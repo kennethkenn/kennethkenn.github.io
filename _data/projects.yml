@@ -1,0 +1,6 @@
+- title: Portfolio Website
+  description: A personal portfolio built with Jekyll.
+  tech: HTML, SCSS, Jekyll
+  github: https://github.com/kennethkenn/kennethkenn.github.io
+  demo: https://kennethkenn.github.io
+  image: /assets/images/portfolio-thumb.jpg
