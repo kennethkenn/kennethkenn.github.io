@@ -1,0 +1,10 @@
+title: Showcase
+baseurl: ""
+url: "https://themintcoder.org"
+email: kenneth@themintcoder.org
+description: >-
+  Portfolio of Kenneth, developer and designer.
+theme: minima
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
