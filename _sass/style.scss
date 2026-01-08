@@ -623,8 +623,8 @@ header {
         transition: all 0.3s ease;
 
         &:hover {
-          color: color.mix(black, $primary-color, 10%);
-          border-color: color.mix(black, $primary-color, 10%);
+          color: mix(black, $primary-color, 10%);
+          border-color: mix(black, $primary-color, 10%);
         }
       }
     }
@@ -789,7 +789,7 @@ header {
       position: relative;
 
       &:hover:not(:disabled) {
-        background-color: color.mix(white, $secondary-color, 10%);
+        background-color: mix(white, $secondary-color, 10%);
       }
 
       &:disabled {
