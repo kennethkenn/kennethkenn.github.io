@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Projects
+description: Explore Kenneth's portfolio of projects including enterprise systems, high-performance engines, and fullstack applications.
 ---
 
 <section class="projects">

@@ -3,19 +3,18 @@
 
 <head>
     {% include head.html %}
-    <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}?v={{ site.time | date: '%s' }}">
-    <link
-        href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:wght@400;700&display=swap"
-        rel="stylesheet">
-
 </head>
 
 <body>
+    <a href="#main-content" class="skip-to-main">Skip to main content</a>
     {% include header.html %}
-    <main>
+    <main id="main-content">
         {{ content }}
     </main>
     {% include footer.html %}
+    <script src="{{ '/assets/js/dark-mode.js' | relative_url }}"></script>
+    <script src="{{ '/assets/js/main.js' | relative_url }}"></script>
+    <script src="{{ '/assets/js/form-handler.js' | relative_url }}"></script>
 </body>
 
 </html>

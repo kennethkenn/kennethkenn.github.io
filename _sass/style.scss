@@ -1,10 +1,56 @@
-// Variables
-$primary-color: #C5A059; // Muted Gold
-$secondary-color: #2C3E50; // Dark Slate
+// SCSS Variables (for build-time compilation)
+$primary-color: #C5A059;
+$secondary-color: #2C3E50;
 $background-color: #FFFFFF;
 $light-bg: #F9F9F9;
 $font-stack: 'Lato', sans-serif;
 $heading-font: 'Playfair Display', serif;
+
+// CSS Custom Properties (for runtime theming)
+:root {
+  // Colors
+  --color-primary: #{$primary-color};
+  --color-secondary: #{$secondary-color};
+  --color-background: #{$background-color};
+  --color-light-bg: #{$light-bg};
+  --color-text: #{$secondary-color};
+  --color-text-light: #5a6c7d;
+  --color-border: #e1e8ed;
+
+  // Spacing
+  --spacing-xs: 0.5rem;
+  --spacing-sm: 1rem;
+  --spacing-md: 2rem;
+  --spacing-lg: 4rem;
+  --spacing-xl: 6rem;
+
+  // Transitions
+  --transition-fast: 0.2s ease;
+  --transition-base: 0.3s ease;
+  --transition-slow: 0.5s ease;
+
+  // Shadows
+  --shadow-sm: 0 2px 5px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 5px 15px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 10px 30px rgba(0, 0, 0, 0.15);
+
+  // Border radius
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-xl: 16px;
+  --radius-full: 50px;
+}
+
+// Dark mode theme
+[data-theme="dark"] {
+  --color-background: #1a1a1a;
+  --color-light-bg: #2d2d2d;
+  --color-text: #e8e8e8;
+  --color-text-light: #b0b0b0;
+  --color-secondary: #e8e8e8;
+  --color-border: #404040;
+}
 
 // Reset & base styles
 * {
@@ -13,13 +59,18 @@ $heading-font: 'Playfair Display', serif;
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: $font-stack;
   line-height: 1.8;
-  background-color: $background-color;
-  color: $secondary-color;
+  background-color: var(--color-background);
+  color: var(--color-text);
   padding: 0;
   margin: 0;
+  transition: background-color var(--transition-base), color var(--transition-base);
 }
 
 h1,
@@ -30,9 +81,111 @@ h5,
 h6 {
   font-family: $heading-font;
   font-weight: 700;
-  color: $secondary-color;
+  color: var(--color-text);
   margin-top: 1.5em;
   margin-bottom: 0.5em;
+}
+
+// Accessibility - Focus States
+a:focus,
+button:focus,
+input:focus,
+textarea:focus,
+.btn-primary:focus,
+.btn-secondary:focus {
+  outline: 3px solid $primary-color;
+  outline-offset: 3px;
+}
+
+// Skip to main content for screen readers
+.skip-to-main {
+  position: absolute;
+  left: -9999px;
+  z-index: 999;
+
+  &:focus {
+    left: 50%;
+    transform: translateX(-50%);
+    top: 1rem;
+    padding: 1rem;
+    background: $primary-color;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+  }
+}
+
+// Scroll Animations
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulse {
+
+  0%,
+  100% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0.5;
+  }
+}
+
+.fade-in-element {
+  opacity: 0;
+}
+
+.fade-in-up {
+  animation: fadeInUp 0.6s ease-out forwards;
+}
+
+// Dark Mode Toggle Button
+.dark-mode-toggle {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  width: 50px;
+  height: 50px;
+  border-radius: var(--radius-full);
+  background: var(--color-primary);
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: var(--shadow-lg);
+  z-index: 1000;
+  transition: all var(--transition-base);
+
+  .icon {
+    font-size: 1.5rem;
+    line-height: 1;
+  }
+
+  &:hover {
+    transform: scale(1.1) rotate(10deg);
+    box-shadow: 0 15px 40px rgba(197, 160, 89, 0.4);
+  }
+
+  &:active {
+    transform: scale(0.95);
+  }
+
+  @media (max-width: 768px) {
+    bottom: 1rem;
+    right: 1rem;
+    width: 45px;
+    height: 45px;
+  }
 }
 
 // Header / Nav
@@ -224,6 +377,14 @@ header {
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 2rem;
 
+  @media (max-width: 900px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (max-width: 600px) {
+    grid-template-columns: 1fr;
+  }
+
   .service-card {
     background: #fff;
     padding: 2.5rem;
@@ -254,8 +415,48 @@ header {
   }
 }
 
-// Featured Projects
-.projects-grid {
+// Tech Stack Section
+.tech-stack-section {
+  background-color: var(--color-background);
+}
+
+.tech-stack-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  max-width: 800px;
+  margin: 0 auto;
+
+  .tech-item {
+    background: linear-gradient(135deg, var(--color-primary) 0%, darken($primary-color, 10%) 100%);
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border-radius: var(--radius-full);
+    font-weight: 700;
+    font-size: 0.9rem;
+    letter-spacing: 0.5px;
+    box-shadow: var(--shadow-sm);
+    transition: all var(--transition-base);
+    cursor: default;
+
+    &:hover {
+      transform: translateY(-3px) scale(1.05);
+      box-shadow: var(--shadow-md);
+    }
+
+    &:nth-child(3n+1) {
+      background: linear-gradient(135deg, var(--color-secondary) 0%, lighten($secondary-color, 10%) 100%);
+    }
+
+    &:nth-child(3n+2) {
+      background: linear-gradient(135deg, var(--color-primary) 0%, lighten($primary-color, 5%) 100%);
+    }
+  }
+}
+
+// Featured Projects (Home Page)
+.featured-projects-grid {
   display: flex;
   flex-direction: column;
   gap: 4rem;
@@ -263,23 +464,20 @@ header {
   .featured-card {
     display: grid;
     grid-template-columns: 1.2fr 0.8fr;
+    grid-template-areas: "image info";
     gap: 3rem;
     align-items: center;
     background: #fff;
     border-radius: 16px;
-    overflow: hidden;
-    box-shadow: none; // Reset base project style
+    overflow: visible;
+    box-shadow: none;
 
     &:nth-child(even) {
-      direction: rtl; // Hack for alternating layout
-
-      .project-info {
-        direction: ltr; // Reset text direction
-        text-align: right;
-      }
+      grid-template-areas: "info image";
     }
 
     .project-image {
+      grid-area: image;
       height: 400px;
       overflow: hidden;
       border-radius: 16px;
@@ -298,6 +496,7 @@ header {
     }
 
     .project-info {
+      grid-area: info;
       padding: 1rem;
 
       h3 {
@@ -317,9 +516,6 @@ header {
         flex-wrap: wrap;
         gap: 0.5rem;
         margin-bottom: 2rem;
-
-        // Handle alignment for even items if using the direction hack, 
-        // or just use flex-direction row-reverse properly in a real setup.
       }
 
       .tech-badge {
@@ -350,16 +546,13 @@ header {
   }
 }
 
-// Mobile Responsive Fixes for New Sections
 @media (max-width: 900px) {
-  .projects-grid .featured-card {
+  .featured-projects-grid .featured-card {
     grid-template-columns: 1fr;
+    grid-template-areas:
+      "image"
+      "info" !important;
     gap: 2rem;
-    direction: ltr !important; // Reset alternating layout
-
-    .project-info {
-      text-align: left !important;
-    }
 
     .project-image {
       height: 300px;
@@ -507,10 +700,21 @@ header {
       text-transform: uppercase;
       letter-spacing: 1px;
       cursor: pointer;
-      transition: background-color 0.3s ease;
+      transition: background-color var(--transition-base);
+      position: relative;
 
-      &:hover {
+      &:hover:not(:disabled) {
         background-color: lighten($secondary-color, 10%);
+      }
+
+      &:disabled {
+        cursor: not-allowed;
+        opacity: 0.6;
+      }
+
+      .btn-loader {
+        display: inline-block;
+        animation: pulse 1.5s ease-in-out infinite;
       }
     }
 

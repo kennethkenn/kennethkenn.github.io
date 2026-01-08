@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Contact
+description: Get in touch with Kenneth for project collaborations, consultations, or just to say hello.
 ---
 
 <section class="contact-section">
@@ -26,7 +27,10 @@ title: Contact
         <textarea id="message" name="message" rows="5" placeholder="Your message here..." required></textarea>
       </div>
       
-      <button type="submit" class="btn-submit">Send Message</button>
+      <button type="submit" class="btn-submit" id="contact-submit">
+        <span class="btn-text">Send Message</span>
+        <span class="btn-loader" style="display: none;">Sending...</span>
+      </button>
     </form>
     
     <div class="contact-info">
