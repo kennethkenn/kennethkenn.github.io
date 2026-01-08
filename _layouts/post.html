@@ -1,0 +1,33 @@
+---
+layout: default
+---
+<article class="post-content" style="max-width: 800px; margin: 0 auto; padding: 6rem 1rem;">
+    <div style="margin-bottom: 2rem;">
+        <a href="{{ '/blog' | relative_url }}" class="btn-text"
+            style="color: var(--color-primary); font-weight: 700; text-decoration: none;">← Back to Blog</a>
+    </div>
+
+    <header class="post-header" style="text-align: center; margin-bottom: 4rem;">
+        <h1 class="post-title" style="font-size: 3rem; margin-bottom: 1rem; line-height: 1.2;">{{ page.title | escape }}
+        </h1>
+        <p class="post-meta" style="color: var(--color-text-light); font-size: 1.1rem;">
+            <time class="dt-published" datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
+                {%- assign date_format = site.minima.date_format | default: "%B %-d, %Y" -%}
+                {{ page.date | date: date_format }}
+            </time>
+            {%- if page.author -%}
+            • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card"
+                    itemprop="name">{{ page.author }}</span></span>
+            {%- endif -%}
+        </p>
+    </header>
+
+    <div class="post-body" style="font-size: 1.15rem; line-height: 1.8;">
+        {{ content }}
+    </div>
+
+    <div style="margin-top: 4rem; padding-top: 2rem; border-top: 1px solid var(--color-border);">
+        <a href="{{ '/blog' | relative_url }}" class="btn-text"
+            style="color: var(--color-primary); font-weight: 700; text-decoration: none;">← Back to Blog</a>
+    </div>
+</article>
