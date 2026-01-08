@@ -128,6 +128,18 @@ textarea:focus,
   }
 }
 
+@keyframes pulse {
+
+  0%,
+  100% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0.5;
+  }
+}
+
 .fade-in-element {
   opacity: 0;
 }
@@ -688,10 +700,21 @@ header {
       text-transform: uppercase;
       letter-spacing: 1px;
       cursor: pointer;
-      transition: background-color 0.3s ease;
+      transition: background-color var(--transition-base);
+      position: relative;
 
-      &:hover {
+      &:hover:not(:disabled) {
         background-color: lighten($secondary-color, 10%);
+      }
+
+      &:disabled {
+        cursor: not-allowed;
+        opacity: 0.6;
+      }
+
+      .btn-loader {
+        display: inline-block;
+        animation: pulse 1.5s ease-in-out infinite;
       }
     }
 

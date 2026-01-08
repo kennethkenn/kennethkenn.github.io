@@ -27,7 +27,10 @@ description: Get in touch with Kenneth for project collaborations, consultations
         <textarea id="message" name="message" rows="5" placeholder="Your message here..." required></textarea>
       </div>
       
-      <button type="submit" class="btn-submit">Send Message</button>
+      <button type="submit" class="btn-submit" id="contact-submit">
+        <span class="btn-text">Send Message</span>
+        <span class="btn-loader" style="display: none;">Sending...</span>
+      </button>
     </form>
     
     <div class="contact-info">
