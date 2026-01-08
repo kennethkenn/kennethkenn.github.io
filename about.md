@@ -3,18 +3,27 @@ layout: default
 title: About
 ---
 
-<section class="about">
-  <img src="/assets/images/profile.png" alt="Profile Photo" class="profile-img">
-  <h1>About Me</h1>
-  <p>Hello! I'm Kenneth, a passionate fullstack developer and designer. I specialize in creating clean, modern, and responsive websites.</p>
-  <h2>Education</h2>
-  <p>Bachelor's in Computer Science, XYZ University</p>
-  <h2>Skills</h2>
-  <ul>
-    <li>HTML5, CSS3, SCSS</li>
-    <li>JavaScript, React, Node.js</li>
-    <li>Jekyll, Liquid Templates</li>
-  </ul>
-  <h2>Work History</h2>
-  <p>Freelance Developer (2020 - Present)</p>
+<section class="about-section">
+  <div class="about-header">
+    <h1>About Me</h1>
+    <p class="lead">I consider myself a digital artisan, blending code and creativity to build meaningful experiences.</p>
+  </div>
+
+  <div class="about-grid">
+    <div class="about-content">
+      <h2>The Narrative</h2>
+      <p>My journey began with a curiosity for how things work on the web. That curiosity evolved into a passion for building robust applications that don't just function well but feel great to use.</p>
+      <p>I believe in the power of minimalism and clarity. Whether I'm designing a UI or architecting a database, I strive for elegance and efficiency.</p>
+    </div>
+
+    <div class="skills-content">
+      <h2>Expertise</h2>
+      <ul class="skills-list">
+        <li><strong>Languages:</strong> C/C++, Java, Python, x86 Assembly</li>
+        <li><strong>Backend:</strong> Spring Boot, Flask, SQL</li>
+        <li><strong>Frontend:</strong> AngularJS</li>
+        <li><strong>Tools:</strong> Git, Docker</li>
+      </ul>
+    </div>
+  </div>
 </section>

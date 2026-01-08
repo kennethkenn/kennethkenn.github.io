@@ -1,6 +1,20 @@
 - title: Portfolio Website
-  description: A personal portfolio built with Jekyll.
+  description: A personal portfolio built with Jekyll, featuring a custom classy design system.
   tech: HTML, SCSS, Jekyll
   github: https://github.com/kennethkenn/kennethkenn.github.io
   demo: https://kennethkenn.github.io
-  image: /assets/images/portfolio-thumb.jpg
+  image: https://placehold.co/600x400/2C3E50/FFF?text=Portfolio
+
+- title: Enterprise Inventory System
+  description: A robust application for tracking stock levels with a RESTful API backend.
+  tech: Java, Spring Boot, AngularJS, SQL
+  github: #
+  demo: #
+  image: https://placehold.co/600x400/C5A059/FFF?text=Inventory+System
+
+- title: High-Performance Data Engine
+  description: A multi-threaded data processing engine optimized for low latency and throughput.
+  tech: C++, Python, x86 Assembly
+  github: #
+  demo: #
+  image: https://placehold.co/600x400/2C3E50/C5A059?text=Data+Engine
