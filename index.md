@@ -7,6 +7,8 @@ title: Home
        alt="Profile Photo"
        class="profile-img">
   <h1>Kenneth</h1>
-  <h2>Fullstack Developer & Designer</h2>
-  <b style="color:red;"> Under Develoment </b>
+  <h2>Crafting Digital Experiences with <br> Elegance & Precision</h2>
+  <p>Fullstack Developer & Designer specializing in building exceptional digital products.</p>
+  <br>
+  <a href="/projects" class="btn-primary">View My Work</a>
 </section>

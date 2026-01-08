@@ -1,8 +1,10 @@
 // Variables
-$primary-color: #4A90E2;
-$dark-color: #1e1e1e;
-$light-color: #ffffff;
-$font-stack: "Segoe UI", Roboto, sans-serif;
+$primary-color: #C5A059; // Muted Gold
+$secondary-color: #2C3E50; // Dark Slate
+$background-color: #FFFFFF;
+$light-bg: #F9F9F9;
+$font-stack: 'Lato', sans-serif;
+$heading-font: 'Playfair Display', serif;
 
 // Reset & base styles
 * {
@@ -13,31 +15,56 @@ $font-stack: "Segoe UI", Roboto, sans-serif;
 
 body {
   font-family: $font-stack;
-  line-height: 1.6;
-  background-color: $light-color;
-  color: $dark-color;
-  padding: 1rem;
+  line-height: 1.8;
+  background-color: $background-color;
+  color: $secondary-color;
+  padding: 0;
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $heading-font;
+  font-weight: 700;
+  color: $secondary-color;
+  margin-top: 1.5em;
+  margin-bottom: 0.5em;
 }
 
 // Header / Nav
 header {
-  background: $primary-color;
-  color: $light-color;
-  padding: 1rem 0;
+  background: #FFFFFF;
+  color: $secondary-color;
+  padding: 1.5rem 0;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 
   nav ul {
     list-style: none;
     display: flex;
     justify-content: center;
-    gap: 2rem;
+    gap: 3rem;
+    margin: 0;
+    padding: 0;
 
     li a {
-      color: $light-color;
+      color: $secondary-color;
       text-decoration: none;
-      font-weight: bold;
+      font-weight: 400;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      font-size: 0.9rem;
+      transition: color 0.3s ease;
 
       &:hover {
-        text-decoration: underline;
+        color: $primary-color;
+        text-decoration: none;
       }
     }
   }
@@ -46,74 +73,289 @@ header {
 // Hero Section (Home page)
 .hero {
   text-align: center;
-  margin: 2rem auto;
-  max-width: 600px;
+  padding: 6rem 1rem;
+  max-width: 800px;
+  margin: 0 auto;
 
   .profile-img {
-    width: 120px;
-    height: 120px;
+    width: 150px;
+    height: 150px;
     border-radius: 50%;
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
+    object-fit: cover;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    border: 3px solid #fff;
   }
 
   h1 {
-    font-size: 2rem;
-    margin-bottom: 0.2rem;
+    font-size: 3.5rem;
+    margin-bottom: 0.5rem;
+    letter-spacing: -1px;
   }
 
   h2 {
-    font-size: 1.2rem;
-    color: #666;
-    margin-bottom: 1rem;
+    font-size: 1.5rem;
+    color: lighten($secondary-color, 20%);
+    font-weight: 300;
+    margin-bottom: 2rem;
+    font-family: $font-stack;
   }
 
   p {
-    font-size: 1rem;
-    color: #444;
+    font-size: 1.1rem;
+    color: lighten($secondary-color, 10%);
+    line-height: 2;
+    max-width: 600px;
+    margin: 0 auto;
+    margin-bottom: 2rem;
+  }
+
+  .btn-primary {
+    display: inline-block;
+    background-color: $primary-color;
+    color: #fff;
+    padding: 1rem 2rem;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 0.9rem;
+    box-shadow: 0 4px 15px rgba(197, 160, 89, 0.3);
+    transition: all 0.3s ease;
+
+    &:hover {
+      background-color: darken($primary-color, 10%);
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(197, 160, 89, 0.4);
+    }
+  }
+}
+
+// About Page
+.about-section {
+  max-width: 1000px;
+  margin: 4rem auto;
+  padding: 0 1rem;
+
+  .about-header {
+    text-align: center;
+    margin-bottom: 4rem;
+
+    h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+    }
+
+    .lead {
+      font-size: 1.25rem;
+      color: lighten($secondary-color, 20%);
+      max-width: 700px;
+      margin: 0 auto;
+    }
+  }
+
+  .about-grid {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 4rem;
+    align-items: start;
+
+    @media (max-width: 768px) {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+
+    h2 {
+      font-size: 1.8rem;
+      margin-top: 0;
+      margin-bottom: 1.5rem;
+      border-bottom: 2px solid $light-bg;
+      padding-bottom: 0.5rem;
+      display: inline-block;
+    }
+
+    p {
+      margin-bottom: 1.5rem;
+      font-size: 1.05rem;
+      color: lighten($secondary-color, 10%);
+    }
+
+    .skills-list {
+      list-style: none;
+      padding: 0;
+
+      li {
+        background: #fff;
+        padding: 1rem;
+        margin-bottom: 1rem;
+        border-radius: 8px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.03);
+        border-left: 4px solid $primary-color;
+
+        strong {
+          color: $secondary-color;
+          display: block;
+          margin-bottom: 0.25rem;
+        }
+      }
+    }
+  }
+}
+
+// Contact Page
+.contact-section {
+  max-width: 800px;
+  margin: 4rem auto;
+  padding: 0 1rem;
+
+  .contact-intro {
+    text-align: center;
+    margin-bottom: 3rem;
+
+    h1 {
+      font-size: 3rem;
+    }
+
+    p {
+      font-size: 1.2rem;
+      color: lighten($secondary-color, 20%);
+    }
+  }
+
+  .contact-form-container {
+    background: #fff;
+    padding: 2.5rem;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+
+    .form-group {
+      margin-bottom: 1.5rem;
+
+      label {
+        display: block;
+        margin-bottom: 0.5rem;
+        font-weight: 700;
+        font-size: 0.9rem;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+      }
+
+      input,
+      textarea {
+        width: 100%;
+        padding: 1rem;
+        border: 1px solid lighten($secondary-color, 60%);
+        border-radius: 6px;
+        font-family: $font-stack;
+        font-size: 1rem;
+        transition: border-color 0.3s ease;
+        background-color: $light-bg;
+
+        &:focus {
+          outline: none;
+          border-color: $primary-color;
+          background-color: #fff;
+        }
+      }
+    }
+
+    .btn-submit {
+      width: 100%;
+      padding: 1rem;
+      background-color: $secondary-color;
+      color: #fff;
+      border: none;
+      border-radius: 6px;
+      font-size: 1rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+
+      &:hover {
+        background-color: lighten($secondary-color, 10%);
+      }
+    }
+
+    .contact-info {
+      text-align: center;
+      margin-top: 2rem;
+      font-size: 0.9rem;
+      color: lighten($secondary-color, 30%);
+
+      a {
+        color: $primary-color;
+        text-decoration: none;
+        font-weight: 700;
+      }
+    }
   }
 }
 
 // Projects page
 .projects {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 1.5rem;
-  margin: 2rem 0;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2.5rem;
+  margin: 4rem auto;
+  max-width: 1000px;
+  padding: 0 1rem;
 
   .project-card {
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    padding: 1rem;
-    text-align: center;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    background: #fff;
+    border: none;
+    border-radius: 12px;
+    padding: 0;
+    text-align: left;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
+
+    &:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+    }
 
     img {
-      max-width: 100%;
-      height: auto;
-      border-radius: 4px;
-      margin-bottom: 1rem;
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 0;
+      margin-bottom: 0;
     }
 
     h3 {
-      margin-bottom: 0.5rem;
+      padding: 1.5rem 1.5rem 0.5rem;
+      margin: 0;
+      font-size: 1.5rem;
     }
 
     p {
-      font-size: 0.9rem;
-      color: #555;
+      padding: 0 1.5rem;
+      font-size: 1rem;
+      color: lighten($secondary-color, 20%);
+      margin-bottom: 1.5rem;
     }
 
     a {
       display: inline-block;
-      margin-top: 0.5rem;
+      margin: 0 1.5rem 1.5rem;
       color: $primary-color;
       text-decoration: none;
-      font-weight: bold;
+      font-weight: 700;
+      text-transform: uppercase;
+      font-size: 0.8rem;
+      letter-spacing: 1px;
+      border-bottom: 2px solid transparent;
+      transition: border-color 0.3s ease;
 
       &:hover {
-        text-decoration: underline;
+        border-color: $primary-color;
+        text-decoration: none;
       }
-    }  
+    }
   }
 }
 
@@ -121,36 +363,41 @@ header {
 @media (max-width: 768px) {
   header nav ul {
     flex-direction: column;
-    gap: 1rem;
+    gap: 1.5rem;
     text-align: center;
   }
 
   .projects {
     grid-template-columns: 1fr;
+    padding: 0 1.5rem;
   }
 
   .hero {
+    padding: 4rem 1rem;
+
     .profile-img {
-      width: 80px;
-      height: 80px;
+      width: 120px;
+      height: 120px;
     }
 
     h1 {
-      font-size: 1.5rem;
+      font-size: 2.5rem;
     }
 
     h2 {
-      font-size: 1rem;
+      font-size: 1.2rem;
     }
   }
 }
 
 .site-footer {
-  background-color: #f4f4f4;
-  padding: 2rem 1rem;
+  background-color: $background-color;
+  padding: 4rem 1rem;
   text-align: center;
-  color: #555;
+  color: lighten($secondary-color, 30%);
   font-size: 0.9rem;
+  border-top: 1px solid lighten($secondary-color, 70%);
+  margin-top: 4rem;
 
   .footer-container {
     max-width: 960px;
@@ -160,18 +407,22 @@ header {
   .footer-links {
     list-style: none;
     padding: 0;
-    margin: 1rem 0 0;
+    margin: 2rem 0 0;
     display: flex;
     justify-content: center;
-    gap: 1.5rem;
+    gap: 2rem;
 
     li a {
       text-decoration: none;
-      color: #4A90E2;
-      transition: color 0.2s ease-in-out;
+      color: $secondary-color;
+      font-weight: 700;
+      text-transform: uppercase;
+      font-size: 0.8rem;
+      letter-spacing: 1px;
+      transition: color 0.3s ease;
 
       &:hover {
-        color: #1e70c1;
+        color: $primary-color;
       }
     }
   }
