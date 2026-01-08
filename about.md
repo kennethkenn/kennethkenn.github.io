@@ -1,6 +1,7 @@
 ---
 layout: default
 title: About
+description: Learn about Kenneth's journey as a digital artisan blending code and creativity. Expert in C/C++, Java, Python, Spring Boot, and more.
 ---
 
 <section class="about-section">

@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Contact
+description: Get in touch with Kenneth for project collaborations, consultations, or just to say hello.
 ---
 
 <section class="contact-section">

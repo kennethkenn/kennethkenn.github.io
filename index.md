@@ -1,10 +1,11 @@
 ---
 layout: default
 title: Home
+description: Kenneth - Fullstack Developer & Designer specializing in C/C++, Java, Spring Boot, and building exceptional digital products.
 ---
 <section class="hero">
-  <img src="/assets/images/profile.png"
-       alt="Profile Photo"
+  <img src="https://ui-avatars.com/api/?name=Kenneth&size=200&background=C5A059&color=fff&bold=true"
+       alt="Kenneth - Portfolio"
        class="profile-img">
   <h1>Kenneth</h1>
   <h2>Crafting Digital Experiences with <br> Elegance & Precision</h2>
@@ -32,6 +33,24 @@ title: Home
         <h3>Performance Optimization</h3>
         <p>Analyzing and tuning applications for maximum speed, efficiency, and resource utilization.</p>
       </div>
+    </div>
+  </div>
+</section>
+
+<section class="home-section tech-stack-section">
+  <div class="container">
+    <h2 class="section-title">Tech Stack</h2>
+    <div class="tech-stack-grid">
+      <span class="tech-item">C/C++</span>
+      <span class="tech-item">Java</span>
+      <span class="tech-item">Python</span>
+      <span class="tech-item">Spring Boot</span>
+      <span class="tech-item">Flask</span>
+      <span class="tech-item">AngularJS</span>
+      <span class="tech-item">SQL</span>
+      <span class="tech-item">Git</span>
+      <span class="tech-item">Docker</span>
+      <span class="tech-item">x86 Assembly</span>
     </div>
   </div>
 </section>
