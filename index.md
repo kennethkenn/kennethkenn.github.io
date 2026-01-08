@@ -7,7 +7,7 @@ description: Kenneth - Fullstack Developer & Designer specializing in C/C++, Jav
   <img src="https://ui-avatars.com/api/?name=Kenneth&size=200&background=C5A059&color=fff&bold=true"
        alt="Kenneth - Portfolio"
        class="profile-img">
-  <h1>Kenneth</h1>
+  <h1>Kenneth Buchunju</h1>
   <h2>Crafting Digital Experiences with <br> Elegance & Precision</h2>
   <p>Fullstack Developer & Designer specializing in building exceptional digital products.</p>
 <br>

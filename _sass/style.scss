@@ -1,6 +1,6 @@
 // SCSS Variables (for build-time compilation)
 $primary-color: #C5A059;
-$secondary-color: #2C3E50;
+$secondary-color: #526c86;
 $background-color: #FFFFFF;
 $light-bg: #F9F9F9;
 $font-stack: 'Lato', sans-serif;
@@ -190,7 +190,7 @@ textarea:focus,
 
 // Header / Nav
 header {
-  background: #FFFFFF;
+  background: var(--color-background);
   color: $secondary-color;
   padding: 1.5rem 0;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
@@ -248,7 +248,7 @@ header {
 
   h2 {
     font-size: 1.5rem;
-    color: lighten($secondary-color, 20%);
+    color: var(--color-text-light);
     font-weight: 300;
     margin-bottom: 2rem;
     font-family: $font-stack;
@@ -256,7 +256,7 @@ header {
 
   p {
     font-size: 1.1rem;
-    color: lighten($secondary-color, 10%);
+    color: var(--color-text-light);
     line-height: 2;
     max-width: 600px;
     margin: 0 auto;
@@ -339,16 +339,16 @@ header {
   padding: 6rem 0;
 
   &.services-section {
-    background-color: $light-bg;
+    background-color: var(--color-background);
   }
 
   &.cta-section {
     text-align: center;
-    background-color: $secondary-color;
-    color: #fff;
+    background-color: var(--color-background);
+    color: var(--color-text-light);
 
     h2 {
-      color: #fff;
+      color: var(--color-text-light);
       margin-top: 0;
     }
 
@@ -359,15 +359,33 @@ header {
     }
 
     .btn-cta {
-      background-color: #fff;
-      color: $secondary-color;
-      border-color: #fff;
+      background-color: var(--color-background);
+      color: var(--color-text-light);
+      border: 2px solid var(--color-background);
+      padding: 0.75rem 1.75rem;
+      font-weight: 600;
+      border-radius: 6px;
+      transition:
+        background-color 0.25s ease,
+        color 0.25s ease,
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
 
       &:hover {
         background-color: transparent;
-        color: #fff;
+        color: var(--color-secondary);
+        transform: translateY(-2px);
+        box-shadow: 0 10px 28px rgba(0, 0, 0, 0.25);
+      }
+
+      &:active {
+        transform: translateY(0);
+        box-shadow: 0 4px 14px rgba(0, 0, 0, 0.18);
       }
     }
+
   }
 }
 
@@ -386,7 +404,7 @@ header {
   }
 
   .service-card {
-    background: #fff;
+    background: var(--color-light-bg);
     padding: 2.5rem;
     border-radius: 12px;
     text-align: center;
@@ -410,7 +428,7 @@ header {
     }
 
     p {
-      color: lighten($secondary-color, 10%);
+      color: var(--color-text-light);
     }
   }
 }
@@ -467,7 +485,7 @@ header {
     grid-template-areas: "image info";
     gap: 3rem;
     align-items: center;
-    background: #fff;
+    background: var(--color-light-bg);
     border-radius: 16px;
     overflow: visible;
     box-shadow: none;
@@ -577,7 +595,7 @@ header {
 
     .lead {
       font-size: 1.25rem;
-      color: lighten($secondary-color, 20%);
+      color: var(--color-text-light);
       max-width: 700px;
       margin: 0 auto;
     }
@@ -606,7 +624,7 @@ header {
     p {
       margin-bottom: 1.5rem;
       font-size: 1.05rem;
-      color: lighten($secondary-color, 10%);
+      color: var(--color-text-light);
     }
 
     .skills-list {
@@ -614,7 +632,7 @@ header {
       padding: 0;
 
       li {
-        background: #fff;
+        background: var(--color-light-bg);
         padding: 1rem;
         margin-bottom: 1rem;
         border-radius: 8px;
@@ -647,12 +665,12 @@ header {
 
     p {
       font-size: 1.2rem;
-      color: lighten($secondary-color, 20%);
+      color: var(--color-text-light);
     }
   }
 
   .contact-form-container {
-    background: #fff;
+    background: var(--color-light-bg);
     padding: 2.5rem;
     border-radius: 12px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
@@ -673,7 +691,7 @@ header {
       textarea {
         width: 100%;
         padding: 1rem;
-        border: 1px solid lighten($secondary-color, 60%);
+        border: 1px solid var(--color-border);
         border-radius: 6px;
         font-family: $font-stack;
         font-size: 1rem;
@@ -722,7 +740,7 @@ header {
       text-align: center;
       margin-top: 2rem;
       font-size: 0.9rem;
-      color: lighten($secondary-color, 30%);
+      color: var(--color-text-light);
 
       a {
         color: $primary-color;
@@ -743,7 +761,7 @@ header {
   padding: 0 1rem;
 
   .project-card {
-    background: #fff;
+    background: var(--color-light-bg);
     border: none;
     border-radius: 12px;
     padding: 0;
@@ -774,7 +792,7 @@ header {
     p {
       padding: 0 1.5rem;
       font-size: 1rem;
-      color: lighten($secondary-color, 20%);
+      color: var(--color-text-light);
       margin-bottom: 1.5rem;
     }
 
@@ -830,12 +848,12 @@ header {
 }
 
 .site-footer {
-  background-color: $background-color;
+  background-color: var(--color-background);
   padding: 4rem 1rem;
   text-align: center;
-  color: lighten($secondary-color, 30%);
+  color: var(--color-text-light);
   font-size: 0.9rem;
-  border-top: 1px solid lighten($secondary-color, 70%);
+  border-top: 1px solid var(--color-border);
   margin-top: 4rem;
 
   .footer-container {
@@ -853,7 +871,7 @@ header {
 
     li a {
       text-decoration: none;
-      color: $secondary-color;
+      color: var(--color-secondary);
       font-weight: 700;
       text-transform: uppercase;
       font-size: 0.8rem;

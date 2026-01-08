@@ -11,7 +11,7 @@ description: Get in touch with Kenneth for project collaborations, consultations
   </div>
 
   <div class="contact-form-container">
-    <form action="https://formspree.io/f/yourformid" method="POST">
+    <form action="https://formspree.io/f/mbdlnwzw" method="POST">
       <div class="form-group">
         <label for="name">Name</label>
         <input type="text" id="name" name="name" placeholder="John Doe" required>
