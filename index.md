@@ -39,7 +39,7 @@ title: Home
 <section class="home-section featured-projects">
   <div class="container">
     <h2 class="section-title">Featured Projects</h2>
-    <div class="projects-grid">
+    <div class="featured-projects-grid">
       {% for project in site.data.projects limit:2 %}
       <div class="project-card featured-card">
         <div class="project-image">

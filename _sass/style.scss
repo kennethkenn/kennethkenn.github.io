@@ -254,8 +254,8 @@ header {
   }
 }
 
-// Featured Projects
-.projects-grid {
+// Featured Projects (Home Page)
+.featured-projects-grid {
   display: flex;
   flex-direction: column;
   gap: 4rem;
@@ -350,9 +350,8 @@ header {
   }
 }
 
-// Mobile Responsive Fixes for New Sections
 @media (max-width: 900px) {
-  .projects-grid .featured-card {
+  .featured-projects-grid .featured-card {
     grid-template-columns: 1fr;
     gap: 2rem;
     direction: ltr !important; // Reset alternating layout
