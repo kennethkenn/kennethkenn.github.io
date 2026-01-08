@@ -123,11 +123,246 @@ header {
     font-size: 0.9rem;
     box-shadow: 0 4px 15px rgba(197, 160, 89, 0.3);
     transition: all 0.3s ease;
+    border: 2px solid $primary-color;
 
     &:hover {
-      background-color: darken($primary-color, 10%);
+      background-color: transparent;
+      color: $primary-color;
       transform: translateY(-2px);
       box-shadow: 0 6px 20px rgba(197, 160, 89, 0.4);
+    }
+  }
+}
+
+// Utility Classes
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+  position: relative;
+
+  &:after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 3px;
+    background: $primary-color;
+    margin: 1rem auto 0;
+  }
+}
+
+.center-btn {
+  text-align: center;
+  margin-top: 3rem;
+}
+
+.btn-secondary {
+  display: inline-block;
+  color: $secondary-color;
+  padding: 1rem 2rem;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 0.9rem;
+  border: 2px solid $secondary-color;
+  transition: all 0.3s ease;
+
+  &:hover {
+    background-color: $secondary-color;
+    color: #fff;
+  }
+}
+
+// Home Sections
+.home-section {
+  padding: 6rem 0;
+
+  &.services-section {
+    background-color: $light-bg;
+  }
+
+  &.cta-section {
+    text-align: center;
+    background-color: $secondary-color;
+    color: #fff;
+
+    h2 {
+      color: #fff;
+      margin-top: 0;
+    }
+
+    p {
+      color: rgba(255, 255, 255, 0.8);
+      font-size: 1.2rem;
+      margin-bottom: 2rem;
+    }
+
+    .btn-cta {
+      background-color: #fff;
+      color: $secondary-color;
+      border-color: #fff;
+
+      &:hover {
+        background-color: transparent;
+        color: #fff;
+      }
+    }
+  }
+}
+
+// Services Grid
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+
+  .service-card {
+    background: #fff;
+    padding: 2.5rem;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.03);
+    transition: transform 0.3s ease;
+
+    &:hover {
+      transform: translateY(-5px);
+    }
+
+    .service-icon {
+      font-size: 3rem;
+      margin-bottom: 1.5rem;
+      display: block;
+    }
+
+    h3 {
+      margin-top: 0;
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+    }
+
+    p {
+      color: lighten($secondary-color, 10%);
+    }
+  }
+}
+
+// Featured Projects
+.projects-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+
+  .featured-card {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 3rem;
+    align-items: center;
+    background: #fff;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: none; // Reset base project style
+
+    &:nth-child(even) {
+      direction: rtl; // Hack for alternating layout
+
+      .project-info {
+        direction: ltr; // Reset text direction
+        text-align: right;
+      }
+    }
+
+    .project-image {
+      height: 400px;
+      overflow: hidden;
+      border-radius: 16px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.5s ease;
+
+        &:hover {
+          transform: scale(1.03);
+        }
+      }
+    }
+
+    .project-info {
+      padding: 1rem;
+
+      h3 {
+        font-size: 2.5rem;
+        margin-top: 0;
+        margin-bottom: 1rem;
+      }
+
+      p {
+        font-size: 1.1rem;
+        line-height: 1.8;
+        margin-bottom: 1.5rem;
+      }
+
+      .tech-stack {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+        margin-bottom: 2rem;
+
+        // Handle alignment for even items if using the direction hack, 
+        // or just use flex-direction row-reverse properly in a real setup.
+      }
+
+      .tech-badge {
+        background: $light-bg;
+        padding: 0.4rem 1rem;
+        border-radius: 50px;
+        font-size: 0.85rem;
+        font-weight: 700;
+        color: $secondary-color;
+      }
+
+      .btn-text {
+        color: $primary-color;
+        font-weight: 700;
+        text-decoration: none;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        border-bottom: 2px solid $primary-color;
+        padding-bottom: 0.2rem;
+        transition: all 0.3s ease;
+
+        &:hover {
+          color: darken($primary-color, 10%);
+          border-color: darken($primary-color, 10%);
+        }
+      }
+    }
+  }
+}
+
+// Mobile Responsive Fixes for New Sections
+@media (max-width: 900px) {
+  .projects-grid .featured-card {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    direction: ltr !important; // Reset alternating layout
+
+    .project-info {
+      text-align: left !important;
+    }
+
+    .project-image {
+      height: 300px;
     }
   }
 }

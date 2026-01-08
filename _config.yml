@@ -4,7 +4,7 @@ url: "https://themintcoder.org"
 email: kenneth@themintcoder.org
 description: >-
   Portfolio of Kenneth, developer and designer.
-theme: minima
+# theme: minima
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
