@@ -1042,3 +1042,34 @@ header {
     }
   }
 }
+// Post Categories
+.category-badge {
+  display: inline-block;
+  background-color: var(--color-light-bg);
+  color: var(--color-secondary);
+  padding: 0.3rem 0.8rem;
+  border-radius: 4px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-right: 0.5rem;
+  margin-bottom: 0.5rem;
+  text-transform: capitalize;
+  transition: all var(--transition-base);
+  border: 1px solid var(--color-border);
+
+  &:hover {
+    background-color: var(--color-primary);
+    color: white;
+    border-color: var(--color-primary);
+    text-decoration: none;
+    transform: translateY(-2px);
+  }
+}
+
+.post-categories-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 1rem;
+}
+

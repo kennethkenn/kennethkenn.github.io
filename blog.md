@@ -14,7 +14,13 @@ title: Blog
         <div class="post-meta" style="color: var(--color-text-light); font-size: 0.9rem; margin-bottom: 1rem;">
           {{ post.date | date: "%B %-d, %Y" }}
         </div>
-        <p style="color: var(--color-text-light);">{{ post.excerpt }}</p>
+        {% if post.categories %}
+        <div class="post-categories-container" style="justify-content: flex-start; margin-left: -0.5rem; margin-top: 0;">
+            {% for category in post.categories %}
+            <span class="category-badge">{{ category }}</span>
+            {% endfor %}
+        </div>
+        {% endif %}
         <a href="{{ post.url | relative_url }}" class="btn-text" style="color: var(--color-primary); font-weight: 700; text-decoration: none;">Read More →</a>
       </article>
     {% else %}

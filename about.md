@@ -21,8 +21,8 @@ description: Learn about Kenneth's journey as a digital artisan blending code an
       <h2>Expertise</h2>
       <ul class="skills-list">
         <li><strong>Languages:</strong> C/C++, Java, Python, x86 Assembly</li>
-        <li><strong>Backend:</strong> Spring Boot, Flask, SQL</li>
-        <li><strong>Frontend:</strong> AngularJS</li>
+        <li><strong>Backend:</strong> Spring Boot, Flask, SQL, PostgreSQL</li>
+        <li><strong>Frontend:</strong> AngularJS, ReactJS, HTML, CSS, JavaScript</li>
         <li><strong>Tools:</strong> Git, Docker</li>
       </ul>
     </div>
