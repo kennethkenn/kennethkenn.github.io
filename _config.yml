@@ -1,4 +1,5 @@
 title: Showcase
+permalink: /:year/:month/:day/:title.html
 baseurl: ""
 url: "https://themintcoder.org"
 email: kenneth@themintcoder.org
