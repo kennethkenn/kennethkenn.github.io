@@ -1,20 +1,18 @@
 ---
 layout: default
 ---
-<article class="post-content" style="max-width: 800px; margin: 0 auto; padding: 6rem 1rem;">
+<article class="post-content">
     <!-- Back to Blog Link -->
-    <div style="margin-bottom: 2rem;">
-        <a href="{{ '/blog' | relative_url }}" class="btn-text"
-            style="color: var(--color-primary); font-weight: 700; text-decoration: none;">←
-            Back to Blog</a>
+    <div class="back-link-container">
+        <a href="{{ '/blog' | relative_url }}" class="btn-text">← Back to Blog</a>
     </div>
 
     <!-- Post Header -->
-    <header class="post-header" style="text-align: center; margin-bottom: 4rem;">
-        <h1 class="post-title" style="font-size: 3rem; margin-bottom: 1rem; line-height: 1.2;">
+    <header class="post-header">
+        <h1 class="post-title">
             {{ page.title | escape }}
         </h1>
-        <p class="post-meta" style="color: var(--color-text-light); font-size: 1.1rem;">
+        <p class="post-meta">
             <time class="dt-published" datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
                 {%- assign date_format = site.minima.date_format | default:
                 "%B %-d, %Y" -%}
@@ -22,8 +20,7 @@ layout: default
             </time>
             {%- if page.author -%}
             • <span itemprop="author" itemscope itemtype="http://schema.org/Person">
-                <span class="p-author h-card" itemprop="name">{{ page.author
-                    }}</span>
+                <span class="p-author h-card" itemprop="name">{{ page.author }}</span>
             </span>
             {%- endif -%}
         </p>
@@ -38,14 +35,12 @@ layout: default
     </header>
 
     <!-- Post Content -->
-    <div class="post-body" style="font-size: 1.15rem; line-height: 1.8;">
+    <div class="post-body">
         {{ content }}
     </div>
 
     <!-- Footer Back to Blog Link -->
-    <div style="margin-top: 4rem; padding-top: 2rem; border-top: 1px solid var(--color-border);">
-        <a href="{{ '/blog' | relative_url }}" class="btn-text"
-            style="color: var(--color-primary); font-weight: 700; text-decoration: none;">←
-            Back to Blog</a>
+    <div class="post-footer-nav">
+        <a href="{{ '/blog' | relative_url }}" class="btn-text">← Back to Blog</a>
     </div>
 </article>
