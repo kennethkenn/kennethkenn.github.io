@@ -1,20 +1,125 @@
 - title: Portfolio Website
-  description: A personal portfolio built with Jekyll, featuring a custom classy design system.
+  description: A responsive personal portfolio website built with Jekyll and SCSS. It features a custom design system, dynamic project loading, and an SEO-optimized blog section.
   tech: HTML, SCSS, Jekyll
   github: https://github.com/kennethkenn/kennethkenn.github.io
   demo: https://kennethkenn.github.io
   image: https://placehold.co/600x400/2C3E50/FFF?text=Portfolio
 
 - title: Enterprise Inventory System
-  description: A robust application for tracking stock levels with a RESTful API backend.
+  description: A robust enterprise application for tracking stock levels across multiple warehouses, featuring a RESTful API backend, role-based access control, and real-time reporting dashboards.
   tech: Java, Spring Boot, AngularJS, SQL
   github: #
   demo: #
   image: https://placehold.co/600x400/C5A059/FFF?text=Inventory+System
 
 - title: High-Performance Data Engine
-  description: A multi-threaded data processing engine optimized for low latency and throughput.
+  description: A high-performance, multi-threaded data processing engine connected to low-level hardware. It implements lock-free data structures and custom memory allocators for sub-microsecond latency.
   tech: C++, Python, x86 Assembly
   github: #
   demo: #
   image: https://placehold.co/600x400/2C3E50/C5A059?text=Data+Engine
+
+- title: Personal Finance Tracker
+  description: A comprehensive personal finance dashboard that visualizes income streams and expenses. Features include budget setting, recurring transaction tracking, and interactive charts for financial health analysis.
+  tech: React, Node.js, PostgreSQL
+  github: #
+  demo: #
+  image: https://placehold.co/600x400/27ae60/ffffff?text=Finance+Tracker
+
+- title: Markdown Blog Engine
+  description: A lightweight, file-based CMS that parses Markdown with front-matter metadata. It supports custom themes, syntax highlighting for code blocks, and static site generation for fast deployment.
+  tech: Next.js, Gray-matter, Tailwind CSS
+  github: #
+  demo: #
+  image: https://placehold.co/600x400/2980b9/ffffff?text=Blog+Engine
+
+- title: Real-time Chat Application
+  description: A scalable real-time messaging application using WebSockets. Supports private 1-on-1 chats, group rooms, typing indicators, read receipts, and push notifications.
+  tech: Socket.io, Express, Vanilla JS
+  github: #
+  demo: #
+  image: https://placehold.co/600x400/8e44ad/ffffff?text=Chat+App
+
+- title: Weather Dashboard
+  description: A sleek weather visualization tool consuming the OpenWeatherMap API. It offers automatic geolocation, 5-day forecasts, and dynamic background themes based on current weather conditions.
+  tech: Vue.js, OpenWeatherMap API, Chart.js
+  github: #
+  demo: #
+  image: https://placehold.co/600x400/e67e22/ffffff?text=Weather+Dash
+
+- title: Task Management Tool
+  description: A productivity tool featuring a drag-and-drop Kanban board. Users can organize tasks by priority, set due dates, add subtasks, and track progress with preserved local storage state.
+  tech: React, Redux, Firebase
+  github: #
+  demo: #
+  image: https://placehold.co/600x400/c0392b/ffffff?text=Task+Manager
+
+- title: Recipe Keeper
+  description: A digital culinary organizer allowing users to save, categorize, and filter recipes. Includes features for scaling ingredient quantities, generating shopping lists, and collaborative sharing.
+  tech: Flutter, SQLite
+  github: #
+  demo: #
+  image: https://placehold.co/600x400/16a085/ffffff?text=Recipe+Keeper
+
+- title: Fitness Activity Log
+  description: A dedicated workout tracker to log sets, reps, and weights. It visualizes progress over time with line charts and includes a built-in rest timer and exercise history database.
+  tech: React Native, GraphQL
+  github: #
+  demo: #
+  image: https://placehold.co/600x400/f1c40f/333333?text=Fitness+Log
+
+- title: URL Shortener Service
+  description: A high-throughput link shortening service. It generates unique aliases, handles redirects with millisecond latency, and provides detailed analytics on click-through rates and geographical data.
+  tech: Go, Redis, Docker
+  github: #
+  demo: #
+  image: https://placehold.co/600x400/7f8c8d/ffffff?text=URL+Shortener
+
+- title: Algorithm Visualizer
+  description: An educational interactive tool that animates sorting and pathfinding algorithms (like Dijkstra, A*, QuickSort). It helps visualize step-by-step execution and time complexity.
+  tech: JavaScript, HTML5 Canvas
+  github: #
+  demo: #
+  image: https://placehold.co/600x400/2c3e50/ffffff?text=Algo+Visualizer
+
+- title: E-commerce Storefront
+  description: A fully functional mock online store application. It demonstrates product catalog filtering, cart state management, user authentication, and a simulated Stripe checkout payment flow.
+  tech: TypeScript, Next.js, Stripe API
+  github: #
+  demo: #
+  image: https://placehold.co/600x400/d35400/ffffff?text=E-commerce
+
+- title: Online Discussion Forum
+  description: A community-driven platform featuring threaded discussions, rich-text editing, specific user reputation systems, and moderation tools for admin management.
+  tech: Java, Spring Boot, PostgreSQL, AngularJS
+  github: #
+  demo: #
+  image: https://placehold.co/600x400/3498db/ffffff?text=Discussion+Forum
+
+- title: Minimalist OS Kernel
+  description: A didactic 32-bit operating system kernel written from scratch. It boots from bare metal, handles protected mode switching, basic memory paging, and keyboard interrupt handling.
+  tech: C, x86 Assembly, Makefile
+  github: #
+  demo: #
+  image: https://placehold.co/600x400/2c3e50/ffffff?text=OS+Kernel
+
+- title: Cross-Platform Desktop Note App
+  description: A privacy-focused, offline-first desktop note-taking app. It supports extensive markdown formatting, local encryption for data security, and seamless cross-platform performance.
+  tech: React, Electron, Node.js
+  github: #
+  demo: #
+  image: https://placehold.co/600x400/e74c3c/ffffff?text=Desktop+Notes
+
+- title: Inventory Scanner Mobile App
+  description: A companion mobile application for warehouse staff. It utilizes the camera for barcode/QR scanning to update inventory records instantly and syncs with the central database.
+  tech: React Native, Firebase, Camera API
+  github: #
+  demo: #
+  image: https://placehold.co/600x400/f39c12/ffffff?text=Inventory+App
+
+- title: Microservices E-commerce Platform
+  description: A distributed e-commerce backend architected with microservices. It features independent services for product, order, and user management, communicating via RabbitMQ for resilience.
+  tech: Java, Spring Boot, Docker, RabbitMQ
+  github: #
+  demo: #
+  image: https://placehold.co/600x400/9b59b6/ffffff?text=Microservices+Shop
