@@ -8,6 +8,7 @@ title: Blog
   <div class="blog-header">
     <h1>Blog</h1>
     <p>Thoughts, tutorials, and insights on software development.</p>
+    <p><i>Challenged myself to write one blog a day</i></p>
   </div>
 
   <div class="blog-grid">
