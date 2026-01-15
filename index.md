@@ -4,7 +4,7 @@ title: Home
 description: Kenneth - Fullstack Developer & Designer specializing in C/C++, Java, Spring Boot, and building exceptional digital products.
 ---
 <section class="hero">
-  <img src="https://ui-avatars.com/api/?name=Kenneth&size=200&background=C5A059&color=fff&bold=true"
+  <img src="assets/images/profile.png"
        alt="Kenneth - Portfolio"
        class="profile-img">
   <h1>Kenneth Buchunju</h1>
@@ -46,10 +46,19 @@ description: Kenneth - Fullstack Developer & Designer specializing in C/C++, Jav
       <span class="tech-item">Python</span>
       <span class="tech-item">Spring Boot</span>
       <span class="tech-item">Flask</span>
-      <span class="tech-item">AngularJS</span>
-      <span class="tech-item">SQL</span>
-      <span class="tech-item">Git</span>
+      <span class="tech-item">Qt</span>
+      <span class="tech-item">wxWidgets</span>
+      <span class="tech-item">Android</span>
+      <span class="tech-item">Node.js</span>
+      <span class="tech-item">TypeScript</span>
+      <span class="tech-item">React</span>
+      <span class="tech-item">Kotlin</span>
+      <span class="tech-item">Angular</span>
+      <span class="tech-item">PostgreSQL</span>
+      <span class="tech-item">Linux</span>
       <span class="tech-item">Docker</span>
+      <span class="tech-item">Git</span>
+      <span class="tech-item">CMake</span>
       <span class="tech-item">x86 Assembly</span>
     </div>
   </div>
