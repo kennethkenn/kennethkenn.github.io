@@ -629,6 +629,31 @@ header {
   position: relative;
 }
 
+
+// Reusable Tech Item Badge
+.tech-item {
+  background: var(--color-light-bg);
+  color: var(--color-text);
+  padding: 0.75rem 1.5rem;
+  border-radius: var(--radius-md);
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: all var(--transition-base);
+  border: 1px solid transparent;
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--color-border);
+  cursor: default;
+  display: inline-block;
+
+  &:hover {
+    background: var(--color-surface);
+    color: var(--color-primary);
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: var(--shadow-md);
+    border-color: var(--color-primary);
+  }
+}
+
 .tech-stack-grid {
   display: flex;
   flex-wrap: wrap;
@@ -637,38 +662,10 @@ header {
   max-width: 900px;
   margin: 0 auto;
 
-  .tech-item {
-    background: var(--color-light-bg);
-    color: var(--color-text);
-    padding: 0.75rem 1.5rem;
-    border-radius: var(--radius-md);
-    font-weight: 600;
-    font-size: 0.95rem;
-    transition: all var(--transition-base);
-    border: 1px solid transparent;
-
-    &:hover {
-      background: var(--color-surface);
-      color: var(--color-primary);
-      transform: translateY(-3px);
-      box-shadow: var(--shadow-md);
-      border-color: var(--color-primary);
-    }
-
-    box-shadow: var(--shadow-sm);
-    transition: all var(--transition-bounce);
-    border: 1px solid var(--color-border);
-    cursor: default;
-
-    &:hover {
-      transform: translateY(-4px) scale(1.05);
-      box-shadow: var(--shadow-md);
-      border-color: var(--color-primary);
-      color: var(--color-primary);
-      background: var(--color-surface);
-    }
-  }
+  // .tech-item styles moved to global
 }
+
+
 
 // Featured Projects (Home Page)
 .featured-projects-grid {
@@ -1015,15 +1012,15 @@ header {
         transition: color 0.3s ease;
       }
 
-      ul {
-        list-style: none;
-        padding: 0;
-        margin: 0;
+      .skill-badges {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 0.5rem;
 
-        li {
-          margin-bottom: 0.5rem;
-          font-size: 0.95rem;
-          color: var(--color-text-light);
+        .tech-item {
+          padding: 0.5rem 1rem; // Slightly smaller for tree view
+          font-size: 0.85rem;
         }
       }
     }

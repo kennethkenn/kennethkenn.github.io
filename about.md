@@ -36,14 +36,14 @@ description: Learn about Kenneth's journey as a digital artisan blending code an
             <div class="tree-category">
                 <div class="category-card">
                     <h3>Languages</h3>
-                    <ul>
-                        <li>C/C++</li>
-                        <li>Java</li>
-                        <li>Python</li>
-                        <li>TypeScript</li>
-                        <li>Kotlin</li>
-                        <li>Assembly</li>
-                    </ul>
+                    <div class="skill-badges">
+                        <span class="tech-item">C/C++</span>
+                        <span class="tech-item">Java</span>
+                        <span class="tech-item">Python</span>
+                        <span class="tech-item">TypeScript</span>
+                        <span class="tech-item">Kotlin</span>
+                        <span class="tech-item">Assembly</span>
+                    </div>
                 </div>
             </div>
 
@@ -51,13 +51,13 @@ description: Learn about Kenneth's journey as a digital artisan blending code an
             <div class="tree-category">
                 <div class="category-card">
                     <h3>Frontend</h3>
-                    <ul>
-                        <li>React</li>
-                        <li>Angular</li>
-                        <li>HTML5</li>
-                        <li>SCSS</li>
-                        <li>Tailwind</li>
-                    </ul>
+                    <div class="skill-badges">
+                        <span class="tech-item">React</span>
+                        <span class="tech-item">Angular</span>
+                        <span class="tech-item">HTML5</span>
+                        <span class="tech-item">SCSS</span>
+                        <span class="tech-item">Tailwind</span>
+                    </div>
                 </div>
             </div>
 
@@ -65,13 +65,13 @@ description: Learn about Kenneth's journey as a digital artisan blending code an
             <div class="tree-category">
                 <div class="category-card">
                     <h3>Backend</h3>
-                    <ul>
-                        <li>Node.js</li>
-                        <li>Spring Boot</li>
-                        <li>Flask</li>
-                        <li>PostgreSQL</li>
-                        <li>SQL</li>
-                    </ul>
+                    <div class="skill-badges">
+                        <span class="tech-item">Node.js</span>
+                        <span class="tech-item">Spring Boot</span>
+                        <span class="tech-item">Flask</span>
+                        <span class="tech-item">PostgreSQL</span>
+                        <span class="tech-item">SQL</span>
+                    </div>
                 </div>
             </div>
 
@@ -79,11 +79,11 @@ description: Learn about Kenneth's journey as a digital artisan blending code an
             <div class="tree-category">
                 <div class="category-card">
                     <h3>App Dev</h3>
-                    <ul>
-                        <li>Android</li>
-                        <li>Qt</li>
-                        <li>wxWidgets</li>
-                    </ul>
+                    <div class="skill-badges">
+                        <span class="tech-item">Android</span>
+                        <span class="tech-item">Qt</span>
+                        <span class="tech-item">wxWidgets</span>
+                    </div>
                 </div>
             </div>
 
@@ -91,13 +91,13 @@ description: Learn about Kenneth's journey as a digital artisan blending code an
             <div class="tree-category">
                 <div class="category-card">
                     <h3>DevOps</h3>
-                    <ul>
-                        <li>Git</li>
-                        <li>Docker</li>
-                        <li>AWS</li>
-                        <li>Linux</li>
-                        <li>CMake</li>
-                    </ul>
+                    <div class="skill-badges">
+                        <span class="tech-item">Git</span>
+                        <span class="tech-item">Docker</span>
+                        <span class="tech-item">AWS</span>
+                        <span class="tech-item">Linux</span>
+                        <span class="tech-item">CMake</span>
+                    </div>
                 </div>
             </div>
         </div>
