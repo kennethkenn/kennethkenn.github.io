@@ -46,10 +46,16 @@ description: Kenneth - Fullstack Developer & Designer specializing in C/C++, Jav
       <span class="tech-item">Python</span>
       <span class="tech-item">Spring Boot</span>
       <span class="tech-item">Flask</span>
-      <span class="tech-item">AngularJS</span>
-      <span class="tech-item">SQL</span>
-      <span class="tech-item">Git</span>
+      <span class="tech-item">Qt</span>
+      <span class="tech-item">wxWidgets</span>
+      <span class="tech-item">Node.js</span>
+      <span class="tech-item">React</span>
+      <span class="tech-item">Angular</span>
+      <span class="tech-item">PostgreSQL</span>
+      <span class="tech-item">Linux</span>
       <span class="tech-item">Docker</span>
+      <span class="tech-item">Git</span>
+      <span class="tech-item">CMake</span>
       <span class="tech-item">x86 Assembly</span>
     </div>
   </div>
