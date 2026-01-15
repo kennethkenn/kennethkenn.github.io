@@ -3,25 +3,42 @@ layout: default
 title: Blog
 ---
 
-<section class="container" style="padding: 4rem 1rem;">
 
-  <div class="blog-grid" style="display: grid; gap: 3rem; max-width: 800px; margin: 0 auto;">
+<section class="blog-section">
+  <div class="blog-header">
+    <h1>Blog</h1>
+    <p>Thoughts, tutorials, and insights on software development.</p>
+  </div>
+
+  <div class="blog-grid">
     {% for post in site.posts %}
-      <article class="blog-post" style="border-bottom: 1px solid var(--color-border); padding-bottom: 2rem;">
-        <h2 style="margin-bottom: 0.5rem;">
-          <a href="{{ post.url | relative_url }}" style="text-decoration: none; color: var(--color-text);">{{ post.title }}</a>
-        </h2>
-        <div class="post-meta" style="color: var(--color-text-light); font-size: 0.9rem; margin-bottom: 1rem;">
-          {{ post.date | date: "%B %-d, %Y" }}
+      <article class="blog-card">
+        <a href="{{ post.url | relative_url }}" class="stretched-link" aria-label="{{ post.title }}"></a>
+        <div class="blog-card-content">
+          <div class="post-meta">
+            {{ post.date | date: "%B %-d, %Y" }}
+          </div>
+          <h2>
+            <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+          </h2>
+          <p class="post-excerpt">
+            {% if post.description %}
+              {{ post.description }}
+            {% else %}
+              {{ post.excerpt | strip_html | truncatewords: 20 }}
+            {% endif %}
+          </p>
         </div>
-        {% if post.categories %}
-        <div class="post-categories-container" style="justify-content: flex-start; margin-left: -0.5rem; margin-top: 0;">
-            {% for category in post.categories %}
-            <span class="category-badge">{{ category }}</span>
-            {% endfor %}
+        <div class="blog-card-footer">
+            <div class="post-categories">
+            {% if post.categories %}
+                {% for category in post.categories limit:1 %}
+                <span class="category-badge">{{ category }}</span>
+                {% endfor %}
+            {% endif %}
+            </div>
+            <span class="read-more-link">Read More &rarr;</span>
         </div>
-        {% endif %}
-        <a href="{{ post.url | relative_url }}" class="btn-text" style="color: var(--color-primary); font-weight: 700; text-decoration: none;">Read More →</a>
       </article>
     {% else %}
       <p>No posts found.</p>
