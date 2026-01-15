@@ -4,7 +4,7 @@ title: Home
 description: Kenneth - Fullstack Developer & Designer specializing in C/C++, Java, Spring Boot, and building exceptional digital products.
 ---
 <section class="hero">
-  <img src="https://ui-avatars.com/api/?name=Kenneth&size=200&background=C5A059&color=fff&bold=true"
+  <img src="assets/images/profile.png"
        alt="Kenneth - Portfolio"
        class="profile-img">
   <h1>Kenneth Buchunju</h1>
