@@ -5,6 +5,13 @@
   demo: https://kennethkenn.github.io
   image: https://placehold.co/600x400/2C3E50/FFF?text=Portfolio
 
+- title: Minimalist OS Kernel
+  description: A didactic 32-bit operating system kernel written from scratch. It boots from bare metal, handles protected mode switching, basic memory paging, and keyboard interrupt handling.
+  tech: C, x86 Assembly, Makefile
+  github: https://github.com/kennethkenn/ATLAS
+  demo: #
+  image: https://github.com/kennethkenn/ATLAS/blob/main/images/img1.png
+
 - title: Enterprise Inventory System
   description: A robust enterprise application for tracking stock levels across multiple warehouses, featuring a RESTful API backend, role-based access control, and real-time reporting dashboards.
   tech: Java, Spring Boot, AngularJS, SQL
@@ -95,13 +102,6 @@
   github: #
   demo: #
   image: https://placehold.co/600x400/3498db/ffffff?text=Discussion+Forum
-
-- title: Minimalist OS Kernel
-  description: A didactic 32-bit operating system kernel written from scratch. It boots from bare metal, handles protected mode switching, basic memory paging, and keyboard interrupt handling.
-  tech: C, x86 Assembly, Makefile
-  github: #
-  demo: #
-  image: https://placehold.co/600x400/2c3e50/ffffff?text=OS+Kernel
 
 - title: Cross-Platform Desktop Note App
   description: A privacy-focused, offline-first desktop note-taking app. It supports extensive markdown formatting, local encryption for data security, and seamless cross-platform performance.
