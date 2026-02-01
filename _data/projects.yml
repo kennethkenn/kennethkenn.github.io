@@ -10,7 +10,7 @@
   tech: C, x86 Assembly, Makefile
   github: https://github.com/kennethkenn/ATLAS
   demo: #
-  image: https://github.com/kennethkenn/ATLAS/blob/main/images/img1.png
+  image: https://raw.githubusercontent.com/kennethkenn/ATLAS/refs/heads/main/images/img1.png
 
 - title: Enterprise Inventory System
   description: A robust enterprise application for tracking stock levels across multiple warehouses, featuring a RESTful API backend, role-based access control, and real-time reporting dashboards.
