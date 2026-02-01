@@ -3,7 +3,7 @@
   tech: HTML, SCSS, Jekyll
   github: https://github.com/kennethkenn/kennethkenn.github.io
   demo: https://kennethkenn.github.io
-  image: https://placehold.co/600x400/2C3E50/FFF?text=Portfolio
+  image: https://github.com/kennethkenn/kennethkenn.github.io/blob/main/assets/images/image.png?raw=true
 
 - title: Minimalist OS Kernel
   description: A didactic 32-bit operating system kernel written from scratch. It boots from bare metal, handles protected mode switching, basic memory paging, and keyboard interrupt handling.
