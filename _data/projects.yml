@@ -47,20 +47,6 @@
   demo: #
   image: https://placehold.co/600x400/8e44ad/ffffff?text=Chat+App
 
-- title: Weather Dashboard
-  description: A sleek weather visualization tool consuming the OpenWeatherMap API. It offers automatic geolocation, 5-day forecasts, and dynamic background themes based on current weather conditions.
-  tech: Vue.js, OpenWeatherMap API, Chart.js
-  github: #
-  demo: #
-  image: https://placehold.co/600x400/e67e22/ffffff?text=Weather+Dash
-
-- title: Task Management Tool
-  description: A productivity tool featuring a drag-and-drop Kanban board. Users can organize tasks by priority, set due dates, add subtasks, and track progress with preserved local storage state.
-  tech: React, Redux, Firebase
-  github: #
-  demo: #
-  image: https://placehold.co/600x400/c0392b/ffffff?text=Task+Manager
-
 - title: Recipe Keeper
   description: A digital culinary organizer allowing users to save, categorize, and filter recipes. Includes features for scaling ingredient quantities, generating shopping lists, and collaborative sharing.
   tech: Flutter, SQLite
@@ -103,23 +89,9 @@
   demo: #
   image: https://placehold.co/600x400/3498db/ffffff?text=Discussion+Forum
 
-- title: Cross-Platform Desktop Note App
-  description: A privacy-focused, offline-first desktop note-taking app. It supports extensive markdown formatting, local encryption for data security, and seamless cross-platform performance.
-  tech: React, Electron, Node.js
-  github: #
-  demo: #
-  image: https://placehold.co/600x400/e74c3c/ffffff?text=Desktop+Notes
-
 - title: Inventory Scanner Mobile App
   description: A companion mobile application for warehouse staff. It utilizes the camera for barcode/QR scanning to update inventory records instantly and syncs with the central database.
   tech: React Native, Firebase, Camera API
   github: #
   demo: #
   image: https://placehold.co/600x400/f39c12/ffffff?text=Inventory+App
-
-- title: Microservices E-commerce Platform
-  description: A distributed e-commerce backend architected with microservices. It features independent services for product, order, and user management, communicating via RabbitMQ for resilience.
-  tech: Java, Spring Boot, Docker, RabbitMQ
-  github: #
-  demo: #
-  image: https://placehold.co/600x400/9b59b6/ffffff?text=Microservices+Shop
