@@ -22,16 +22,16 @@
 - title: High-Performance Data Engine
   description: A high-performance, multi-threaded data processing engine connected to low-level hardware. It implements lock-free data structures and custom memory allocators for sub-microsecond latency.
   tech: C++, Python, x86 Assembly
-  github: #
+  github: https://github.com/kennethkenn/Data-Engine
   demo: #
-  image: https://placehold.co/600x400/2C3E50/C5A059?text=Data+Engine
+  image: https://github.com/kennethkenn/Data-Engine/blob/master/benchmark/image.png?raw=true
 
 - title: Personal Finance Tracker
   description: A comprehensive personal finance dashboard that visualizes income streams and expenses. Features include budget setting, recurring transaction tracking, and interactive charts for financial health analysis.
   tech: React, Node.js, PostgreSQL
-  github: #
+  github: https://github.com/kennethkenn/Finance-Tracker
   demo: #
-  image: https://placehold.co/600x400/27ae60/ffffff?text=Finance+Tracker
+  image: https://github.com/kennethkenn/Finance-Tracker/raw/master/screenshots/dashboard1.png
 
 - title: Markdown Blog Engine
   description: A lightweight, file-based CMS that parses Markdown with front-matter metadata. It supports custom themes, syntax highlighting for code blocks, and static site generation for fast deployment.
