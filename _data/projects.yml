@@ -15,9 +15,9 @@
 - title: Enterprise Inventory System
   description: A robust enterprise application for tracking stock levels across multiple warehouses, featuring a RESTful API backend, role-based access control, and real-time reporting dashboards.
   tech: Java, Spring Boot, AngularJS, SQL
-  github: #
+  github: https://github.com/kennethkenn/Enterprise-Inventory
   demo: #
-  image: https://placehold.co/600x400/C5A059/FFF?text=Inventory+System
+  image: https://github.com/kennethkenn/Enterprise-Inventory/blob/master/screenshots/login.png?raw=true
 
 - title: High-Performance Data Engine
   description: A high-performance, multi-threaded data processing engine connected to low-level hardware. It implements lock-free data structures and custom memory allocators for sub-microsecond latency.
