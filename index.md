@@ -4,14 +4,47 @@ title: Home
 description: Kenneth - Fullstack Developer & Designer specializing in C/C++, Java, Spring Boot, and building exceptional digital products.
 ---
 <section class="hero">
-  <img src="assets/images/profile.png"
-       alt="Kenneth - Portfolio"
-       class="profile-img">
-  <h1>Kenneth Buchunju</h1>
-  <h2>Crafting Digital Experiences with <br> Elegance & Precision</h2>
-  <p>Fullstack Developer & Designer specializing in building exceptional digital products.</p>
-<br>
-  <a href="/projects" class="btn-primary">View My Work</a>
+  <div class="hero-inner container">
+    <div class="hero-content">
+      <p class="hero-eyebrow">Fullstack Developer & Designer</p>
+      <h1>Kenneth Buchunju</h1>
+      <h2>Crafting Digital Experiences with <br> Elegance & Precision</h2>
+      <p>Building thoughtful software across systems, web, and product design with a focus on performance, clarity, and polish.</p>
+      <div class="hero-actions">
+        <a href="/projects" class="btn-primary">View My Work</a>
+        <a href="/contacts" class="btn-secondary">Let&#39;s Talk</a>
+      </div>
+      <div class="hero-meta">
+        <div class="meta-item">
+          <span class="meta-label">Specialties</span>
+          <span class="meta-value">C/C++, Java, Spring Boot</span>
+        </div>
+        <div class="meta-item">
+          <span class="meta-label">Focus</span>
+          <span class="meta-value">Performance, UX, Scalability</span>
+        </div>
+      </div>
+    </div>
+    <div class="hero-media">
+      <div class="hero-image-wrap">
+        <img src="assets/images/profile.png"
+             alt="Kenneth - Portfolio"
+             class="profile-img">
+        <div class="hero-badge">
+          <span class="badge-title">Open to</span>
+          <span class="badge-value">Collaborate on an interesting project.</span>
+        </div>
+      </div>
+      <div class="hero-card">
+        <h3>What I Build</h3>
+        <ul>
+          <li>Enterprise-grade backends</li>
+          <li>High-performance desktop apps</li>
+          <li>Modern, conversion-focused web</li>
+        </ul>
+      </div>
+    </div>
+  </div>
 </section>
 
 <section class="home-section services-section">
@@ -19,17 +52,17 @@ description: Kenneth - Fullstack Developer & Designer specializing in C/C++, Jav
     <h2 class="section-title">What I Do</h2>
     <div class="services-grid">
       <div class="service-card">
-        <span class="service-icon">💻</span>
+        <span class="service-icon" aria-hidden="true">&#128187;</span>
         <h3>Fullstack Development</h3>
         <p>Building comprehensive web solutions from the database to the user interface using modern frameworks.</p>
       </div>
       <div class="service-card">
-        <span class="service-icon">🏗️</span>
+        <span class="service-icon" aria-hidden="true">&#127959;</span>
         <h3>System Architecture</h3>
         <p>Designing scalable, maintainable, and efficient software architectures for complex enterprise needs.</p>
       </div>
       <div class="service-card">
-        <span class="service-icon">⚡</span>
+        <span class="service-icon" aria-hidden="true">&#9889;</span>
         <h3>Performance Optimization</h3>
         <p>Analyzing and tuning applications for maximum speed, efficiency, and resource utilization.</p>
       </div>
@@ -82,7 +115,7 @@ description: Kenneth - Fullstack Developer & Designer specializing in C/C++, Jav
               <span class="tech-badge">{{ tech }}</span>
             {% endfor %}
           </div>
-          <a href="{{ project.demo }}" class="btn-text">View Project →</a>
+          <a href="{{ project.github }}" class="btn-text">View Project &rarr;</a>
         </div>
       </div>
       {% endfor %}
