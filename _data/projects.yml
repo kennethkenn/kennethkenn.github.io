@@ -1,10 +1,3 @@
-- title: Portfolio Website
-  description: A responsive personal portfolio website built with Jekyll and SCSS. It features a custom design system, dynamic project loading, and an SEO-optimized blog section.
-  tech: HTML, SCSS, Jekyll
-  github: https://github.com/kennethkenn/kennethkenn.github.io
-  demo: https://kennethkenn.github.io
-  image: https://github.com/kennethkenn/kennethkenn.github.io/blob/main/assets/images/image.png?raw=true
-
 - title: Minimalist OS Kernel
   description: A didactic 32-bit operating system kernel written from scratch. It boots from bare metal, handles protected mode switching, basic memory paging, and keyboard interrupt handling.
   tech: C, x86 Assembly, Makefile
@@ -36,9 +29,23 @@
 - title: Markdown Blog Engine
   description: A lightweight, file-based CMS that parses Markdown with front-matter metadata. It supports custom themes, syntax highlighting for code blocks, and static site generation for fast deployment.
   tech: Next.js, Gray-matter, Tailwind CSS
-  github: #
+  github: https://github.com/kennethkenn/Blog-Engine
   demo: #
-  image: https://placehold.co/600x400/2980b9/ffffff?text=Blog+Engine
+  image: https://github.com/kennethkenn/Blog-Engine/raw/master/images/screenshot.png
+
+- title: URL Shortener Service
+  description: A high-throughput link shortening service. It generates unique aliases, handles redirects with millisecond latency, and provides detailed analytics on click-through rates and geographical data.
+  tech: Python, Fastapi, Docker, SQLite
+  github: https://github.com/kennethkenn/url-shortener
+  demo: #
+  image: https://github.com/kennethkenn/url-shortener/raw/master/images/screenshot.png
+
+- title: Algorithm Visualizer
+  description: An educational interactive tool that animates sorting and pathfinding algorithms (like Dijkstra, A*, QuickSort). It helps visualize step-by-step execution and time complexity.
+  tech: JavaScript, HTML5 Canvas
+  github: https://github.com/kennethkenn/algovista
+  demo: #
+  image: https://github.com/kennethkenn/algovista/raw/master/images/search.png
 
 - title: Real-time Chat Application
   description: A scalable real-time messaging application using WebSockets. Supports private 1-on-1 chats, group rooms, typing indicators, read receipts, and push notifications.
@@ -61,20 +68,6 @@
   demo: #
   image: https://placehold.co/600x400/f1c40f/333333?text=Fitness+Log
 
-- title: URL Shortener Service
-  description: A high-throughput link shortening service. It generates unique aliases, handles redirects with millisecond latency, and provides detailed analytics on click-through rates and geographical data.
-  tech: Go, Redis, Docker
-  github: #
-  demo: #
-  image: https://placehold.co/600x400/7f8c8d/ffffff?text=URL+Shortener
-
-- title: Algorithm Visualizer
-  description: An educational interactive tool that animates sorting and pathfinding algorithms (like Dijkstra, A*, QuickSort). It helps visualize step-by-step execution and time complexity.
-  tech: JavaScript, HTML5 Canvas
-  github: #
-  demo: #
-  image: https://placehold.co/600x400/2c3e50/ffffff?text=Algo+Visualizer
-
 - title: E-commerce Storefront
   description: A fully functional mock online store application. It demonstrates product catalog filtering, cart state management, user authentication, and a simulated Stripe checkout payment flow.
   tech: TypeScript, Next.js, Stripe API
@@ -95,3 +88,10 @@
   github: #
   demo: #
   image: https://placehold.co/600x400/f39c12/ffffff?text=Inventory+App
+
+- title: Portfolio Website
+  description: A responsive personal portfolio website built with Jekyll and SCSS. It features a custom design system, dynamic project loading, and an SEO-optimized blog section.
+  tech: HTML, SCSS, Jekyll
+  github: https://github.com/kennethkenn/kennethkenn.github.io
+  demo: https://kennethkenn.github.io
+  image: https://github.com/kennethkenn/kennethkenn.github.io/blob/main/assets/images/image.png?raw=true
