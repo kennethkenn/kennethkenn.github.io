@@ -390,21 +390,6 @@ header {
     text-align: left;
   }
 
-  .hero-eyebrow {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.5rem;
-    background: var(--color-surface);
-    border: 1px solid var(--color-border);
-    color: var(--color-text-light);
-    padding: 0.35rem 1rem;
-    border-radius: var(--radius-full);
-    font-size: 0.85rem;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    margin-bottom: 1.5rem;
-  }
-
   h1 {
     font-size: 4rem;
     margin-bottom: 0.65rem;
@@ -595,6 +580,10 @@ header {
 
     .hero-content {
       text-align: center;
+    }
+
+    h1 {
+      display: block;
     }
 
     .hero-actions {

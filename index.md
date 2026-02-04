@@ -6,7 +6,6 @@ description: Kenneth - Fullstack Developer & Designer specializing in C/C++, Jav
 <section class="hero">
   <div class="hero-inner container">
     <div class="hero-content">
-      <p class="hero-eyebrow">Fullstack Developer & Designer</p>
       <h1>Kenneth Buchunju</h1>
       <h2>Crafting Digital Experiences with <br> Elegance & Precision</h2>
       <p>Building thoughtful software across systems, web, and product design with a focus on performance, clarity, and polish.</p>
