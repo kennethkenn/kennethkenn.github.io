@@ -50,16 +50,16 @@
 - title: Real-time Chat Application
   description: A scalable real-time messaging application using WebSockets. Supports private 1-on-1 chats, group rooms, typing indicators, read receipts, and push notifications.
   tech: Socket.io, Express, Vanilla JS
-  github: #
+  github: https://github.com/kennethkenn/Magma-Chat
   demo: #
-  image: https://placehold.co/600x400/8e44ad/ffffff?text=Chat+App
+  image: https://github.com/kennethkenn/Magma-Chat/raw/master/images/image.png
 
 - title: Recipe Keeper
   description: A digital culinary organizer allowing users to save, categorize, and filter recipes. Includes features for scaling ingredient quantities, generating shopping lists, and collaborative sharing.
   tech: Flutter, SQLite
-  github: #
+  github: https://github.com/kennethkenn/Recipe-Keeper
   demo: #
-  image: https://placehold.co/600x400/16a085/ffffff?text=Recipe+Keeper
+  image: https://github.com/kennethkenn/Recipe-Keeper/raw/master/assets/images/image.png
 
 - title: Fitness Activity Log
   description: A dedicated workout tracker to log sets, reps, and weights. It visualizes progress over time with line charts and includes a built-in rest timer and exercise history database.
