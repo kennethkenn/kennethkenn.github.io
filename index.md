@@ -1,6 +1,5 @@
 ---
 layout: default
-title: Home
 description: Kenneth - Fullstack Developer & Designer specializing in C/C++, Java, Spring Boot, and building exceptional digital products.
 ---
 <section class="hero">
