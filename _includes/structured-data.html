@@ -2,10 +2,12 @@
 {
   "@context": "https://schema.org",
   "@type": "Person",
-  "name": "Kenneth",
+  "@id": "{{ site.url }}#person",
+  "name": "The Mint Coder",
+  "alternateName": "TheMintCoder",
   "url": "{{ site.url }}",
-  "email": "{{ site.email }}",
-  "jobTitle": "Fullstack Developer & Designer",
+  "email": "mailto:{{ site.email }}",
+  "jobTitle": "Full Stack Developer",
   "description": "{{ site.description }}",
   "knowsAbout": [
     "C/C++",
@@ -13,12 +15,17 @@
     "Python",
     "Spring Boot",
     "Flask",
-    "AngularJS",
+    "Angular",
     "SQL",
     "Docker",
     "Git",
     "x86 Assembly"
   ],
+  "affiliation": {
+    "@type": "Brand",
+    "name": "The Mint Coder",
+    "url": "{{ site.url }}"
+  },
   "sameAs": [
     "https://github.com/kennethkenn",
     "https://linkedin.com/in/kenneth-buchunju"
