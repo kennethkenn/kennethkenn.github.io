@@ -5,11 +5,13 @@ date: 2025-07-25
 categories: [Frontend, React]
 description: "A deep dive into when to use React's built-in Context API versus a robust library like Redux, with code examples and performance considerations."
 tags: [react, redux, context-api, frontend, javascript]
+excerpt_separator: "<!--excerpt-->"
 ---
 
 In the React ecosystem, managing state is one of the most critical architectural decisions you'll make. For years, Redux was the undisputed king. Then came the Context API updates, and suddenly, developers started asking: "Do I even need Redux anymore?"
 
 The answer, as always in software engineering, is: *it depends*.
+<!--excerpt-->
 
 ## The Context API: Built-in Simplicity
 
@@ -21,6 +23,7 @@ React's Context API is designed to share data that can be considered "global" fo
 *   **Simple state**: If you're just drilling a prop down 3-4 levels, Context is perfect.
 *   **Small to medium apps**: For many apps, `useContext` + `useReducer` is sufficient.
 
+{% raw %}
 ```javascript
 // ThemeContext.js
 import React, { createContext, useState } from 'react';
@@ -37,6 +40,7 @@ export const ThemeProvider = ({ children }) => {
   );
 };
 ```
+{% endraw %}
 
 ## Redux: The Heavy Lifter
 

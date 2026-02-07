@@ -10,6 +10,7 @@ Automate your C++ builds, tests, and releases with GitHub Actions.
 
 ## Basic Workflow
 
+{% raw %}
 ```yaml
 # .github/workflows/build.yml
 name: Build and Test
@@ -41,9 +42,11 @@ jobs:
     - name: Test
       run: cd build && ctest --output-on-failure
 ```
+{% endraw %}
 
 ## Multi-Platform Build
 
+{% raw %}
 ```yaml
 jobs:
   build:
@@ -67,9 +70,11 @@ jobs:
         cmake -B build -DCMAKE_CXX_COMPILER=${{ matrix.compiler }}
         cmake --build build
 ```
+{% endraw %}
 
 ## Caching Dependencies
 
+{% raw %}
 ```yaml
 - name: Cache dependencies
   uses: actions/cache@v3
@@ -79,9 +84,11 @@ jobs:
       build/_deps
     key: ${{ runner.os }}-deps-${{ hashFiles('**/CMakeLists.txt') }}
 ```
+{% endraw %}
 
 ## Code Coverage
 
+{% raw %}
 ```yaml
 - name: Coverage
   run: |
@@ -95,9 +102,11 @@ jobs:
   with:
     files: build/coverage.info
 ```
+{% endraw %}
 
 ## Release Automation
 
+{% raw %}
 ```yaml
 on:
   push:
@@ -121,6 +130,7 @@ jobs:
       with:
         files: build/*.tar.gz
 ```
+{% endraw %}
 
 ---
 

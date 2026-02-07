@@ -5,7 +5,7 @@ title: Blog
 
 
 <section class="blog-section">
-  <div class="blog-header">
+  <div class="blog-header page-hero">
     <h1>Blog</h1>
     <p>Thoughts, tutorials, and insights on software development.</p>
     <p><i>Challenged myself to write one blog a day</i></p>
@@ -13,7 +13,7 @@ title: Blog
 
   <div class="blog-grid">
     {% for post in site.posts %}
-      <article class="blog-card">
+      <article class="blog-card card-base">
         <a href="{{ post.url | relative_url }}" class="stretched-link" aria-label="{{ post.title }}"></a>
         <div class="blog-card-content">
           <div class="post-meta">

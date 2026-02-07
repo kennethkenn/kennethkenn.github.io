@@ -19,16 +19,6 @@
         -webkit-text-fill-color: transparent;
         position: relative;
         display: inline-block;
-
-        &::after {
-            content: '';
-            display: block;
-            width: 80px;
-            height: 4px;
-            background: var(--color-primary);
-            margin: 0.5rem auto 0;
-            border-radius: 2px;
-        }
     }
 
     p {
@@ -46,22 +36,12 @@
 }
 
 .blog-card {
-    background: var(--color-surface);
-    border-radius: var(--radius-lg);
-    overflow: hidden;
-    transition: all var(--transition-base);
-    border: 1px solid var(--color-border);
     display: flex;
     flex-direction: column;
     height: 100%;
     position: relative;
-    box-shadow: var(--shadow-sm);
 
     &:hover {
-        transform: translateY(-5px);
-        box-shadow: var(--shadow-lg);
-        border-color: var(--color-primary);
-
         .read-more-link {
             color: var(--color-primary);
             padding-right: 5px; // Subtle movement hint
