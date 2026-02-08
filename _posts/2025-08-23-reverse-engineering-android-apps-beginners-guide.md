@@ -6,7 +6,7 @@ categories: [Security, Android]
 tags: [Reverse Engineering, Android, APK, Security]
 ---
 
-Ever wondered how an Android app works under the hood? Here's how to peek inside.
+Ever wondered how an Android app works under the hood? Here's how to peek inside, safely and legally, without bricking your device.
 
 ## Tools You'll Need
 
@@ -38,6 +38,15 @@ apktool d base.apk -o output/
 #   smali/        # Decompiled code
 ```
 
+### APK Structure 101
+
+An APK is just a zip file:
+
+1.  `classes.dex`: The compiled bytecode.
+2.  `AndroidManifest.xml`: App metadata and permissions.
+3.  `res/` and `resources.arsc`: UI assets and strings.
+4.  `lib/`: Native libraries (`.so` files).
+
 ## Step 3: Analyze Code
 
 ### Convert to Java
@@ -48,6 +57,8 @@ jadx base.apk -d output-java/
 
 # Now you have .java files
 ```
+
+Use JADX for readability, but keep apktool output around because it preserves resources and manifest details.
 
 ### Example Decompiled Code
 
@@ -84,6 +95,17 @@ Java.perform(function() {
 frida -U -f com.example.app -l hook.js
 ```
 
+## Bonus: Inspect the Manifest
+
+The manifest tells you permissions, exported activities, and deep links:
+
+```bash
+apktool d base.apk -o output/
+cat output/AndroidManifest.xml
+```
+
+Look for exported components or dangerous permissions like `READ_SMS`, `READ_CONTACTS`, or `WRITE_EXTERNAL_STORAGE`.
+
 ## Common Findings
 
 ### 1. Hardcoded Secrets
@@ -98,6 +120,10 @@ String dbPassword = "admin123";
 // No certificate pinning
 HttpURLConnection conn = (HttpURLConnection) url.openConnection();
 ```
+
+### 2b. No TLS Validation
+
+Custom `TrustManager` implementations that accept all certificates are a red flag.
 
 ### 3. Root Detection
 ```java
@@ -119,6 +145,10 @@ Java.perform(function() {
 });
 ```
 
+## Dynamic Traffic Analysis (Optional)
+
+Use a proxy like mitmproxy or Burp Suite to observe API calls. This helps verify if data is encrypted or if sensitive information is sent in plaintext.
+
 ## Ethical Considerations
 
 **Legal uses:**
@@ -138,6 +168,7 @@ Java.perform(function() {
 3. **Root Detection:** Multiple checks
 4. **Encrypt Secrets:** Use Android Keystore
 5. **Tamper Detection:** Verify APK signature
+6. **Avoid hardcoded secrets**: Use backend-issued tokens instead
 
 ---
 

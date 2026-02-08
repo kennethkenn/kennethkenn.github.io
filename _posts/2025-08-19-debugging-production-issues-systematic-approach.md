@@ -6,7 +6,7 @@ categories: [Debugging, DevOps]
 tags: [Debugging, Production, Troubleshooting]
 ---
 
-Production issues are stressful. Here's a systematic approach to debug them quickly.
+Production issues are stressful. Here's a systematic approach to debug them quickly without making things worse.
 
 ## The Framework
 
@@ -15,6 +15,8 @@ Production issues are stressful. Here's a systematic approach to debug them quic
 3. **Test Hypothesis**
 4. **Fix and Verify**
 5. **Document**
+
+Before you start: **stabilize the system**. Rate limit, scale up, or roll back if needed. Debugging while users are down is rarely worth it.
 
 ## Step 1: Gather Information
 
@@ -36,6 +38,8 @@ awk '$0 >= "2024-01-15 14:00" && $0 <= "2024-01-15 15:00"' app.log
 - Request rate
 - Error rate
 - Response time
+- Queue depth / backlog
+- Saturation (threads, connections, file descriptors)
 
 ### Recent Changes
 ```bash
@@ -90,6 +94,14 @@ watch -n 1 'curl -s http://localhost:8080/actuator/metrics/hikari.connections.ac
 
 ## Common Patterns
 
+### Slow Dependency
+
+If downstream latency spikes, everything upstream can collapse:
+
+1.  Check timeouts and retry behavior.
+2.  Ensure you are not retrying without backoff.
+3.  Fail fast or use circuit breakers.
+
 ### Memory Leak
 ```bash
 # Heap dump
@@ -126,6 +138,15 @@ tcpdump -i any -w capture.pcap port 5432
 - **Metrics:** Prometheus, Grafana, Datadog
 - **Tracing:** Jaeger, Zipkin
 - **APM:** New Relic, AppDynamics
+
+## Communication Matters
+
+During incidents, keep a short status update loop:
+
+1.  Current impact
+2.  What you believe the cause is
+3.  What you are doing next
+4.  ETA for next update
 
 ---
 

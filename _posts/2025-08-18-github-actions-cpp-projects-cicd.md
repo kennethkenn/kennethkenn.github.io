@@ -6,7 +6,14 @@ categories: [DevOps, C++]
 tags: [GitHub Actions, CI/CD, C++, Automation]
 ---
 
-Automate your C++ builds, tests, and releases with GitHub Actions.
+Automate your C++ builds, tests, and releases with GitHub Actions. The key is to make the workflow **reproducible**, **fast**, and **consistent across platforms**.
+
+## Core Ideas
+
+1.  **Use out-of-source builds**: Keep artifacts in `build/`.
+2.  **Test every PR**: Fail fast before merge.
+3.  **Cache dependencies**: Reduce cold-start time.
+4.  **Publish artifacts**: Make binaries easy to download.
 
 ## Basic Workflow
 
@@ -34,13 +41,27 @@ jobs:
         sudo apt-get install -y cmake g++ libboost-all-dev
     
     - name: Configure
-      run: cmake -B build -DCMAKE_BUILD_TYPE=Release
+      run: cmake -S . -B build -DCMAKE_BUILD_TYPE=Release
     
     - name: Build
       run: cmake --build build
     
     - name: Test
       run: cd build && ctest --output-on-failure
+```
+{% endraw %}
+
+## Use CMake Presets
+
+If you have `CMakePresets.json`, your workflow becomes cleaner and consistent with local builds:
+
+{% raw %}
+```yaml
+- name: Configure
+  run: cmake --preset linux-release
+
+- name: Build
+  run: cmake --build --preset linux-release
 ```
 {% endraw %}
 
@@ -67,10 +88,12 @@ jobs:
     
     - name: Build
       run: |
-        cmake -B build -DCMAKE_CXX_COMPILER=${{ matrix.compiler }}
+        cmake -S . -B build -DCMAKE_CXX_COMPILER=${{ matrix.compiler }}
         cmake --build build
 ```
 {% endraw %}
+
+Use `exclude` to avoid invalid compiler/OS combos. For MSVC on Windows, consider using the Visual Studio generator and omit `CMAKE_CXX_COMPILER`.
 
 ## Caching Dependencies
 
@@ -83,6 +106,18 @@ jobs:
       ~/.conan
       build/_deps
     key: ${{ runner.os }}-deps-${{ hashFiles('**/CMakeLists.txt') }}
+```
+{% endraw %}
+
+For faster compiles, add `ccache`:
+
+{% raw %}
+```yaml
+- name: Cache ccache
+  uses: actions/cache@v3
+  with:
+    path: ~/.ccache
+    key: ${{ runner.os }}-ccache-${{ hashFiles('**/*.cpp', '**/*.h') }}
 ```
 {% endraw %}
 
@@ -101,6 +136,18 @@ jobs:
   uses: codecov/codecov-action@v3
   with:
     files: build/coverage.info
+```
+{% endraw %}
+
+## Upload Build Artifacts
+
+{% raw %}
+```yaml
+- name: Upload artifacts
+  uses: actions/upload-artifact@v4
+  with:
+    name: binaries-${{ matrix.os }}
+    path: build/bin/
 ```
 {% endraw %}
 
