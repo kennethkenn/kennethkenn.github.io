@@ -6,9 +6,12 @@ title: Blog
 
 <section class="blog-section">
   <div class="blog-header page-hero">
-    <h1>Blog</h1>
-    <p>Thoughts, tutorials, and insights on software development.</p>
-    <p><i>Challenged myself to write one blog a day</i></p>
+    <div class="container hero-inner">
+      <span class="hero-kicker">Writing & Insights</span>
+      <h1>The Blog</h1>
+      <p class="hero-tagline">Thoughts on software development and the daily challenge of writing.</p>
+      <div class="hero-meta-badge">Daily Challenge Active</div>
+    </div>
   </div>
 
   <div class="blog-grid">

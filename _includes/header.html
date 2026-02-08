@@ -1,19 +1,24 @@
-<header>
+<header id="site-header">
     <div class="container header-container">
-        <a href="{{ '/' | relative_url }}" class="logo">KB.</a>
+        <a href="{{ '/' | relative_url }}" class="logo">
+            <span class="logo-text">KB.</span>
+        </a>
 
-        <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
-            <span class="hamburger"></span>
-        </button>
-
-        <nav class="nav-menu">
+        <nav class="nav-menu" id="nav-menu">
             <ul>
-                <li><a href="{{ '/' | relative_url }}">Home</a></li>
-                <li><a href="{{ '/projects' | relative_url }}">Projects</a></li>
-                <li><a href="{{ '/about' | relative_url }}">About</a></li>
-                <li><a href="{{ '/blog' | relative_url }}">Blog</a></li>
-                <li><a href="{{ '/contacts' | relative_url }}">Contact</a></li>
+                <li><a href="{{ '/' | relative_url }}" class="nav-link">Home</a></li>
+                <li><a href="{{ '/projects' | relative_url }}" class="nav-link">Projects</a></li>
+                <li><a href="{{ '/about' | relative_url }}" class="nav-link">About</a></li>
+                <li><a href="{{ '/blog' | relative_url }}" class="nav-link">Blog</a></li>
+                <li><a href="{{ '/contacts' | relative_url }}" class="nav-link">Contact</a></li>
             </ul>
         </nav>
+
+        <div class="header-actions">
+            <a href="{{ '/contacts' | relative_url }}" class="btn-header-cta">Get in Touch</a>
+            <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="nav-menu">
+                <span class="hamburger"></span>
+            </button>
+        </div>
     </div>
 </header>

@@ -6,8 +6,11 @@ description: Explore Kenneth's portfolio of projects including enterprise system
 
 <section class="projects">
   <div class="projects-header page-hero">
-    <h1>Projects</h1>
-    <p>Selected work spanning systems, full-stack applications, and performance-focused tooling.</p>
+    <div class="container hero-inner">
+      <span class="hero-kicker">Portfolio</span>
+      <h1>Selected Projects</h1>
+      <p class="hero-tagline">Systems, full-stack applications, and performance-focused tooling.</p>
+    </div>
   </div>
 
   <div class="projects-grid">

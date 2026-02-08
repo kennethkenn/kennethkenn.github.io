@@ -6,8 +6,11 @@ description: Get in touch with Kenneth for project collaborations, consultations
 
 <section class="contact-section">
   <div class="contact-intro page-hero">
-    <h1>Get in Touch</h1>
-    <p>Have a project in mind or just want to say hello? I'd love to hear from you.</p>
+    <div class="container hero-inner">
+      <span class="hero-kicker">Collaboration</span>
+      <h1>Get in Touch</h1>
+      <p class="hero-tagline">Have a project in mind or just want to say hello? I'd love to hear from you.</p>
+    </div>
   </div>
 
   <div class="contact-form-container">

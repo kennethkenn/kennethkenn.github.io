@@ -8,8 +8,11 @@ description: Learn about Kenneth's journey as a digital artisan blending code an
   
   <!-- Section 1: Hero -->
   <section class="about-hero page-hero">
-    <h1>About Me</h1>
-    <p class="lead">I consider myself a digital artisan, blending code and creativity to build meaningful experiences.</p>
+    <div class="container hero-inner">
+      <span class="hero-kicker">Digital Artisan</span>
+      <h1>About Me</h1>
+      <p class="hero-tagline">Building meaningful experiences at the intersection of logic and creativity.</p>
+    </div>
   </section>
 
   <!-- Section 2: Narrative & Profile -->
