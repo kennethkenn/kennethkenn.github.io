@@ -78,9 +78,9 @@
 - title: Online Discussion Forum
   description: A community-driven platform featuring threaded discussions, rich-text editing, specific user reputation systems, and moderation tools for admin management.
   tech: Java, Spring Boot, PostgreSQL, AngularJS
-  github: #
+  github: https://github.com/kennethkenn/Forum
   demo: #
-  image: https://placehold.co/600x400/3498db/ffffff?text=Discussion+Forum
+  image: https://github.com/kennethkenn/Forum/raw/main/images/dashboard_light.png
 
 - title: Inventory Scanner Mobile App
   description: A companion mobile application for warehouse staff. It utilizes the camera for barcode/QR scanning to update inventory records instantly and syncs with the central database.
