@@ -71,9 +71,9 @@
 - title: E-commerce Storefront
   description: A fully functional mock online store application. It demonstrates product catalog filtering, cart state management, user authentication, and a simulated Stripe checkout payment flow.
   tech: TypeScript, Next.js, Stripe API
-  github: #
+  github: https://github.com/kennethkenn/ShopHub
   demo: #
-  image: https://placehold.co/600x400/d35400/ffffff?text=E-commerce
+  image: https://github.com/kennethkenn/ShopHub/raw/master/screenshots/home.png
 
 - title: Online Discussion Forum
   description: A community-driven platform featuring threaded discussions, rich-text editing, specific user reputation systems, and moderation tools for admin management.
