@@ -10,7 +10,7 @@
   tech: Java, Spring Boot, AngularJS, SQL
   github: https://github.com/kennethkenn/Enterprise-Inventory
   demo: #
-  image: https://github.com/kennethkenn/Enterprise-Inventory/blob/master/screenshots/login.png?raw=true
+  image: https://github.com/kennethkenn/Enterprise-Inventory/raw/master/screenshots/dashboard.png
 
 - title: Algorithm Visualizer
   description: An educational interactive tool that animates sorting and pathfinding algorithms (like Dijkstra, A*, QuickSort). It helps visualize step-by-step execution and time complexity.
@@ -24,7 +24,7 @@
   tech: C, x86 Assembly, Makefile
   github: https://github.com/kennethkenn/ATLAS
   demo: #
-  image: https://raw.githubusercontent.com/kennethkenn/ATLAS/refs/heads/main/images/img1.png
+  image: https://github.com/kennethkenn/ATLAS/raw/main/images/img1.png
 
 - title: High-Performance Data Engine
   description: A high-performance, multi-threaded data processing engine connected to low-level hardware. It implements lock-free data structures and custom memory allocators for sub-microsecond latency.
