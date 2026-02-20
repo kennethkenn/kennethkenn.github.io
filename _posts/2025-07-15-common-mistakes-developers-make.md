@@ -4,7 +4,6 @@ title: "Common Mistakes Developers Make When Learning C++ (and How to Avoid Them
 date: 2025-07-15 12:00:00 +0300
 categories: cpp programming learning
 ---
-## Introduction
 
 C++ is a powerful and widely used programming language, but it has a reputation for being difficult to learn—and for good reason. Many developers struggle not because C++ is inherently impossible, but because they approach it with incorrect assumptions or habits carried over from other languages.
 

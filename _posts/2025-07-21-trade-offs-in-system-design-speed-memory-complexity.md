@@ -4,9 +4,6 @@ title: "Trade-offs in System Design: Speed, Memory, and Complexity"
 date: 2025-07-21 12:00:00 +0300
 categories: system-design software-architecture engineering
 ---
-
-## Introduction
-
 Every system design decision comes with trade-offs. Improving performance often increases memory usage. Reducing memory may introduce additional computation. Simplifying a system can limit flexibility, while adding features increases complexity.
 
 Understanding these trade-offs is a core skill for software engineers. This post explores the balance between **speed, memory, and complexity**, and how to make informed design decisions.
@@ -33,7 +30,7 @@ Caching is the classic example.
 
 ```text
 More memory → Faster responses
-````
+```
 
 Examples:
 

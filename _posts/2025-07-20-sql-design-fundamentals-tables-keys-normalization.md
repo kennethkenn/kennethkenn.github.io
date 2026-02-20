@@ -5,8 +5,6 @@ date: 2025-07-20 12:00:00 +0300
 categories: sql databases data-modeling
 ---
 
-## Introduction
-
 Good database design is the foundation of reliable and scalable applications. Poor schema decisions made early often lead to data inconsistencies, complex queries, and performance issues later.
 
 This post covers the core principles of SQL database design—**tables, keys, and normalization**—and explains how to apply them in practical, real-world systems.
@@ -41,7 +39,7 @@ CREATE TABLE users (
     name VARCHAR(100),
     email VARCHAR(255)
 );
-````
+```
 
 At this stage, the table works—but it lacks constraints and structure.
 

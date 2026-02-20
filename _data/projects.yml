@@ -73,7 +73,7 @@
   tech: TypeScript, Next.js, Stripe API
   github: https://github.com/kennethkenn/ShopHub
   demo: #
-  image: https://github.com/kennethkenn/ShopHub/raw/master/screenshots/home.png
+  image: https://github.com/kennethkenn/ShopHub/raw/master/screenshots/products.png
 
 - title: Online Discussion Forum
   description: A community-driven platform featuring threaded discussions, rich-text editing, specific user reputation systems, and moderation tools for admin management.

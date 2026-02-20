@@ -4,9 +4,6 @@ title: "How to Structure Side Projects So They Don’t Die Halfway"
 date: 2025-07-22 12:00:00 +0300
 categories: productivity side-projects software-engineering
 ---
-
-## Introduction
-
 Most developers have a folder full of abandoned side projects. The problem is rarely lack of motivation or skill—it is usually poor structure, unrealistic scope, or unclear goals.
 
 Side projects fail not because they are bad ideas, but because they are designed in a way that makes completion unlikely. This post explains how to structure side projects so they remain manageable, motivating, and finishable.

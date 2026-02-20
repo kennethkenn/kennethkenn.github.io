@@ -5,8 +5,6 @@ date: 2025-07-17 12:00:00 +0300
 categories: backend web-development flask spring-boot
 ---
 
-## Introduction
-
 When building small-to-medium web applications, choosing the right backend framework has a significant impact on development speed, maintainability, and scalability. Two popular choices are **Flask**, a lightweight Python framework, and **Spring Boot**, a production-grade Java framework.
 
 Although both are used to build web APIs and services, they follow very different philosophies. This post compares Flask and Spring Boot across key dimensions to help you make an informed decision.

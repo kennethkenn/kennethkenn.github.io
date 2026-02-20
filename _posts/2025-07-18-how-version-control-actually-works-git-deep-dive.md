@@ -5,8 +5,6 @@ date: 2025-07-18 12:00:00 +0300
 categories: git version-control software-engineering
 ---
 
-## Introduction
-
 Most developers use Git daily, yet many treat it as a collection of memorized commands rather than a system they truly understand. This often leads to confusion when things go wrong—merge conflicts, detached HEAD states, or lost commits.
 
 This post explains how Git actually works under the hood, focusing on practical concepts rather than surface-level commands.
