@@ -26,6 +26,13 @@
   demo: #
   image: https://github.com/kennethkenn/ATLAS/raw/main/images/img1.png
 
+- title: YT-DLP Web Wrapper
+  description: A web interface for yt-dlp that allows users to download videos from various platforms.
+  tech: Python, Flask, yt-dlp
+  github: https://github.com/kennethkenn/YT-DLP-Web
+  demo: #
+  image: https://github.com/kennethkenn/YT-DLP-Web/raw/main/screenshots/home.png
+
 - title: High-Performance Data Engine
   description: A high-performance, multi-threaded data processing engine connected to low-level hardware. It implements lock-free data structures and custom memory allocators for sub-microsecond latency.
   tech: C++, Python, x86 Assembly
