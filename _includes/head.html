@@ -1,6 +1,22 @@
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<script>
+  // Apply the saved theme before first paint to avoid a flash of the wrong theme.
+  (function () {
+    var theme = 'light';
+    var saved = null;
+    try {
+      saved = localStorage.getItem('theme');
+    } catch (e) { }
+    if (saved === 'dark' || saved === 'light') {
+      theme = saved;
+    } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+      theme = 'dark';
+    }
+    document.documentElement.setAttribute('data-theme', theme);
+  })();
+</script>
 {%- if page.url == "/" -%}
 {%- assign full_title = site.title -%}
 {%- elsif page.title -%}
@@ -31,10 +47,12 @@
     content="{{ site.url }}/assets/images/og-image.jpg">
 
 {%- seo -%}
-<link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link
-    href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:wght@400;700&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&display=swap"
     rel="stylesheet">
+<link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
 {%- feed_meta -%}
 {%- include structured-data.html -%}
 {%- if jekyll.environment == 'production' and site.google_analytics -%}

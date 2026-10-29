@@ -1,11 +1,16 @@
 <footer class="site-footer">
     <div class="footer-container">
-        <p>&copy; {{ site.time | date: '%Y' }} {{ site.title }}. All rights
-            reserved.</p>
+        <div class="footer-brand">
+            <span class="footer-logo">{{ site.title }}</span>
+            <p>Full-stack developer &amp; designer.</p>
+        </div>
+
         <ul class="footer-links">
-            <li><a href="https://github.com/kennethkenn">GitHub</a></li>
-            <li><a href="https://linkedin.com/in/kenneth-buchunju">LinkedIn</a></li>
+            <li><a href="https://github.com/kennethkenn" rel="me">GitHub</a></li>
+            <li><a href="https://linkedin.com/in/kenneth-buchunju" rel="me">LinkedIn</a></li>
             <li><a href="mailto:{{ site.email }}">Email</a></li>
         </ul>
+
+        <p class="footer-meta">&copy; {{ site.time | date: '%Y' }} {{ site.title }}. All rights reserved.</p>
     </div>
 </footer>

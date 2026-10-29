@@ -1,16 +1,31 @@
 <header id="site-header">
     <div class="container header-container">
-        <a href="{{ '/' | relative_url }}" class="logo">
+        <a href="{{ '/' | relative_url }}" class="logo" aria-label="{{ site.title }} home">
             <span class="logo-text">KB.</span>
         </a>
 
-        <nav class="nav-menu" id="nav-menu">
+        <nav class="nav-menu" id="nav-menu" aria-label="Main navigation">
             <ul>
-                <li><a href="{{ '/' | relative_url }}" class="nav-link">Home</a></li>
-                <li><a href="{{ '/projects' | relative_url }}" class="nav-link">Projects</a></li>
-                <li><a href="{{ '/about' | relative_url }}" class="nav-link">About</a></li>
-                <li><a href="{{ '/blog' | relative_url }}" class="nav-link">Blog</a></li>
-                <li><a href="{{ '/contacts' | relative_url }}" class="nav-link">Contact</a></li>
+                <li>
+                    <a href="{{ '/' | relative_url }}" class="nav-link"
+                        {% if page.url == "/" %}aria-current="page"{% endif %}>Home</a>
+                </li>
+                <li>
+                    <a href="{{ '/projects' | relative_url }}" class="nav-link"
+                        {% if page.url contains "/projects" %}aria-current="page"{% endif %}>Projects</a>
+                </li>
+                <li>
+                    <a href="{{ '/about' | relative_url }}" class="nav-link"
+                        {% if page.url contains "/about" %}aria-current="page"{% endif %}>About</a>
+                </li>
+                <li>
+                    <a href="{{ '/blog' | relative_url }}" class="nav-link"
+                        {% if page.url contains "/blog" or page.collection == "posts" %}aria-current="page"{% endif %}>Blog</a>
+                </li>
+                <li>
+                    <a href="{{ '/contacts' | relative_url }}" class="nav-link"
+                        {% if page.url contains "/contacts" %}aria-current="page"{% endif %}>Contact</a>
+                </li>
             </ul>
         </nav>
 

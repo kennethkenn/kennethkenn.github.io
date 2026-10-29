@@ -1,89 +1,98 @@
-// Scroll Animations
+// Site interactions
 document.addEventListener('DOMContentLoaded', function () {
-  // Fade-in animation for sections
-  const observerOptions = {
-    threshold: 0.1,
-    rootMargin: '0px 0px -50px 0px'
-  };
+  var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-  const observer = new IntersectionObserver(function (entries) {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('fade-in-up');
-        observer.unobserve(entry.target);
-      }
+  // --- Scroll reveal -----------------------------------------------------
+  if ('IntersectionObserver' in window && !reduceMotion) {
+    var observer = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('fade-in-up');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
+
+    document.querySelectorAll(
+      '.home-section, .service-card, .featured-card, .project-card, .blog-card, .skill-card, .about-section, .contact-section'
+    ).forEach(function (el) {
+      el.classList.add('fade-in-element');
+      el.addEventListener('animationend', function () {
+        // Drop the reveal classes so hover transforms are no longer overridden
+        // by the finished animation's fill mode.
+        el.classList.remove('fade-in-element', 'fade-in-up');
+      }, { once: true });
+      observer.observe(el);
     });
-  }, observerOptions);
+  }
 
-  // Observe all sections and cards
-  const elementsToAnimate = document.querySelectorAll(
-    '.home-section, .service-card, .featured-card, .project-card, .about-section, .contact-section'
-  );
-
-  elementsToAnimate.forEach(el => {
-    el.classList.add('fade-in-element');
-    observer.observe(el);
-  });
-
-  // Smooth scroll for anchor links
-  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  // --- Smooth scrolling for in-page anchors ------------------------------
+  document.querySelectorAll('a[href^="#"]').forEach(function (anchor) {
     anchor.addEventListener('click', function (e) {
-      e.preventDefault();
-      const target = document.querySelector(this.getAttribute('href'));
+      var id = this.getAttribute('href');
+      if (!id || id === '#') return;
+
+      var target = document.querySelector(id);
       if (target) {
+        e.preventDefault();
         target.scrollIntoView({
-          behavior: 'smooth',
+          behavior: reduceMotion ? 'auto' : 'smooth',
           block: 'start'
         });
       }
     });
   });
 
-  // Mobile Navigation Toggle
-  const navToggle = document.querySelector('.nav-toggle');
-  const navMenu = document.querySelector('.nav-menu');
-  const body = document.body;
+  // --- Mobile navigation -------------------------------------------------
+  var navToggle = document.querySelector('.nav-toggle');
+  var navMenu = document.querySelector('.nav-menu');
+  var body = document.body;
+
+  function setMenu(open) {
+    if (!navToggle || !navMenu) return;
+    navToggle.classList.toggle('active', open);
+    navMenu.classList.toggle('active', open);
+    navToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+    body.classList.toggle('nav-open', open);
+  }
 
   if (navToggle && navMenu) {
     navToggle.addEventListener('click', function (e) {
       e.stopPropagation();
-      this.classList.toggle('active');
-      navMenu.classList.toggle('active');
-
-      // Update ARIA attribute
-      const isExpanded = this.classList.contains('active');
-      this.setAttribute('aria-expanded', isExpanded);
+      setMenu(!navMenu.classList.contains('active'));
     });
 
-    // Close menu when clicking outside
     document.addEventListener('click', function (e) {
       if (navMenu.classList.contains('active') && !navMenu.contains(e.target) && !navToggle.contains(e.target)) {
-        navToggle.classList.remove('active');
-        navMenu.classList.remove('active');
-        navToggle.setAttribute('aria-expanded', 'false');
+        setMenu(false);
       }
     });
 
-    // Close menu when clicking a link
-    navMenu.querySelectorAll('a').forEach(link => {
-      link.addEventListener('click', () => {
-        navToggle.classList.remove('active');
-        navMenu.classList.remove('active');
-        navToggle.setAttribute('aria-expanded', 'false');
-      });
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape' && navMenu.classList.contains('active')) {
+        setMenu(false);
+        navToggle.focus();
+      }
+    });
+
+    navMenu.querySelectorAll('a').forEach(function (link) {
+      link.addEventListener('click', function () { setMenu(false); });
+    });
+
+    window.addEventListener('resize', function () {
+      if (window.innerWidth > 980 && navMenu.classList.contains('active')) {
+        setMenu(false);
+      }
     });
   }
-  // Header Scroll Effect
-  const header = document.querySelector('header');
-  const scrollThreshold = 10;
 
+  // --- Header state ------------------------------------------------------
+  var header = document.querySelector('header');
   if (header) {
-    window.addEventListener('scroll', () => {
-      if (window.scrollY > scrollThreshold) {
-        header.classList.add('scrolled');
-      } else {
-        header.classList.remove('scrolled');
-      }
-    });
+    var onScroll = function () {
+      header.classList.toggle('scrolled', window.scrollY > 8);
+    };
+    onScroll();
+    window.addEventListener('scroll', onScroll, { passive: true });
   }
 });
