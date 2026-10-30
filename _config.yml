@@ -10,6 +10,18 @@ plugins:
   - jekyll-feed
   - jekyll-seo-tag
   - jekyll-sitemap
+twitter:
+  card: summary_large_image
+# Social preview image for every page (used by jekyll-seo-tag)
+defaults:
+  - scope:
+      path: ""
+    values:
+      image:
+        path: /assets/images/og-image.png
+        width: 1200
+        height: 630
+        alt: The Mint Coder - Kenneth Buchunju, full-stack developer and designer.
 sass:
   sass_dir: _sass
   style: compressed

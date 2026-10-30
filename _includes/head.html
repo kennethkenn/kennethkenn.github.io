@@ -1,6 +1,10 @@
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="{{ '/favicon.svg' | relative_url }}" type="image/svg+xml">
+<link rel="icon" href="{{ '/favicon.ico' | relative_url }}" sizes="any">
+<link rel="apple-touch-icon" href="{{ '/assets/images/apple-touch-icon.png' | relative_url }}">
+<meta name="theme-color" content="#FAF9F5">
 <script>
   // Apply the saved theme before first paint to avoid a flash of the wrong theme.
   (function () {
@@ -15,37 +19,12 @@
       theme = 'dark';
     }
     document.documentElement.setAttribute('data-theme', theme);
+    var meta = document.querySelector('meta[name="theme-color"]');
+    if (meta) {
+      meta.setAttribute('content', theme === 'dark' ? '#121311' : '#FAF9F5');
+    }
   })();
 </script>
-{%- if page.url == "/" -%}
-{%- assign full_title = site.title -%}
-{%- elsif page.title -%}
-{%- assign full_title = page.title | append: " | " | append: site.title -%}
-{%- else -%}
-{%- assign full_title = site.title -%}
-{%- endif -%}
-<title>{{ full_title }}</title>
-<meta property="og:site_name" content="The Mint Coder">
-<meta name="description"
-    content="{{ page.description | default: site.description }}">
-
-<!-- Open Graph / Facebook -->
-<meta property="og:type" content="website">
-<meta property="og:url" content="{{ page.url | absolute_url }}">
-<meta property="og:title" content="{{ full_title }}">
-<meta property="og:description"
-    content="{{ page.description | default: site.description }}">
-<meta property="og:image" content="{{ site.url }}/assets/images/og-image.jpg">
-
-<!-- Twitter -->
-<meta property="twitter:card" content="summary_large_image">
-<meta property="twitter:url" content="{{ page.url | absolute_url }}">
-<meta property="twitter:title" content="{{ full_title }}">
-<meta property="twitter:description"
-    content="{{ page.description | default: site.description }}">
-<meta property="twitter:image"
-    content="{{ site.url }}/assets/images/og-image.jpg">
-
 {%- seo -%}
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>

@@ -17,25 +17,33 @@ description: Get in touch with Kenneth for project collaborations, consultations
     <form action="https://formspree.io/f/mbdlnwzw" method="POST">
       <div class="form-group">
         <label for="name">Name</label>
-        <input type="text" id="name" name="name" placeholder="John Doe" required>
+        <input type="text" id="name" name="name" placeholder="John Doe" autocomplete="name" required>
       </div>
-      
+
       <div class="form-group">
         <label for="email">Email</label>
-        <input type="email" id="email" name="email" placeholder="john@example.com" required>
+        <input type="email" id="email" name="email" placeholder="john@example.com" autocomplete="email" required>
       </div>
-      
+
       <div class="form-group">
         <label for="message">Message</label>
         <textarea id="message" name="message" rows="5" placeholder="Your message here..." required></textarea>
       </div>
-      
+
+      <!-- Honeypot: hidden from people, tempting to bots -->
+      <div class="hp-field" aria-hidden="true">
+        <label for="company-website">Leave this field empty</label>
+        <input type="text" id="company-website" name="_gotcha" tabindex="-1" autocomplete="off">
+      </div>
+
+      <p class="form-status" data-form-status role="status" aria-live="polite" tabindex="-1" hidden></p>
+
       <button type="submit" class="btn-submit" id="contact-submit">
         <span class="btn-text">Send Message</span>
-        <span class="btn-loader" style="display: none;">Sending...</span>
+        <span class="btn-loader" hidden>Sending…</span>
       </button>
     </form>
-    
+
     <div class="contact-info">
       <p>Or email me directly at <a href="mailto:kenneth@themintcoder.org">kenneth@themintcoder.org</a></p>
     </div>

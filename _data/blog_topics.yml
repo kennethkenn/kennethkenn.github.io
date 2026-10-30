@@ -1,0 +1,80 @@
+# Curated topic groups for the blog filter.
+# Every category used in _posts should appear in exactly one group.
+- slug: systems
+  label: Systems
+  categories:
+    - systems
+    - systems programming
+    - low-level
+    - c
+    - c++
+    - cpp
+    - assembly
+    - os
+    - compilers
+    - linux
+    - performance
+
+- slug: backend
+  label: Backend
+  categories:
+    - backend
+    - java
+    - spring-boot
+    - flask
+    - python
+    - api design
+    - database
+    - databases
+    - sql
+    - data-modeling
+    - architecture
+    - system-design
+    - software-architecture
+    - web-development
+
+- slug: frontend
+  label: Frontend & Mobile
+  categories:
+    - frontend
+    - react
+    - react native
+    - css
+    - mobile
+    - android
+    - qt
+    - gui development
+    - cross-platform
+
+- slug: devops
+  label: DevOps & Tools
+  categories:
+    - devops
+    - git
+    - version-control
+    - build systems
+    - developer-tools
+    - debugging
+
+- slug: security
+  label: Security
+  categories:
+    - security
+
+- slug: craft
+  label: Career & Craft
+  categories:
+    - career
+    - interviews
+    - soft skills
+    - learning
+    - productivity
+    - portfolio
+    - best-practices
+    - software-engineering
+    - software-development
+    - engineering
+    - programming
+    - general
+    - side-projects
+    - frameworks

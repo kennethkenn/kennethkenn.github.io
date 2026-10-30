@@ -23,7 +23,7 @@ description: Learn about Kenneth's journey as a digital artisan blending code an
       <p>I believe in the power of minimalism and clarity. Whether I'm designing a UI or architecting a database, I strive for elegance and efficiency. I mostly enjoy working with C++, Java, and Python.</p>
     </div>
     <div class="bio-image">
-       <img src="/assets/images/profile.png" alt="Kenneth Profile" loading="lazy" decoding="async">
+       <img src="/assets/images/profile-mark.png" alt="" width="675" height="1049" loading="lazy" decoding="async" aria-hidden="true">
     </div>
   </section>
 

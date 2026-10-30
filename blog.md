@@ -14,9 +14,28 @@ title: Blog
     </div>
   </div>
 
-  <div class="blog-grid">
+  <div class="blog-filters" data-blog-filters role="group" aria-label="Filter posts by topic">
+    <button type="button" class="filter-chip is-active" data-filter="all" aria-pressed="true">All</button>
+    {%- for topic in site.data.blog_topics %}
+    <button type="button" class="filter-chip" data-filter="{{ topic.slug }}" aria-pressed="false">{{ topic.label }}</button>
+    {%- endfor %}
+  </div>
+  <p class="filter-status" data-filter-status aria-live="polite"></p>
+
+  <div class="blog-grid" data-blog-grid>
     {% for post in site.posts %}
-      <article class="blog-card card-base">
+      {%- assign post_topics = "" -%}
+      {%- for category in post.categories -%}
+        {%- assign category_key = category | downcase -%}
+        {%- for topic in site.data.blog_topics -%}
+          {%- if topic.categories contains category_key -%}
+            {%- unless post_topics contains topic.slug -%}
+              {%- assign post_topics = post_topics | append: topic.slug | append: "|" -%}
+            {%- endunless -%}
+          {%- endif -%}
+        {%- endfor -%}
+      {%- endfor -%}
+      <article class="blog-card card-base" data-topics="{{ post_topics | escape }}">
         <a href="{{ post.url | relative_url }}" class="stretched-link" aria-label="{{ post.title }}"></a>
         <div class="blog-card-content">
           <div class="post-meta">

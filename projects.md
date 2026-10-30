@@ -37,10 +37,12 @@ description: Explore Kenneth's portfolio of projects including enterprise system
 
         <div class="card-actions">
           {% if project.github and project.github != "#" %}
-          <a href="{{ project.github }}" target="_blank" class="btn-link">GitHub</a>
+          <a href="{{ project.github }}" target="_blank" rel="noopener" class="btn-link"
+            aria-label="View the {{ project.title }} source code on GitHub">GitHub</a>
           {% endif %}
           {% if project.demo and project.demo != "#" %}
-          <a href="{{ project.demo }}" target="_blank" class="btn-link btn-primary">Live Demo</a>
+          <a href="{{ project.demo }}" target="_blank" rel="noopener" class="btn-link btn-primary"
+            aria-label="Open the {{ project.title }} live demo">Live Demo</a>
           {% endif %}
         </div>
       </div>

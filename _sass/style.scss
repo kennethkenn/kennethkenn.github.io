@@ -290,6 +290,15 @@ select:focus-visible {
   animation: fadeInUp 0.55s cubic-bezier(0.2, 0.6, 0.2, 1) forwards;
 }
 
+// Print / PDF: never leave revealed sections hidden
+@media print {
+  .fade-in-element {
+    opacity: 1 !important;
+    transform: none !important;
+    animation: none !important;
+  }
+}
+
 // --------------------------------------------------------------------------
 // Buttons
 // --------------------------------------------------------------------------
@@ -477,7 +486,8 @@ header#site-header {
   .btn-header-cta {
     display: inline-flex;
     align-items: center;
-    padding: 0.6rem 1.1rem;
+    height: 42px;
+    padding: 0 1.15rem;
     border-radius: var(--radius-md);
     border: 1px solid var(--color-text);
     background: var(--color-text);
@@ -564,7 +574,7 @@ header#site-header {
   position: relative;
   display: flex;
   align-items: center;
-  min-height: calc(100vh - var(--header-h));
+  min-height: min(calc(100vh - var(--header-h)), 820px);
   padding: 5rem 0 6rem;
   overflow: hidden;
   background:
@@ -650,24 +660,40 @@ header#site-header {
 
   .information-image-wrap {
     position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 100%;
+    aspect-ratio: 4 / 5;
+    padding: clamp(1.75rem, 4vw, 2.75rem);
+    overflow: hidden;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-xl);
+    background:
+      radial-gradient(120% 85% at 72% 6%, rgba(var(--color-primary-rgb), 0.16), transparent 62%),
+      radial-gradient(90% 60% at 8% 100%, rgba(var(--color-primary-rgb), 0.06), transparent 70%),
+      var(--color-surface);
+
+    &:hover .profile-img {
+      transform: translateY(-5px) scale(1.01);
+    }
   }
 
   .profile-img {
-    width: 100%;
-    aspect-ratio: 4 / 5;
-    max-height: 520px;
-    object-fit: cover;
-    object-position: center top;
-    border-radius: var(--radius-xl);
-    border: 1px solid var(--color-border);
-    box-shadow: var(--shadow-xl);
-    background: var(--color-light-bg);
-    transition: transform 0.5s cubic-bezier(0.2, 0.6, 0.2, 1);
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    transition: transform 0.6s cubic-bezier(0.2, 0.6, 0.2, 1), filter var(--transition-base);
+  }
+}
 
-    &:hover {
-      transform: translateY(-4px);
-    }
+// The emblem is ink-on-transparent: flip it for dark surfaces
+[data-theme="dark"] {
+  .profile-img,
+  .bio-image img {
+    filter: invert(1);
   }
 }
 
@@ -691,7 +717,7 @@ header#site-header {
 
     .information-media {
       justify-self: center;
-      max-width: 300px;
+      max-width: 260px;
     }
   }
 }
@@ -726,21 +752,23 @@ header#site-header {
     transition: transform var(--transition-base), box-shadow var(--transition-base),
       border-color var(--transition-base);
 
-    .expertise-icon {
+    .expertise-index {
       display: inline-flex;
       align-items: center;
-      justify-content: center;
-      width: 42px;
-      height: 42px;
+      gap: 0.7rem;
       margin-bottom: 1.5rem;
-      border-radius: var(--radius-md);
-      background: rgba(var(--color-primary-rgb), 0.09);
+      font-family: $font-mono;
+      font-size: 0.72rem;
+      font-weight: 500;
+      letter-spacing: 0.2em;
       color: var(--color-primary);
 
-      svg {
-        width: 20px;
-        height: 20px;
-        stroke-width: 1.6;
+      &::after {
+        content: '';
+        width: 34px;
+        height: 1px;
+        background: currentColor;
+        opacity: 0.45;
       }
     }
 
@@ -787,20 +815,16 @@ header#site-header {
       overflow: hidden;
       border-radius: var(--radius-lg);
       border: 1px solid var(--color-border);
-      background: var(--color-background);
-      box-shadow: var(--shadow-sm);
+      background:
+        radial-gradient(120% 90% at 84% 0%, rgba(var(--color-primary-rgb), 0.1), transparent 62%),
+        var(--color-background);
 
       img {
         width: 100%;
         height: 100%;
         object-fit: cover;
         object-position: top center;
-        transition: transform 0.6s cubic-bezier(0.2, 0.6, 0.2, 1);
       }
-    }
-
-    &:hover .project-image img {
-      transform: scale(1.03);
     }
 
     .project-info {
@@ -1087,7 +1111,9 @@ header#site-header {
   position: relative;
   aspect-ratio: 16 / 10;
   overflow: hidden;
-  background: var(--color-light-bg);
+  background:
+    radial-gradient(120% 90% at 84% 0%, rgba(var(--color-primary-rgb), 0.1), transparent 62%),
+    var(--color-light-bg);
   border-bottom: 1px solid var(--color-border);
 
   img {
@@ -1147,22 +1173,30 @@ header#site-header {
   }
 
   .bio-image {
-    flex: 0 0 320px;
+    flex: 0 0 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    aspect-ratio: 4 / 5;
+    padding: 1.75rem;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    background:
+      radial-gradient(120% 85% at 72% 6%, rgba(var(--color-primary-rgb), 0.15), transparent 62%),
+      var(--color-background);
 
     @media (max-width: 860px) {
       flex: 0 0 auto;
       width: 100%;
-      max-width: 260px;
+      max-width: 240px;
     }
 
     img {
-      width: 100%;
-      aspect-ratio: 4 / 5;
-      object-fit: cover;
-      object-position: center top;
-      border-radius: var(--radius-lg);
-      border: 1px solid var(--color-border);
-      background: var(--color-light-bg);
+      width: auto;
+      height: auto;
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: contain;
     }
   }
 }
@@ -1275,16 +1309,6 @@ header#site-header {
   }
 
   .project-media {
-    &::after {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(180deg, transparent 55%, rgba(26, 26, 23, 0.16));
-      opacity: 0;
-      transition: opacity var(--transition-base);
-      pointer-events: none;
-    }
-
     img {
       transition: transform 0.5s cubic-bezier(0.2, 0.6, 0.2, 1);
     }
@@ -1296,14 +1320,6 @@ header#site-header {
         linear-gradient(135deg, rgba(var(--color-primary-rgb), 0.16), rgba(var(--color-primary-rgb), 0.04)),
         var(--color-light-bg);
     }
-  }
-
-  .project-card:hover .project-media img {
-    transform: scale(1.035);
-  }
-
-  .project-card:hover .project-media::after {
-    opacity: 1;
   }
 
   .project-content {
@@ -1464,6 +1480,40 @@ header#site-header {
       }
     }
 
+    // Honeypot field: hidden from people, still reachable by bots.
+    .hp-field {
+      position: absolute;
+      left: -9999px;
+      width: 1px;
+      height: 1px;
+      overflow: hidden;
+    }
+
+    .form-status {
+      margin-bottom: 1.25rem;
+      padding: 0.85rem 1rem;
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-md);
+      background: var(--color-light-bg);
+      color: var(--color-text);
+      font-size: 0.9rem;
+      line-height: 1.55;
+
+      &:focus {
+        outline: none;
+      }
+
+      &.is-success {
+        border-color: rgba(var(--color-primary-rgb), 0.45);
+        background: rgba(var(--color-primary-rgb), 0.09);
+      }
+
+      &.is-error {
+        border-color: rgba(169, 80, 47, 0.45);
+        background: rgba(169, 80, 47, 0.09);
+      }
+    }
+
     .btn-submit {
       display: inline-flex;
       align-items: center;
@@ -1483,6 +1533,11 @@ header#site-header {
       cursor: pointer;
       transition: background-color var(--transition-fast), border-color var(--transition-fast),
         color var(--transition-fast);
+
+      &[hidden],
+      [hidden] {
+        display: none !important;
+      }
 
       &:hover:not(:disabled) {
         background: var(--color-primary);
@@ -1779,6 +1834,19 @@ header#site-header {
     font-size: 1.02rem;
     color: var(--color-text-light);
   }
+
+  .not-found-actions {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.75rem;
+
+    @media (max-width: 480px) {
+      flex-direction: column;
+      width: 100%;
+      max-width: 280px;
+    }
+  }
 }
 
 // --------------------------------------------------------------------------
@@ -1865,27 +1933,24 @@ header#site-header {
 }
 
 // --------------------------------------------------------------------------
-// Theme toggle
+// Theme toggle (lives in the header actions)
 // --------------------------------------------------------------------------
 .dark-mode-toggle {
-  position: fixed;
-  right: 1.5rem;
-  bottom: 1.5rem;
-  display: flex;
+  position: relative;
+  z-index: 1002;
+  display: inline-flex;
   align-items: center;
   justify-content: center;
   width: 42px;
   height: 42px;
   padding: 0;
   border: 1px solid var(--color-border);
-  border-radius: var(--radius-full);
-  background: var(--color-surface);
+  border-radius: var(--radius-md);
+  background: transparent;
   color: var(--color-text-light);
-  box-shadow: var(--shadow-md);
   cursor: pointer;
-  z-index: 900;
   transition: color var(--transition-fast), border-color var(--transition-fast),
-    transform var(--transition-fast), background-color var(--transition-fast);
+    background-color var(--transition-fast), transform var(--transition-fast);
 
   svg {
     width: 17px;
@@ -1893,20 +1958,26 @@ header#site-header {
   }
 
   &:hover {
-    color: var(--color-primary);
-    border-color: rgba(var(--color-primary-rgb), 0.45);
-    transform: translateY(-1px);
+    color: var(--color-text);
+    background: var(--color-light-bg);
+    border-color: var(--color-border);
   }
 
   &:active {
-    transform: translateY(0) scale(0.96);
+    transform: scale(0.96);
   }
 
-  @media (max-width: 640px) {
-    right: 1rem;
-    bottom: 1rem;
-    width: 38px;
-    height: 38px;
+  // Fallback if the header is not present
+  &.is-floating {
+    position: fixed;
+    right: 1.5rem;
+    bottom: 1.5rem;
+    z-index: 900;
+    width: 42px;
+    height: 42px;
+    border-radius: var(--radius-full);
+    background: var(--color-surface);
+    box-shadow: var(--shadow-md);
   }
 }
 

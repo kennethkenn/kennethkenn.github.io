@@ -1,5 +1,6 @@
 ---
 layout: default
+title: The Mint Coder
 description: Kenneth - Fullstack Developer & Designer specializing in C/C++, Java, Spring Boot, and building exceptional digital products.
 ---
 
@@ -16,9 +17,11 @@ description: Kenneth - Fullstack Developer & Designer specializing in C/C++, Jav
     </div>
     <div class="information-media">
       <div class="information-image-wrap">
-        <img src="assets/images/profile.png"
-             alt="Kenneth - Portfolio"
-             class="profile-img">
+        <img src="/assets/images/profile-mark.png"
+             alt=""
+             class="profile-img"
+             width="675" height="1049"
+             aria-hidden="true">
       </div>
     </div>
   </div>
@@ -32,23 +35,17 @@ description: Kenneth - Fullstack Developer & Designer specializing in C/C++, Jav
     <h2 class="section-title">Core Expertise</h2>
     <div class="expertise-grid">
       <div class="expertise-card">
-        <div class="expertise-icon">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
-        </div>
+        <span class="expertise-index">01</span>
         <h3>Fullstack Development</h3>
         <p>Comprehensive web solutions from architecting robust databases to crafting intuitive user interfaces with modern engineering practices.</p>
       </div>
       <div class="expertise-card">
-        <div class="expertise-icon">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
-        </div>
+        <span class="expertise-index">02</span>
         <h3>System Architecture</h3>
         <p>Designing scalable, high-performance software systems that prioritize maintainability and structural elegance.</p>
       </div>
       <div class="expertise-card">
-        <div class="expertise-icon">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-        </div>
+        <span class="expertise-index">03</span>
         <h3>Digital Craftsmanship</h3>
         <p>Meticulous attention to detail in every line of code and every pixel, ensuring a professional and premium final product.</p>
       </div>
@@ -76,7 +73,7 @@ description: Kenneth - Fullstack Developer & Designer specializing in C/C++, Jav
               <span class="tech-badge">{{ tech }}</span>
             {% endfor %}
           </div>
-          <a href="{{ project.github }}" class="btn-text">Case Study &rarr;</a>
+          <a href="{{ project.github }}" class="btn-text" aria-label="View the {{ project.title }} source code on GitHub">View Source &rarr;</a>
         </div>
       </div>
       {% endfor %}

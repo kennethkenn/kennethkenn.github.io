@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', function () {
     }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
 
     document.querySelectorAll(
-      '.home-section, .service-card, .featured-card, .project-card, .blog-card, .skill-card, .about-section, .contact-section'
+      '.home-section, .service-card, .featured-card, .project-card, .skill-card, .about-section, .contact-section'
     ).forEach(function (el) {
       el.classList.add('fade-in-element');
       el.addEventListener('animationend', function () {
@@ -42,6 +42,51 @@ document.addEventListener('DOMContentLoaded', function () {
       }
     });
   });
+
+  // --- Blog topic filter -------------------------------------------------
+  var filterBar = document.querySelector('[data-blog-filters]');
+  var blogGrid = document.querySelector('[data-blog-grid]');
+
+  if (filterBar && blogGrid) {
+    var cards = Array.prototype.slice.call(blogGrid.querySelectorAll('.blog-card'));
+    var chips = Array.prototype.slice.call(filterBar.querySelectorAll('.filter-chip'));
+    var status = document.querySelector('[data-filter-status]');
+
+    var applyFilter = function (slug, label) {
+      var shown = 0;
+
+      cards.forEach(function (card) {
+        var topics = (card.getAttribute('data-topics') || '').split('|');
+        var match = slug === 'all' || topics.indexOf(slug) !== -1;
+        card.hidden = !match;
+        if (match) {
+          shown++;
+          // Never leave a freshly revealed card stuck at opacity 0.
+          card.classList.remove('fade-in-element', 'fade-in-up');
+        }
+      });
+
+      chips.forEach(function (chip) {
+        var isActive = chip.getAttribute('data-filter') === slug;
+        chip.classList.toggle('is-active', isActive);
+        chip.setAttribute('aria-pressed', isActive ? 'true' : 'false');
+      });
+
+      if (status) {
+        status.textContent = slug === 'all'
+          ? 'Showing all ' + shown + ' posts.'
+          : shown + ' ' + (shown === 1 ? 'post' : 'posts') + ' in ' + label + '.';
+      }
+    };
+
+    filterBar.addEventListener('click', function (e) {
+      var chip = e.target.closest('.filter-chip');
+      if (!chip) return;
+      applyFilter(chip.getAttribute('data-filter'), chip.textContent.trim());
+    });
+
+    applyFilter('all', 'All');
+  }
 
   // --- Mobile navigation -------------------------------------------------
   var navToggle = document.querySelector('.nav-toggle');
