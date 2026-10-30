@@ -11,11 +11,15 @@ document.addEventListener('DOMContentLoaded', function () {
           observer.unobserve(entry.target);
         }
       });
-    }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
+    }, { threshold: 0.02, rootMargin: '0px 0px -10px 0px' });
 
     document.querySelectorAll(
-      '.home-section, .service-card, .featured-card, .project-card, .skill-card, .about-section, .contact-section'
+      '.home-section:not(.information-section), .service-card, .featured-card, .project-card, .skill-card, .about-section, .contact-section'
     ).forEach(function (el) {
+      var rect = el.getBoundingClientRect();
+      if (rect.top < window.innerHeight && rect.bottom > 0) {
+        return;
+      }
       el.classList.add('fade-in-element');
       el.addEventListener('animationend', function () {
         // Drop the reveal classes so hover transforms are no longer overridden

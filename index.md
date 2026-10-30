@@ -92,7 +92,7 @@ description: Kenneth - Fullstack Developer & Designer specializing in C/C++, Jav
     <div class="blog-highlight-grid">
       {% for post in site.posts limit:3 %}
       <article class="blog-mini-card">
-        <div class="mini-meta">{{ post.date | date: "%B %-d %Y" }}</div>
+        <div class="mini-meta">{{ post.date | date: "%B %-d, %Y" }}</div>
         <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
         <p>{{ post.excerpt | strip_html | truncatewords: 15 }}</p>
         <a href="{{ post.url | relative_url }}" class="read-more-link">Read insight &rarr;</a>
