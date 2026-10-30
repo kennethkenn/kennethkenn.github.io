@@ -160,7 +160,7 @@ Complexity is a cost, just like CPU and memory.
 
 ## Conclusion
 
-There is no perfect system design—only informed compromises. Great engineers do not eliminate trade-offs; they understand them and choose deliberately.
+There is no perfect system design-only informed compromises. Great engineers do not eliminate trade-offs; they understand them and choose deliberately.
 
 The best design is not the fastest or the most efficient, but the one that balances speed, memory, and complexity in a way that serves the problem and the people working on it.
 
@@ -168,4 +168,4 @@ The best design is not the fastest or the most efficient, but the one that balan
 
 ## Final Thought
 
-If you cannot explain why a design choice was made, it is likely the wrong choice—or at least an undocumented one.
+If you cannot explain why a design choice was made, it is likely the wrong choice-or at least an undocumented one.

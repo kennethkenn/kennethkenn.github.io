@@ -193,7 +193,7 @@ Choose Spring Boot if:
 
 ## Conclusion
 
-Flask and Spring Boot are both excellent frameworks—but they solve different problems. Flask excels in simplicity and rapid development, while Spring Boot shines in structured, scalable, and enterprise-ready applications.
+Flask and Spring Boot are both excellent frameworks-but they solve different problems. Flask excels in simplicity and rapid development, while Spring Boot shines in structured, scalable, and enterprise-ready applications.
 
 The right choice depends less on popularity and more on **project size, team experience, and long-term goals**.
 

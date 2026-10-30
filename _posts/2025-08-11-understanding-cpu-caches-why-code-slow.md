@@ -23,7 +23,7 @@ SSD:              ~100,000 cycles
 
 ## Cache Lines: The Fundamental Unit
 
-CPUs don't fetch individual bytes—they fetch **cache lines** (typically 64 bytes):
+CPUs don't fetch individual bytes-they fetch **cache lines** (typically 64 bytes):
 
 ```cpp
 struct Point {
@@ -44,7 +44,7 @@ for (int i = 0; i < 1000; i++) {
 
 ### 1. Compulsory Miss (Cold Start)
 
-First access to data—unavoidable:
+First access to data-unavoidable:
 
 ```cpp
 int sum = 0;
@@ -282,7 +282,7 @@ Cache optimization is about:
 
 **Key Takeaways:**
 - RAM access is 50x slower than L1 cache
-- Cache lines are 64 bytes—use them fully
+- Cache lines are 64 bytes-use them fully
 - Struct of Arrays beats Array of Structs
 - Profile with `perf` or VTune
 

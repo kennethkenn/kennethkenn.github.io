@@ -57,7 +57,7 @@
       })
       .then(function () {
         form.reset();
-        showStatus('Thanks — your message is on its way. I usually reply within a day or two.', 'success');
+        showStatus('Thanks - your message is on its way. I usually reply within a day or two.', 'success');
       })
       .catch(function (error) {
         var reason = (error && error.message) ? error.message : 'Something went wrong.';

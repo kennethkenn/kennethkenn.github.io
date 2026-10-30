@@ -5,7 +5,7 @@ date: 2025-07-18 12:00:00 +0300
 categories: git version-control software-engineering
 ---
 
-Most developers use Git daily, yet many treat it as a collection of memorized commands rather than a system they truly understand. This often leads to confusion when things go wrong—merge conflicts, detached HEAD states, or lost commits.
+Most developers use Git daily, yet many treat it as a collection of memorized commands rather than a system they truly understand. This often leads to confusion when things go wrong-merge conflicts, detached HEAD states, or lost commits.
 
 This post explains how Git actually works under the hood, focusing on practical concepts rather than surface-level commands.
 
@@ -52,7 +52,7 @@ Understanding this flow is critical to using Git confidently.
 
 ## What a Commit Really Is
 
-A Git commit is not just a message—it is an object with:
+A Git commit is not just a message-it is an object with:
 
 * A snapshot of the project
 * A reference to its parent commit(s)
@@ -121,7 +121,7 @@ incoming branch code
 >>>>>>> feature-x
 ```
 
-Resolving conflicts is not a failure—it is a normal part of collaborative development.
+Resolving conflicts is not a failure-it is a normal part of collaborative development.
 
 ---
 
@@ -135,7 +135,7 @@ This means:
 * Identical content is stored once
 * History is tamper-evident
 
-Everything—commits, trees, blobs—is referenced by its hash.
+Everything-commits, trees, blobs-is referenced by its hash.
 
 ---
 
@@ -171,7 +171,7 @@ git pull
 git push
 ```
 
-move commit objects and update pointers. There is no magic—only data transfer and reference updates.
+move commit objects and update pointers. There is no magic-only data transfer and reference updates.
 
 ---
 
@@ -185,7 +185,7 @@ Once you understand how Git works, best practices become logical:
 * Use branches aggressively
 * Review diffs before staging
 
-These are not rules—they are consequences of Git’s design.
+These are not rules-they are consequences of Git’s design.
 
 ---
 

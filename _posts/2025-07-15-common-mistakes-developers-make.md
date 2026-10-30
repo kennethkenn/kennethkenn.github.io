@@ -5,7 +5,7 @@ date: 2025-07-15 12:00:00 +0300
 categories: cpp programming learning
 ---
 
-C++ is a powerful and widely used programming language, but it has a reputation for being difficult to learn—and for good reason. Many developers struggle not because C++ is inherently impossible, but because they approach it with incorrect assumptions or habits carried over from other languages.
+C++ is a powerful and widely used programming language, but it has a reputation for being difficult to learn-and for good reason. Many developers struggle not because C++ is inherently impossible, but because they approach it with incorrect assumptions or habits carried over from other languages.
 
 This post outlines the most common mistakes developers make when learning C++ and provides practical guidance on how to avoid them.
 
@@ -170,7 +170,7 @@ Focus on *why* C++ works the way it does, not just *how* to write it.
 
 ## Conclusion
 
-C++ is not difficult because it is poorly designed—it is difficult because it gives developers a high level of control and responsibility. Most mistakes stem from misunderstanding this responsibility rather than from the language itself.
+C++ is not difficult because it is poorly designed-it is difficult because it gives developers a high level of control and responsibility. Most mistakes stem from misunderstanding this responsibility rather than from the language itself.
 
 By adopting modern C++ practices, respecting object lifetimes, and using the standard library effectively, developers can avoid common pitfalls and write safe, expressive, and efficient code.
 

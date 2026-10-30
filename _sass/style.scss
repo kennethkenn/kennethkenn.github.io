@@ -1,5 +1,5 @@
 // ==========================================================================
-// The Mint Coder — design system
+// The Mint Coder - design system
 // Warm paper, ink, and a single muted sage accent.
 // ==========================================================================
 
@@ -583,7 +583,7 @@ header#site-header {
     var(--color-background);
   border-bottom: 1px solid var(--color-border);
 
-  > .container {
+  >.container {
     position: relative;
     z-index: 1;
     display: grid;
@@ -691,6 +691,7 @@ header#site-header {
 
 // The emblem is ink-on-transparent: flip it for dark surfaces
 [data-theme="dark"] {
+
   .profile-img,
   .bio-image img {
     filter: invert(1);
@@ -702,7 +703,7 @@ header#site-header {
     min-height: 0;
     padding: 3.5rem 0 4.5rem;
 
-    > .container {
+    >.container {
       grid-template-columns: 1fr;
       gap: 2.75rem;
       text-align: center;
@@ -2092,7 +2093,7 @@ header#site-header {
         gap: 0;
       }
 
-      li + li {
+      li+li {
         border-top: 1px solid var(--color-border);
       }
 

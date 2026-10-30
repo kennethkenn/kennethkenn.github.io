@@ -7,7 +7,7 @@ categories: sql databases data-modeling
 
 Good database design is the foundation of reliable and scalable applications. Poor schema decisions made early often lead to data inconsistencies, complex queries, and performance issues later.
 
-This post covers the core principles of SQL database design—**tables, keys, and normalization**—and explains how to apply them in practical, real-world systems.
+This post covers the core principles of SQL database design-**tables, keys, and normalization**-and explains how to apply them in practical, real-world systems.
 
 ---
 
@@ -41,7 +41,7 @@ CREATE TABLE users (
 );
 ```
 
-At this stage, the table works—but it lacks constraints and structure.
+At this stage, the table works-but it lacks constraints and structure.
 
 ---
 
@@ -100,7 +100,7 @@ Foreign keys:
 
 Normalization is the process of organizing data to reduce redundancy and improve integrity.
 
-The goal is not complexity—it is **correctness and maintainability**.
+The goal is not complexity-it is **correctness and maintainability**.
 
 ---
 
@@ -178,7 +178,7 @@ id | city_id
 
 ## When to Denormalize
 
-Normalization is not a strict rule—it is a guideline.
+Normalization is not a strict rule-it is a guideline.
 
 Denormalization may be appropriate when:
 
@@ -224,4 +224,4 @@ A well-designed database simplifies application logic and prevents entire classe
 
 ## Final Advice
 
-Design your schema as carefully as you design your code. Databases are not just storage—they are part of your application’s logic.
+Design your schema as carefully as you design your code. Databases are not just storage-they are part of your application’s logic.

@@ -10,7 +10,7 @@ Clean and maintainable C++ is not about clever tricks or advanced language featu
 
 ## Prefer Clarity Over Cleverness
 
-Readable code is more valuable than clever code. Future maintainers—including yourself—will spend far more time reading code than writing it.
+Readable code is more valuable than clever code. Future maintainers-including yourself-will spend far more time reading code than writing it.
 
 ```cpp
 // Avoid
@@ -109,7 +109,7 @@ When in doubt, add `const`.
 
 ## Keep Functions Small and Focused
 
-Functions should do one thing—and do it well.
+Functions should do one thing-and do it well.
 
 ```cpp
 // Avoid
@@ -223,4 +223,4 @@ By prioritizing clarity, ownership, and correctness, you create code that is eas
 
 ## Final Thought
 
-Good C++ code does not try to impress the compiler—it communicates clearly with humans while letting the compiler enforce correctness.
+Good C++ code does not try to impress the compiler-it communicates clearly with humans while letting the compiler enforce correctness.

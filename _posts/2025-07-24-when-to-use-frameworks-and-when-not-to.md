@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "When to Use Frameworks—and When Not To"
+title: "When to Use Frameworks-and When Not To"
 date: 2025-07-24 12:00:00 +0300
 categories: software-development frameworks programming
 ---
@@ -137,7 +137,7 @@ A common approach:
 
 ## Conclusion
 
-Frameworks are powerful allies—but they are not always the solution. Using them wisely requires evaluating **project goals, complexity, and long-term maintenance**.
+Frameworks are powerful allies-but they are not always the solution. Using them wisely requires evaluating **project goals, complexity, and long-term maintenance**.
 
 The right framework choice accelerates development and reduces risk; the wrong choice adds friction and overhead.
 
@@ -145,4 +145,4 @@ The right framework choice accelerates development and reduces risk; the wrong c
 
 ## Final Advice
 
-Start simple, understand the problem, and adopt a framework **only when it provides clear benefits**. Frameworks are tools, not magic—treat them as such.
+Start simple, understand the problem, and adopt a framework **only when it provides clear benefits**. Frameworks are tools, not magic-treat them as such.
