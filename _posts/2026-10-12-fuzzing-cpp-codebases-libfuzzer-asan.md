@@ -6,7 +6,7 @@ categories: [Security, Systems Programming]
 tags: [C++, Security, Fuzzing, ASan, Linux, Low-Level]
 ---
 
-Unit tests verify that code behaves correctly under expected inputs. But in C and C++, the most severe vulnerabilities—buffer overflows, use-after-free conditions, integer wraps, and out-of-bounds reads—hide in unexpected edge cases and malformed input payloads.
+Unit tests verify that code behaves correctly under expected inputs. But in C and C++, the most severe vulnerabilities-buffer overflows, use-after-free conditions, integer wraps, and out-of-bounds reads-hide in unexpected edge cases and malformed input payloads.
 
 **Coverage-guided fuzz testing** automatically generates millions of mutated inputs to find the exact byte sequences that cause undefined behavior and memory crashes.
 
@@ -186,6 +186,7 @@ clang++ -O1 -g -fsanitize=fuzzer,address vulnerable_parser.cpp -o packet_fuzzer
 ## Integrating Fuzzing into CI/CD
 
 To make fuzzing part of standard software engineering practices:
+
 1. **Regression Fuzzing in GitHub Actions**: Run the fuzzer against saved corpus inputs on every pull request for 30 seconds.
 2. **ClusterFuzz / OSS-Fuzz**: For large open-source projects, integrate with Google's OSS-Fuzz service for automated 24/7 continuous distributed fuzzing.
 3. **Combine Sanitizers**: Combine fuzz testing with UndefinedBehaviorSanitizer (`-fsanitize=undefined`) to catch integer overflows and alignment issues simultaneously.

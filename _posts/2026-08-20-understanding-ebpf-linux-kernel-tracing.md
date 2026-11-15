@@ -14,7 +14,7 @@ Historically, modifying or observing Linux kernel behavior meant writing out-of-
 
 ## What is eBPF?
 
-eBPF lets developers run custom bytecode directly inside the Linux kernel in response to kernel events, hardware tracepoints, system calls, and network packet arrivals—all without re-compiling the kernel or rebooting.
+eBPF lets developers run custom bytecode directly inside the Linux kernel in response to kernel events, hardware tracepoints, system calls, and network packet arrivals-all without re-compiling the kernel or rebooting.
 
 ```
 +-----------------------------------------------------------+
@@ -46,6 +46,7 @@ eBPF lets developers run custom bytecode directly inside the Linux kernel in res
 ## The Safety Guarantee: The In-Kernel Verifier
 
 Before any eBPF bytecode executes, the kernel **Verifier** performs rigorous static analysis to guarantee:
+
 1. **No infinite loops**: Every loop must have a statically bounded number of iterations.
 2. **No out-of-bounds memory accesses**: Pointers cannot be dereferenced without validating buffer bounds.
 3. **Restricted function calls**: The program can only call approved in-kernel helper functions (`bpf_ktime_get_ns`, `bpf_trace_printk`, etc.).

@@ -1,0 +1,410 @@
+// ==========================================================================
+// Journal article
+// ==========================================================================
+.post-content {
+  padding: clamp(2rem, 4vw, 3.5rem) 0 clamp(4rem, 8vw, 7rem);
+}
+
+.post-shell {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 0 var(--gutter);
+}
+
+.post-topline {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.6rem 1.5rem;
+  padding-bottom: 1.15rem;
+  border-bottom: 1px solid var(--line);
+  color: var(--muted);
+  font-family: var(--font-body);
+  font-size: 0.7rem;
+  letter-spacing: 0;
+}
+
+.post-back {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  color: var(--muted);
+  text-decoration: none;
+  transition: color 200ms ease, gap 250ms var(--ease-out);
+
+  &:hover {
+    color: var(--mint);
+    gap: 0.6rem;
+  }
+}
+
+.post-header {
+  max-width: 930px;
+  padding: clamp(2.5rem, 5vw, 4.5rem) 0 clamp(1.75rem, 3vw, 2.75rem);
+
+  .post-categories-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.28rem;
+    margin-bottom: 1.1rem;
+  }
+
+  .post-title,
+  h1 {
+    margin-bottom: 1.1rem;
+    font-family: var(--font-display);
+    font-size: clamp(2.1rem, 4.4vw, 3.8rem);
+    font-weight: 400;
+    line-height: 1.02;
+    letter-spacing: -0.03em;
+  }
+}
+
+.post-categories-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.3rem;
+}
+
+.category-badge {
+  display: inline-block;
+  color: var(--muted);
+  font-family: var(--font-body);
+  font-size: 0.66rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.category-badge + .category-badge::before {
+  content: '·';
+  margin-right: 0.4rem;
+  color: var(--line-strong);
+}
+
+.post-body {
+  max-width: 760px;
+  counter-reset: section;
+  color: var(--ink);
+  font-size: 1.02rem;
+  line-height: 1.8;
+
+  h2 {
+    margin-top: 3rem;
+    margin-bottom: 0.9rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid var(--line);
+    font-family: var(--font-display);
+    font-size: clamp(1.7rem, 3vw, 2.15rem);
+    font-weight: 400;
+    line-height: 1.1;
+    letter-spacing: -0.03em;
+    counter-increment: section;
+
+    &::before {
+      content: counter(section, decimal-leading-zero) ' / ';
+      margin-right: 0.35em;
+      color: var(--mint);
+      font-family: var(--font-body);
+      font-size: 0.62em;
+      font-weight: 500;
+      letter-spacing: 0;
+      vertical-align: 0.1em;
+    }
+  }
+
+  h3 {
+    margin-top: 2rem;
+    margin-bottom: 0.6rem;
+    font-family: var(--font-body);
+    font-size: 1.1rem;
+    font-weight: 600;
+    line-height: 1.4;
+    letter-spacing: -0.012em;
+  }
+
+  h4 {
+    margin-top: 1.75rem;
+    margin-bottom: 0.55rem;
+    font-family: var(--font-body);
+    font-size: 1rem;
+    font-weight: 600;
+    letter-spacing: 0;
+  }
+
+  p {
+    margin-bottom: 1.4rem;
+  }
+
+  ul,
+  ol {
+    margin: 0 0 1.6rem;
+    padding-left: 1.35rem;
+
+    li {
+      margin-bottom: 0.45rem;
+      padding-left: 0.25rem;
+    }
+  }
+
+  ul li::marker {
+    color: var(--mint);
+  }
+
+  ol li::marker {
+    color: var(--mint);
+    font-family: var(--font-mono);
+    font-size: 0.85em;
+  }
+
+  a {
+    color: var(--mint);
+    text-decoration: underline;
+    text-decoration-color: var(--mint-mid);
+    text-underline-offset: 3px;
+    transition: text-decoration-color 200ms ease, color 200ms ease;
+
+    &:hover {
+      color: var(--ink);
+      text-decoration-color: var(--ink);
+    }
+  }
+
+  blockquote {
+    position: relative;
+    margin: 2.2rem 0;
+    padding: 1.5rem 1.75rem 1.5rem 3rem;
+    border-left: 2px solid var(--mint);
+    background: var(--surface);
+    color: var(--ink-soft);
+    font-family: var(--font-display);
+    font-size: 1.2rem;
+    font-style: normal;
+    line-height: 1.5;
+
+    &::before {
+      content: '“';
+      position: absolute;
+      top: 0.1rem;
+      left: 0.85rem;
+      color: var(--mint);
+      font-family: var(--font-display);
+      font-size: 3.5rem;
+      line-height: 1;
+      opacity: 0.35;
+    }
+
+    p:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  hr {
+    height: 1px;
+    margin: 2.75rem 0;
+    border: 0;
+    background: var(--line);
+  }
+
+  img {
+    margin: 2rem auto;
+    border: 1px solid var(--line);
+    border-radius: var(--r-xs);
+  }
+
+  code {
+    padding: 0.14em 0.35em;
+    border: 1px solid var(--line);
+    border-radius: 3px;
+    background: var(--surface);
+    color: var(--ink);
+    font-family: var(--font-mono);
+    font-size: 0.84em;
+  }
+
+  pre {
+    margin: 2rem 0;
+    padding: 2.4rem 1.35rem 1.35rem;
+    overflow-x: auto;
+    border: 1px solid #2A2E26;
+    border-radius: var(--r-xs);
+    background: #101209;
+    box-shadow: var(--shadow-sm);
+    line-height: 1.65;
+
+    code {
+      padding: 0;
+      border: 0;
+      background: none;
+      color: #E8E6E1;
+      font-size: 0.84rem;
+    }
+  }
+
+  .code-block {
+    position: relative;
+    margin: 2rem 0;
+
+    pre {
+      margin: 0;
+    }
+
+    &::before {
+      content: attr(data-lang);
+      position: absolute;
+      top: 0.62rem;
+      left: 1.35rem;
+      z-index: 1;
+      color: #8D9587;
+      font-family: var(--font-mono);
+      font-size: 0.46rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+    }
+  }
+
+  .code-copy {
+    position: absolute;
+    top: 0.55rem;
+    right: 0.55rem;
+    z-index: 2;
+    padding: 0.28rem 0.45rem;
+    border: 1px solid #3A4036;
+    border-radius: 3px;
+    background: #191C15;
+    color: #B9C0B2;
+    font-family: var(--font-mono);
+    font-size: 0.44rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background-color 200ms ease, color 200ms ease, border-color 200ms ease;
+
+    &:hover {
+      border-color: var(--mint);
+      background: var(--mint);
+      color: #0B0D09;
+    }
+  }
+
+  table {
+    width: 100%;
+    margin: 2rem 0;
+    border-collapse: collapse;
+    font-size: 0.92rem;
+
+    th,
+    td {
+      padding: 0.6rem 0.7rem;
+      border-bottom: 1px solid var(--line);
+      text-align: left;
+      vertical-align: top;
+    }
+
+    th {
+      color: var(--ink);
+      font-family: var(--font-body);
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0;
+    }
+  }
+}
+
+.post-footer-nav {
+  margin-top: 3rem;
+  padding-top: 1.75rem;
+  border-top: 1px solid var(--line);
+}
+
+// Rouge syntax colours for the dark code plates
+.highlight {
+  .c,
+  .c1,
+  .cm,
+  .cs {
+    color: #79806F;
+    font-style: italic;
+  }
+
+  .k,
+  .kc,
+  .kd,
+  .kn,
+  .kp,
+  .kr,
+  .kt {
+    color: #C9A7EB;
+  }
+
+  .s,
+  .s1,
+  .s2,
+  .sb,
+  .sc,
+  .sd,
+  .se,
+  .sh,
+  .si,
+  .sr,
+  .ss,
+  .sx {
+    color: #A7D8B4;
+  }
+
+  .mi,
+  .mf,
+  .mh,
+  .mo,
+  .il {
+    color: #F0B37E;
+  }
+
+  .na,
+  .nb,
+  .nc,
+  .nd,
+  .ne,
+  .nf,
+  .nl,
+  .nn,
+  .nt,
+  .nv {
+    color: #8FB8F5;
+  }
+
+  .o,
+  .ow,
+  .p {
+    color: #A8B0A4;
+  }
+
+  .err {
+    color: #F08A7A;
+  }
+}
+
+@media (max-width: 700px) {
+  .post-body {
+    font-size: 1.01rem;
+
+    h2 {
+      margin-top: 2.4rem;
+    }
+
+    pre {
+      padding: 2.25rem 1rem 1rem;
+    }
+
+    blockquote {
+      padding: 1.25rem 1.25rem 1.25rem 2.5rem;
+      font-size: 1.12rem;
+    }
+  }
+
+  .post-header .post-title {
+    font-size: clamp(2.2rem, 10vw, 3.4rem);
+  }
+}

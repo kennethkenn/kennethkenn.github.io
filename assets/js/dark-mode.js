@@ -19,8 +19,16 @@
     function syncThemeColor() {
         var meta = document.querySelector('meta[name="theme-color"]');
         if (meta) {
-            meta.setAttribute('content', currentTheme() === 'dark' ? '#121311' : '#FAF9F5');
+            meta.setAttribute('content', currentTheme() === 'dark' ? '#0D0F0C' : '#F2EFE6');
         }
+    }
+
+    function announceTheme() {
+        try {
+            window.dispatchEvent(new CustomEvent('themechange', {
+                detail: { theme: currentTheme() }
+            }));
+        } catch (e) { }
     }
 
     function makeToggle() {
@@ -64,11 +72,16 @@
 
         syncToggle();
         syncThemeColor();
+        announceTheme();
     }
 
     if (document.readyState === 'loading') {
-        document.addEventListener('DOMContentLoaded', makeToggle);
+        document.addEventListener('DOMContentLoaded', function () {
+            makeToggle();
+            announceTheme();
+        });
     } else {
         makeToggle();
+        announceTheme();
     }
 })();

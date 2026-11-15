@@ -1,4 +1,7 @@
---- 
---- 
-@import "style";
-@import "blog";
+---
+---
+@use "base";
+@use "chrome";
+@use "home";
+@use "pages";
+@use "post";

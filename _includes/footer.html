@@ -1,17 +1,38 @@
 <footer class="site-footer">
-    <div class="footer-container">
+    <div class="container footer-top">
         <div class="footer-brand">
-            <span class="footer-logo">{{ site.title }}</span>
-            <p>Full-stack developer &amp; designer.</p>
+            <a href="{{ '/' | relative_url }}" class="footer-logo">
+                <img src="{{ '/assets/images/profile-mark.png' | relative_url }}" alt="" width="675" height="1049"
+                    loading="lazy" aria-hidden="true">
+                <span>The Mint Coder</span>
+            </a>
+            <p>Full-stack engineer and digital artisan. Building systems, products, and the occasional beautiful thing.</p>
         </div>
 
-        <ul class="footer-links">
-            <li><a href="https://github.com/kennethkenn" rel="me noopener" target="_blank">GitHub</a></li>
-            <li><a href="https://linkedin.com/in/kenneth-buchunju" rel="me noopener" target="_blank">LinkedIn</a></li>
-            <li><a href="mailto:{{ site.email }}">Email</a></li>
-            <li><a href="{{ '/feed.xml' | relative_url }}">RSS</a></li>
-        </ul>
+        <nav class="footer-nav" aria-label="Footer navigation">
+            <h2 class="footer-heading">Index</h2>
+            <ul>
+                <li><a href="{{ '/projects' | relative_url }}">Work</a></li>
+                <li><a href="{{ '/about' | relative_url }}">About</a></li>
+                <li><a href="{{ '/blog' | relative_url }}">Journal</a></li>
+                <li><a href="{{ '/contacts' | relative_url }}">Contact</a></li>
+            </ul>
+        </nav>
 
-        <p class="footer-meta">&copy; {{ site.time | date: '%Y' }} {{ site.title }}. All rights reserved.</p>
+        <div class="footer-contact">
+            <h2 class="footer-heading">Dispatch</h2>
+            <a href="mailto:{{ site.email }}" class="footer-email">{{ site.email }}</a>
+            <ul class="footer-links">
+                <li><a href="https://github.com/kennethkenn" rel="me noopener" target="_blank">GitHub</a></li>
+                <li><a href="https://linkedin.com/in/kenneth-buchunju" rel="me noopener" target="_blank">LinkedIn</a></li>
+                <li><a href="{{ '/feed.xml' | relative_url }}">RSS</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="container footer-bottom">
+        <span>&copy; {{ site.time | date: '%Y' }} The Mint Coder. All rights reserved.</span>
+        <span>Designed &amp; built by Kenneth Buchunju</span>
+        <a href="#top">Back to top ↑</a>
     </div>
 </footer>
