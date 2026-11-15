@@ -63,7 +63,7 @@ kennethkenn.github.io/
 ├── _sass/
 │   ├── _base.scss        # Tokens, reset, typography, motion
 │   ├── _chrome.scss      # Grain, header, footer, page heroes
-│   ├── _home.scss        # Hero, work list, journal, manifesto, CTA
+│   ├── _home.scss        # Hero, disciplines, work, journal, manifesto, CTA
 │   ├── _pages.scss       # Archive, about, contact, blog, 404
 │   └── _post.scss        # Article typography and code blocks
 ├── _data/
