@@ -6,11 +6,22 @@
                     loading="lazy" aria-hidden="true">
                 <span>The Mint Coder</span>
             </a>
-            <p>Full-stack engineer and digital artisan. Building systems, products, and the occasional beautiful thing.</p>
+            <p>Independent product engineering and design. Fast, reliable web applications — built to launch and easy to keep.</p>
+            <a href="mailto:{{ site.email }}" class="footer-cta">Start a conversation <span aria-hidden="true">→</span></a>
         </div>
 
+        <nav class="footer-nav" aria-label="Services">
+            <h2 class="footer-heading">Services</h2>
+            <ul>
+                <li><a href="{{ '/#services' | relative_url }}">Web apps</a></li>
+                <li><a href="{{ '/#services' | relative_url }}">Backend &amp; APIs</a></li>
+                <li><a href="{{ '/#services' | relative_url }}">Performance</a></li>
+                <li><a href="{{ '/#services' | relative_url }}">Product design</a></li>
+            </ul>
+        </nav>
+
         <nav class="footer-nav" aria-label="Footer navigation">
-            <h2 class="footer-heading">Index</h2>
+            <h2 class="footer-heading">Explore</h2>
             <ul>
                 <li><a href="{{ '/projects' | relative_url }}">Work</a></li>
                 <li><a href="{{ '/about' | relative_url }}">About</a></li>
@@ -20,12 +31,12 @@
         </nav>
 
         <div class="footer-contact">
-            <h2 class="footer-heading">Dispatch</h2>
+            <h2 class="footer-heading">Get in touch</h2>
             <a href="mailto:{{ site.email }}" class="footer-email">{{ site.email }}</a>
             <ul class="footer-links">
-                <li><a href="https://github.com/kennethkenn" rel="me noopener" target="_blank">GitHub</a></li>
-                <li><a href="https://linkedin.com/in/kenneth-buchunju" rel="me noopener" target="_blank">LinkedIn</a></li>
-                <li><a href="{{ '/feed.xml' | relative_url }}">RSS</a></li>
+                <li><a href="https://github.com/kennethkenn" rel="me noopener" target="_blank">GitHub ↗</a></li>
+                <li><a href="https://linkedin.com/in/kenneth-buchunju" rel="me noopener" target="_blank">LinkedIn ↗</a></li>
+                <li><a href="{{ '/feed.xml' | relative_url }}">RSS feed</a></li>
             </ul>
         </div>
     </div>

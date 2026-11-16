@@ -1,19 +1,19 @@
 ---
 layout: default
-title: Projects
-description: Explore Kenneth's portfolio of projects including enterprise systems, high-performance engines, and fullstack applications.
+title: Work
+description: Selected projects by Kenneth Buchunju — web applications, backend systems, and performance-focused tooling.
 ---
 
 <section class="archive">
   <header class="page-hero">
     <div class="container page-hero-inner">
-      <span class="section-plate">Archive / Work</span>
-      <h1 class="display">Selected work.</h1>
-      <p class="hero-tagline">Systems, full-stack applications, and performance-focused tooling. Each plate is a shipped experiment in making software feel considered.</p>
+      <span class="section-plate">Work / Selected projects</span>
+      <h1 class="display">Things built<br>to be used.</h1>
+      <p class="hero-tagline">Product applications, backend systems, and performance-focused tooling. Each one shipped, documented, and built with an eye on how it will be maintained.</p>
       <div class="page-hero-meta">
         <span>{{ site.data.projects.size }} projects</span>
-        <span>Systems · Web · Mobile</span>
-        <span>Ongoing archive</span>
+        <span>Web · Systems · Mobile</span>
+        <span>Source available where possible</span>
       </div>
     </div>
   </header>
@@ -21,12 +21,12 @@ description: Explore Kenneth's portfolio of projects including enterprise system
   <div class="container archive-layout">
     <aside class="archive-side">
       <label class="search-field">
-        <span class="search-label">Search the archive</span>
-        <input type="search" placeholder="Try “kernel”, “React”, “SQL”…" data-project-search
+        <span class="search-label">Search the work</span>
+        <input type="search" placeholder="Try “React”, “Spring”, “SQL”…" data-project-search
           aria-controls="project-grid" autocomplete="off">
       </label>
 
-      <p class="archive-note">Every project here is a real build: source available where possible, with an emphasis on systems, product engineering, and the occasional deep dive into the machine.</p>
+      <p class="archive-note">Every project here is a real build. Some are client-style product exercises, some are deep dives into the machine — all of them shipped with source or a working demo where possible.</p>
       <p class="archive-status" data-project-status aria-live="polite"></p>
     </aside>
 
@@ -45,7 +45,7 @@ description: Explore Kenneth's portfolio of projects including enterprise system
 
           <div class="project-content">
             <h3>{{ project.title }}</h3>
-            <p>{{ project.description }}</p>
+            <p>{{ project.outcome | default: project.description }}</p>
 
             <div class="tech-stack">
               {% assign techs = project.tech | split: ", " %}
@@ -58,7 +58,7 @@ description: Explore Kenneth's portfolio of projects including enterprise system
               {% if project.github and project.github != "#" %}
               <a href="{{ project.github }}" target="_blank" rel="noopener" class="card-link"
                 aria-label="View the {{ project.title }} source code on GitHub">
-                GitHub <span aria-hidden="true">↗</span>
+                Source <span aria-hidden="true">↗</span>
               </a>
               {% endif %}
               {% if project.demo and project.demo != "#" %}

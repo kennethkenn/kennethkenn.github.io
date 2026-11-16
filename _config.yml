@@ -4,7 +4,8 @@ baseurl: ""
 url: "https://themintcoder.org"
 email: kenneth@themintcoder.org
 description: >-
-  Portfolio of Kenneth, developer and designer.
+  Independent product engineering and design. Kenneth Buchunju builds fast,
+  reliable web applications for founders and small teams.
 # theme: minima
 plugins:
   - jekyll-feed

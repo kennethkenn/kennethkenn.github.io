@@ -5,16 +5,15 @@
                 width="675" height="1049" aria-hidden="true">
             <span class="logo-type">
                 <span class="logo-text">The Mint Coder</span>
-                <span class="logo-meta">Engineering folio</span>
+                <span class="logo-meta">Product engineer</span>
             </span>
         </a>
 
         <nav class="nav-menu" id="nav-menu" aria-label="Main navigation">
             <ul>
                 <li>
-                    <a href="{{ '/' | relative_url }}" class="nav-link"
-                        {% if page.url == "/" %}aria-current="page"{% endif %}>
-                        <span class="nav-label">Home</span>
+                    <a href="{{ '/#services' | relative_url }}" class="nav-link">
+                        <span class="nav-label">Services</span>
                     </a>
                 </li>
                 <li>
@@ -45,6 +44,9 @@
         </nav>
 
         <div class="header-actions">
+            <a href="{{ '/contacts' | relative_url }}" class="header-cta">
+                Start a project <span aria-hidden="true">→</span>
+            </a>
             <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="nav-menu">
                 <span class="hamburger"></span>
             </button>

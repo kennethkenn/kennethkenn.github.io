@@ -19,7 +19,7 @@
     function syncThemeColor() {
         var meta = document.querySelector('meta[name="theme-color"]');
         if (meta) {
-            meta.setAttribute('content', currentTheme() === 'dark' ? '#0D0F0C' : '#F2EFE6');
+            meta.setAttribute('content', currentTheme() === 'dark' ? '#0B0F0D' : '#FAFAF7');
         }
     }
 

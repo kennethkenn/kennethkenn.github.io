@@ -7,10 +7,12 @@
 
 - title: Enterprise Inventory System
   description: A robust enterprise application for tracking stock levels across multiple warehouses, featuring a RESTful API backend, role-based access control, and real-time reporting dashboards.
+  outcome: A multi-warehouse inventory platform with role-based access and live reporting — replacing spreadsheets and manual stock counts.
   tech: Java, Spring Boot, AngularJS, SQL
   github: https://github.com/kennethkenn/Enterprise-Inventory
   demo: #
   image: /assets/images/projects/enterprise-inventory-system.webp
+  featured: true
 
 - title: Algorithm Visualizer
   description: An educational interactive tool that animates sorting and pathfinding algorithms (like Dijkstra, A*, QuickSort). It helps visualize step-by-step execution and time complexity.
@@ -35,17 +37,21 @@
 
 - title: High-Performance Data Engine
   description: A high-performance, multi-threaded data processing engine connected to low-level hardware. It implements lock-free data structures and custom memory allocators for sub-microsecond latency.
+  outcome: A multi-threaded data engine with lock-free queues and custom allocators, built for sub-microsecond latency on constrained hardware.
   tech: C++, Python, x86 Assembly
   github: https://github.com/kennethkenn/Data-Engine
   demo: #
   image: /assets/images/projects/high-performance-data-engine.webp
+  featured: true
 
 - title: Personal Finance Tracker
   description: A comprehensive personal finance dashboard that visualizes income streams and expenses. Features include budget setting, recurring transaction tracking, and interactive charts for financial health analysis.
+  outcome: A finance dashboard that turns raw transactions into budgets, trends, and a clear monthly picture — with recurring payments tracked automatically.
   tech: React, Node.js, PostgreSQL
   github: https://github.com/kennethkenn/Finance-Tracker
   demo: #
   image: /assets/images/projects/personal-finance-tracker.webp
+  featured: true
 
 - title: URL Shortener Service
   description: A high-throughput link shortening service. It generates unique aliases, handles redirects with millisecond latency, and provides detailed analytics on click-through rates and geographical data.
@@ -77,10 +83,12 @@
 
 - title: E-commerce Storefront
   description: A fully functional mock online store application. It demonstrates product catalog filtering, cart state management, user authentication, and a simulated Stripe checkout payment flow.
+  outcome: A storefront with catalogue filtering, cart state, authentication, and a Stripe checkout flow — TypeScript end to end.
   tech: TypeScript, Next.js, Stripe API
   github: https://github.com/kennethkenn/ShopHub
   demo: #
   image: /assets/images/projects/e-commerce-storefront.webp
+  featured: true
 
 - title: Online Discussion Forum
   description: A community-driven platform featuring threaded discussions, rich-text editing, specific user reputation systems, and moderation tools for admin management.

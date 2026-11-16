@@ -8,12 +8,12 @@ description: Notes on systems, backend architecture, performance, and the craft 
   <header class="page-hero">
     <div class="container page-hero-inner">
       <span class="section-plate">Journal / Writing</span>
-      <h1 class="display">Notes from the<br>workbench.</h1>
-      <p class="hero-tagline">Thoughts on software development, systems, and the daily challenge of writing clearly about complicated things.</p>
+      <h1 class="display">Notes on building<br>software that lasts.</h1>
+      <p class="hero-tagline">Essays on systems, backend architecture, performance, and the craft of writing code people can maintain. Written while the work is fresh.</p>
       <div class="page-hero-meta">
         <span>{{ site.posts.size }} entries</span>
         <span>Systems · Backend · Craft</span>
-        <span>Daily challenge active</span>
+        <span>New notes most weeks</span>
       </div>
     </div>
   </header>

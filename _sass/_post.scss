@@ -6,7 +6,7 @@
 }
 
 .post-shell {
-  max-width: 1080px;
+  max-width: 1040px;
   margin: 0 auto;
   padding: 0 var(--gutter);
 }
@@ -17,12 +17,11 @@
   justify-content: space-between;
   flex-wrap: wrap;
   gap: 0.6rem 1.5rem;
-  padding-bottom: 1.15rem;
+  padding-bottom: 1.1rem;
   border-bottom: 1px solid var(--line);
   color: var(--muted);
   font-family: var(--font-body);
-  font-size: 0.7rem;
-  letter-spacing: 0;
+  font-size: 0.8rem;
 }
 
 .post-back {
@@ -40,23 +39,23 @@
 }
 
 .post-header {
-  max-width: 930px;
-  padding: clamp(2.5rem, 5vw, 4.5rem) 0 clamp(1.75rem, 3vw, 2.75rem);
+  max-width: 900px;
+  padding: clamp(2.5rem, 5vw, 4.25rem) 0 clamp(1.75rem, 3vw, 2.5rem);
 
   .post-categories-container {
     display: flex;
     flex-wrap: wrap;
-    gap: 0.28rem;
+    gap: 0.3rem;
     margin-bottom: 1.1rem;
   }
 
   .post-title,
   h1 {
-    margin-bottom: 1.1rem;
+    margin-bottom: 1rem;
     font-family: var(--font-display);
-    font-size: clamp(2.1rem, 4.4vw, 3.8rem);
+    font-size: clamp(2.2rem, 4.4vw, 3.6rem);
     font-weight: 400;
-    line-height: 1.02;
+    line-height: 1.03;
     letter-spacing: -0.03em;
   }
 }
@@ -69,50 +68,33 @@
 
 .category-badge {
   display: inline-block;
+  padding: 0.18rem 0.5rem;
+  border: 1px solid var(--line);
+  border-radius: var(--r-full);
+  background: var(--surface);
   color: var(--muted);
   font-family: var(--font-body);
-  font-size: 0.66rem;
+  font-size: 0.68rem;
   font-weight: 500;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.04em;
   text-transform: uppercase;
   white-space: nowrap;
 }
 
-.category-badge + .category-badge::before {
-  content: '·';
-  margin-right: 0.4rem;
-  color: var(--line-strong);
-}
-
 .post-body {
-  max-width: 760px;
-  counter-reset: section;
+  max-width: 740px;
   color: var(--ink);
-  font-size: 1.02rem;
+  font-size: 1.04rem;
   line-height: 1.8;
 
   h2 {
-    margin-top: 3rem;
+    margin-top: 2.8rem;
     margin-bottom: 0.9rem;
-    padding-bottom: 0.5rem;
-    border-bottom: 1px solid var(--line);
     font-family: var(--font-display);
-    font-size: clamp(1.7rem, 3vw, 2.15rem);
+    font-size: clamp(1.65rem, 2.8vw, 2.05rem);
     font-weight: 400;
-    line-height: 1.1;
-    letter-spacing: -0.03em;
-    counter-increment: section;
-
-    &::before {
-      content: counter(section, decimal-leading-zero) ' / ';
-      margin-right: 0.35em;
-      color: var(--mint);
-      font-family: var(--font-body);
-      font-size: 0.62em;
-      font-weight: 500;
-      letter-spacing: 0;
-      vertical-align: 0.1em;
-    }
+    line-height: 1.15;
+    letter-spacing: -0.025em;
   }
 
   h3 {
@@ -156,7 +138,7 @@
   ol li::marker {
     color: var(--mint);
     font-family: var(--font-mono);
-    font-size: 0.85em;
+    font-size: 0.9em;
   }
 
   a {
@@ -175,26 +157,15 @@
   blockquote {
     position: relative;
     margin: 2.2rem 0;
-    padding: 1.5rem 1.75rem 1.5rem 3rem;
+    padding: 1.4rem 1.75rem;
     border-left: 2px solid var(--mint);
-    background: var(--surface);
+    border-radius: 0 var(--r-md) var(--r-md) 0;
+    background: var(--surface-alt);
     color: var(--ink-soft);
     font-family: var(--font-display);
-    font-size: 1.2rem;
+    font-size: 1.22rem;
     font-style: normal;
-    line-height: 1.5;
-
-    &::before {
-      content: '“';
-      position: absolute;
-      top: 0.1rem;
-      left: 0.85rem;
-      color: var(--mint);
-      font-family: var(--font-display);
-      font-size: 3.5rem;
-      line-height: 1;
-      opacity: 0.35;
-    }
+    line-height: 1.55;
 
     p:last-child {
       margin-bottom: 0;
@@ -211,14 +182,14 @@
   img {
     margin: 2rem auto;
     border: 1px solid var(--line);
-    border-radius: var(--r-xs);
+    border-radius: var(--r-md);
   }
 
   code {
     padding: 0.14em 0.35em;
     border: 1px solid var(--line);
-    border-radius: 3px;
-    background: var(--surface);
+    border-radius: 4px;
+    background: var(--surface-alt);
     color: var(--ink);
     font-family: var(--font-mono);
     font-size: 0.84em;
@@ -226,10 +197,10 @@
 
   pre {
     margin: 2rem 0;
-    padding: 2.4rem 1.35rem 1.35rem;
+    padding: 2.5rem 1.35rem 1.35rem;
     overflow-x: auto;
     border: 1px solid #2A2E26;
-    border-radius: var(--r-xs);
+    border-radius: var(--r-md);
     background: #101209;
     box-shadow: var(--shadow-sm);
     line-height: 1.65;
@@ -254,13 +225,13 @@
     &::before {
       content: attr(data-lang);
       position: absolute;
-      top: 0.62rem;
+      top: 0.72rem;
       left: 1.35rem;
       z-index: 1;
       color: #8D9587;
       font-family: var(--font-mono);
-      font-size: 0.46rem;
-      letter-spacing: 0.14em;
+      font-size: 0.58rem;
+      letter-spacing: 0.12em;
       text-transform: uppercase;
     }
   }
@@ -270,14 +241,14 @@
     top: 0.55rem;
     right: 0.55rem;
     z-index: 2;
-    padding: 0.28rem 0.45rem;
+    padding: 0.3rem 0.55rem;
     border: 1px solid #3A4036;
-    border-radius: 3px;
+    border-radius: 4px;
     background: #191C15;
     color: #B9C0B2;
     font-family: var(--font-mono);
-    font-size: 0.44rem;
-    letter-spacing: 0.1em;
+    font-size: 0.56rem;
+    letter-spacing: 0.08em;
     text-transform: uppercase;
     cursor: pointer;
     transition: background-color 200ms ease, color 200ms ease, border-color 200ms ease;
@@ -306,9 +277,8 @@
     th {
       color: var(--ink);
       font-family: var(--font-body);
-      font-size: 0.72rem;
+      font-size: 0.78rem;
       font-weight: 600;
-      letter-spacing: 0;
     }
   }
 }
@@ -399,12 +369,12 @@
     }
 
     blockquote {
-      padding: 1.25rem 1.25rem 1.25rem 2.5rem;
+      padding: 1.2rem 1.25rem;
       font-size: 1.12rem;
     }
   }
 
   .post-header .post-title {
-    font-size: clamp(2.2rem, 10vw, 3.4rem);
+    font-size: clamp(2.2rem, 10vw, 3.2rem);
   }
 }
