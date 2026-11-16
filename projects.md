@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Work
-description: Selected projects by Kenneth Buchunju — web applications, backend systems, and performance-focused tooling.
+description: Selected projects by Kenneth Buchunju - web applications, backend systems, and performance-focused tooling.
 ---
 
 <section class="archive">
@@ -26,7 +26,7 @@ description: Selected projects by Kenneth Buchunju — web applications, backend
           aria-controls="project-grid" autocomplete="off">
       </label>
 
-      <p class="archive-note">Every project here is a real build. Some are client-style product exercises, some are deep dives into the machine — all of them shipped with source or a working demo where possible.</p>
+      <p class="archive-note">Every project here is a real build. Some are client-style product exercises, some are deep dives into the machine - all of them shipped with source or a working demo where possible.</p>
       <p class="archive-status" data-project-status aria-live="polite"></p>
     </aside>
 

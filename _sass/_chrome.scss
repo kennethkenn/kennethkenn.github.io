@@ -457,8 +457,8 @@ header#site-header {
     margin: 0.85rem 0 1rem;
     font-size: clamp(2.4rem, 4.3vw, 3.5rem);
     font-weight: 400;
-    line-height: 1.03;
-    letter-spacing: -0.032em;
+    line-height: 1.04;
+    letter-spacing: -0.024em;
   }
 
   .hero-tagline {
@@ -543,7 +543,11 @@ header#site-header {
 
 .footer-top {
   display: grid;
-  grid-template-columns: minmax(0, 1.7fr) repeat(3, minmax(0, 0.75fr));
+  grid-template-columns:
+    minmax(0, 1.55fr)
+    minmax(0, 0.7fr)
+    minmax(0, 0.7fr)
+    minmax(0, 1.1fr);
   gap: 2.5rem;
   padding-top: clamp(3rem, 5vw, 4.5rem);
   padding-bottom: clamp(2.5rem, 5vw, 4rem);
@@ -641,9 +645,9 @@ header#site-header {
     display: inline-block;
     color: var(--ink);
     font-family: var(--font-body);
-    font-size: 0.95rem;
+    font-size: 0.9rem;
     text-decoration: none;
-    overflow-wrap: anywhere;
+    overflow-wrap: normal;
     transition: color 200ms ease;
 
     &:hover {

@@ -3,6 +3,7 @@
 // GitHub Pages' built-in Sass compiler (libsass via jekyll-sass-converter 2.x)
 // does not support the Sass module system (@use). Keep @import here so the
 // stylesheet is compiled during the Pages build instead of being copied verbatim.
+@import "fonts";
 @import "base";
 @import "chrome";
 @import "home";

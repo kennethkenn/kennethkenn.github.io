@@ -8,7 +8,7 @@ description: Kenneth Buchunju is an independent full-stack engineer and designer
   <div class="container page-hero-inner">
     <span class="section-plate">About / The practice</span>
     <h1 class="display">A small studio.<br>Senior work.</h1>
-    <p class="hero-tagline">I'm Kenneth Buchunju — a full-stack engineer and designer. The Mint Coder is my independent practice, built on one idea: the person who designs the product should understand the code behind it.</p>
+    <p class="hero-tagline">I'm Kenneth Buchunju - a full-stack engineer and designer. The Mint Coder is my independent practice, built on one idea: the person who designs the product should understand the code behind it.</p>
     <div class="page-hero-meta">
       <span>Full-stack engineer</span>
       <span>Product designer</span>
@@ -23,10 +23,10 @@ description: Kenneth Buchunju is an independent full-stack engineer and designer
     <div class="bio-content">
       <span class="section-plate">The short version</span>
       <h2>Curiosity first.<br>Then craft.</h2>
-      <p>I started by taking things apart to see how they worked — websites, games, operating systems. That curiosity became a career spent building software end to end: the data model, the API, the interface, and the deployment.</p>
+      <p>I started by taking things apart to see how they worked - websites, games, operating systems. That curiosity became a career spent building software end to end: the data model, the API, the interface, and the deployment.</p>
       <p>Today I work with founders and small teams who need a product built properly, without the overhead of a large agency. I care about clarity, maintainability, and the details people notice even when they can't name them.</p>
       <p>When I'm not building for clients, I'm writing about systems and performance, or working on a small kernel and a data engine of my own.</p>
-      <span class="bio-signature">— Kenneth Buchunju, The Mint Coder</span>
+      <span class="bio-signature">- Kenneth Buchunju, The Mint Coder</span>
     </div>
 
     <figure class="bio-image">
@@ -44,19 +44,19 @@ description: Kenneth Buchunju is an independent full-stack engineer and designer
         <span class="section-plate">How I work</span>
         <h2 class="display">Three rules that<br>survive deadlines.</h2>
       </div>
-      <p class="section-lede">A small set of principles that hold up when a project gets complicated — and they usually do.</p>
+      <p class="section-lede">A small set of principles that hold up when a project gets complicated - and they usually do.</p>
     </div>
 
     <div class="principle-list">
       <article class="principle" data-reveal style="--i:0">
         <span>01</span>
         <h3>Clarity over cleverness</h3>
-        <p>The best code reads like a clear sentence. I optimise for the next person who has to understand it — including your future team.</p>
+        <p>The best code reads like a clear sentence. I optimise for the next person who has to understand it - including your future team.</p>
       </article>
       <article class="principle" data-reveal style="--i:1">
         <span>02</span>
         <h3>Measure, then decide</h3>
-        <p>Performance work starts with evidence. Profilers, traces, and benchmarks decide where the effort goes — never guesses.</p>
+        <p>Performance work starts with evidence. Profilers, traces, and benchmarks decide where the effort goes - never guesses.</p>
       </article>
       <article class="principle" data-reveal style="--i:2">
         <span>03</span>
@@ -72,7 +72,7 @@ description: Kenneth Buchunju is an independent full-stack engineer and designer
         <span class="section-plate">Toolkit</span>
         <h2 class="display">The right tool<br>for the job.</h2>
       </div>
-      <p>Tools I reach for across product, backend, and performance work. Chosen for fit and longevity — not fashion.</p>
+      <p>Tools I reach for across product, backend, and performance work. Chosen for fit and longevity - not fashion.</p>
     </div>
 
     <div class="skills-grid">
@@ -188,7 +188,7 @@ description: Kenneth Buchunju is an independent full-stack engineer and designer
       <article class="now-card" data-reveal style="--i:0">
         <span>Building</span>
         <h3>A data engine &amp; a small OS</h3>
-        <p>Lock-free structures, custom allocators, and a didactic 32-bit kernel — one interrupt at a time.</p>
+        <p>Lock-free structures, custom allocators, and a didactic 32-bit kernel - one interrupt at a time.</p>
       </article>
       <article class="now-card" data-reveal style="--i:1">
         <span>Studying</span>

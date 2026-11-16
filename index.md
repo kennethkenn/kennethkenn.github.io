@@ -21,7 +21,7 @@ description: Kenneth Buchunju - independent full-stack engineer and designer bui
 
         <p class="hero-desc">
           I'm Kenneth. I help founders and small teams turn rough ideas into fast, reliable
-          applications — the database, the API, the interface, and the details in between.
+          applications - the database, the API, the interface, and the details in between.
         </p>
 
         <div class="hero-actions">
@@ -49,7 +49,7 @@ description: Kenneth Buchunju - independent full-stack engineer and designer bui
           <img src="{{ '/assets/images/projects/e-commerce-storefront.webp' | relative_url }}"
             alt="Preview of the ShopHub e-commerce storefront" width="1200" height="750" fetchpriority="high">
         </figure>
-        <p class="hero-caption">ShopHub — TypeScript, Next.js, Stripe</p>
+        <p class="hero-caption">ShopHub - TypeScript, Next.js, Stripe</p>
       </div>
     </div>
   </section>
@@ -72,7 +72,7 @@ description: Kenneth Buchunju - independent full-stack engineer and designer bui
         <article class="service-card" data-reveal style="--i:0">
           <span class="service-index">01</span>
           <h3>Web app development</h3>
-          <p>New products, MVPs, and internal tools — designed and built as one coherent system.</p>
+          <p>New products, MVPs, and internal tools - designed and built as one coherent system.</p>
           <ul class="service-list">
             <li>Product scoping and UX flows</li>
             <li>Responsive front end in React, Next.js, or Angular</li>
@@ -85,7 +85,7 @@ description: Kenneth Buchunju - independent full-stack engineer and designer bui
         <article class="service-card" data-reveal style="--i:1">
           <span class="service-index">02</span>
           <h3>Backend &amp; APIs</h3>
-          <p>Services that stay fast and predictable as usage grows — and stay easy to change.</p>
+          <p>Services that stay fast and predictable as usage grows - and stay easy to change.</p>
           <ul class="service-list">
             <li>Data modelling and SQL design</li>
             <li>REST APIs and third-party integrations</li>
@@ -98,7 +98,7 @@ description: Kenneth Buchunju - independent full-stack engineer and designer bui
         <article class="service-card" data-reveal style="--i:2">
           <span class="service-index">03</span>
           <h3>Performance &amp; reliability</h3>
-          <p>Find out why it's slow, fragile, or expensive — then fix the cause, not the symptom.</p>
+          <p>Find out why it's slow, fragile, or expensive - then fix the cause, not the symptom.</p>
           <ul class="service-list">
             <li>Profiling and load testing</li>
             <li>Refactoring and caching strategies</li>
@@ -111,7 +111,7 @@ description: Kenneth Buchunju - independent full-stack engineer and designer bui
         <article class="service-card" data-reveal style="--i:3">
           <span class="service-index">04</span>
           <h3>Product design &amp; UI</h3>
-          <p>Interfaces that explain themselves — clear, consistent, and comfortable to use.</p>
+          <p>Interfaces that explain themselves - clear, consistent, and comfortable to use.</p>
           <ul class="service-list">
             <li>UX audits and wireframes</li>
             <li>Design systems and reusable components</li>
@@ -195,7 +195,7 @@ description: Kenneth Buchunju - independent full-stack engineer and designer bui
         <article class="step" data-reveal style="--i:0">
           <span class="step-num">01</span>
           <h3>Intro call</h3>
-          <p>A 30-minute conversation about the goal, the constraints, and what success looks like. You'll leave with an honest recommendation — even if we don't work together.</p>
+          <p>A 30-minute conversation about the goal, the constraints, and what success looks like. You'll leave with an honest recommendation - even if we don't work together.</p>
         </article>
         <article class="step" data-reveal style="--i:1">
           <span class="step-num">02</span>
@@ -222,7 +222,7 @@ description: Kenneth Buchunju - independent full-stack engineer and designer bui
       <div class="value-intro" data-reveal>
         <span class="section-plate section-plate--light">Why work with me</span>
         <h2 class="display">Senior work, without the agency overhead.</h2>
-        <p>You work directly with the person designing and building the product — not an account manager, and not a handoff between three teams.</p>
+        <p>You work directly with the person designing and building the product - not an account manager, and not a handoff between three teams.</p>
         <a href="{{ '/about' | relative_url }}" class="link-arrow link-arrow--light">More about how I work <span aria-hidden="true">→</span></a>
       </div>
 
@@ -313,7 +313,7 @@ description: Kenneth Buchunju - independent full-stack engineer and designer bui
       <div class="faq-intro" data-reveal>
         <span class="section-plate">FAQ</span>
         <h2 class="display">Good questions, straight answers.</h2>
-        <p>If yours isn't here, send a note — I answer every message personally.</p>
+        <p>If yours isn't here, send a note - I answer every message personally.</p>
         <a href="{{ '/contacts' | relative_url }}" class="link-arrow">Ask a question <span aria-hidden="true">→</span></a>
       </div>
 
@@ -340,7 +340,7 @@ description: Kenneth Buchunju - independent full-stack engineer and designer bui
         </details>
         <details class="faq-item">
           <summary>What if I only need a small fix?</summary>
-          <p>Small, well-defined jobs are welcome when the schedule allows. If it's a quick win, I'll tell you — and if it's too small to be worth a project, I'll point you to the right resource.</p>
+          <p>Small, well-defined jobs are welcome when the schedule allows. If it's a quick win, I'll tell you - and if it's too small to be worth a project, I'll point you to the right resource.</p>
         </details>
       </div>
     </div>
@@ -355,7 +355,7 @@ description: Kenneth Buchunju - independent full-stack engineer and designer bui
       <div>
         <span class="section-plate">The person behind the work</span>
         <h2 class="display">You'll be working with Kenneth.</h2>
-        <p>I'm a full-stack engineer and designer with a soft spot for systems, clean interfaces, and software that lasts. The Mint Coder is my independent practice — small by design, so the work stays personal.</p>
+        <p>I'm a full-stack engineer and designer with a soft spot for systems, clean interfaces, and software that lasts. The Mint Coder is my independent practice - small by design, so the work stays personal.</p>
       </div>
       <a href="{{ '/about' | relative_url }}" class="link-arrow">Read the full story <span aria-hidden="true">→</span></a>
     </div>

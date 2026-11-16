@@ -9,7 +9,7 @@ description: Start a project with Kenneth Buchunju. Share what you're building a
     <div class="container page-hero-inner">
       <span class="section-plate">Contact / Start a project</span>
       <h1 class="display">Tell me what<br>you're building.</h1>
-      <p class="hero-tagline">A rough idea is enough. Send a short note about the product, the timeline, and where you're stuck — I'll reply within two working days.</p>
+      <p class="hero-tagline">A rough idea is enough. Send a short note about the product, the timeline, and where you're stuck - I'll reply within two working days.</p>
       <div class="page-hero-meta">
         <span>Available for projects</span>
         <span>Replies within 48 hours</span>

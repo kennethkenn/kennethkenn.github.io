@@ -6,7 +6,7 @@
                     loading="lazy" aria-hidden="true">
                 <span>The Mint Coder</span>
             </a>
-            <p>Independent product engineering and design. Fast, reliable web applications — built to launch and easy to keep.</p>
+            <p>Independent product engineering and design. Fast, reliable web applications - built to launch and easy to keep.</p>
             <a href="mailto:{{ site.email }}" class="footer-cta">Start a conversation <span aria-hidden="true">→</span></a>
         </div>
 
@@ -32,7 +32,7 @@
 
         <div class="footer-contact">
             <h2 class="footer-heading">Get in touch</h2>
-            <a href="mailto:{{ site.email }}" class="footer-email">{{ site.email }}</a>
+            <a href="mailto:{{ site.email }}" class="footer-email">{{ site.email | split: "@" | first }}@<wbr>{{ site.email | split: "@" | last }}</a>
             <ul class="footer-links">
                 <li><a href="https://github.com/kennethkenn" rel="me noopener" target="_blank">GitHub ↗</a></li>
                 <li><a href="https://linkedin.com/in/kenneth-buchunju" rel="me noopener" target="_blank">LinkedIn ↗</a></li>

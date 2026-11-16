@@ -1,13 +1,13 @@
 # Kenneth's Portfolio - The Mint Coder
 
-A portfolio and journal built with Jekyll, designed as an **engineering atelier / folio**: blueprint paper, a heraldic crest, letterpress display type, and mint-and-copper inks. The interface stays quiet; a single drafting-field animation keeps it alive.
+A portfolio and journal built with Jekyll, designed as a quiet product studio: warm paper, ink, a single emerald accent, and self-hosted typography. The interface stays calm and the work does the talking.
 
 ## Features
 
-- **Editorial design system** - Instrument Serif display type, Inter Tight body and UI copy, JetBrains Mono for code, and a drawn blueprint grid.
-- **Light and dark themes** - persisted in `localStorage`, with a `themechange` event so the hero canvas recolors live.
+- **Editorial design system** - Zodiak display type, General Sans body and UI copy, JetBrains Mono for code, all self-hosted from `assets/fonts`.
+- **Light and dark themes** - persisted in `localStorage`, with a `themechange` event so dynamic pieces can recolor.
 - **Responsive layout** - fluid type and spacing, a dedicated mobile navigation panel, and no horizontal overflow.
-- **Home folio** - asymmetric hero with a static crest and drafting-field canvas, capabilities ledger, cursor-following work previews, journal rows, manifesto, and CTA.
+- **Home folio** - client-focused hero, services with deliverables, featured work with outcomes, process, engagement types, and FAQ.
 - **Project archive** - live search with hover-safe links.
 - **Journal** - topic filters that update a live result count without a reload.
 - **Contact** - async form feedback, honeypot spam protection, and one-click email copying.
@@ -28,25 +28,25 @@ A portfolio and journal built with Jekyll, designed as an **engineering atelier 
 
 | Token | Light | Dark |
 | --- | --- | --- |
-| Paper | `#F2EFE6` | `#0D0F0C` |
-| Ink | `#14150F` | `#EFEBDD` |
-| Mint | `#1E6B4C` | `#8BE7BC` |
-| Copper | `#B15E2E` | `#E6A06F` |
+| Paper | `#FAFAF7` | `#0B0F0D` |
+| Ink | `#111614` | `#EDF2EE` |
+| Mint | `#0F6B4F` | `#6FE0AF` |
 
-Surface, line, shadow, and block colors are all derived from these tokens in `_sass/_base.scss`.
+Surface, line, and shadow colors are all derived from these tokens in `_sass/_base.scss`.
 
 ### Typography
 
-- **Display** - Instrument Serif
-- **Body and UI** - Inter Tight
-- **Code** - JetBrains Mono
+- **Display** - Zodiak (Fontshare)
+- **Body and UI** - General Sans (Fontshare)
+- **Code** - JetBrains Mono (Google Fonts, OFL)
+
+Fonts are self-hosted as `woff2` in `assets/fonts` and declared in `_sass/_fonts.scss`, so there are no third-party font requests at runtime.
 
 ### Layout language
 
-- 24px fine grid under a 120px major grid, masked down the page
-- Small uppercase section labels, hairline rules, and restrained shadows
-- A static heraldic seal in the hero
-- One low-contrast drafting canvas: a breathing dot field, slow contour traces, a traveling plotter marker, and a soft scanning band
+- Hairline rules, small uppercase section labels, and restrained shadows
+- Soft rounded cards on warm paper, with a single emerald accent
+- Generous whitespace and an editorial two-column measure
 
 ## Project Structure
 
@@ -61,9 +61,10 @@ kennethkenn.github.io/
 │   ├── default.html
 │   └── post.html
 ├── _sass/
+│   ├── _fonts.scss       # Self-hosted @font-face declarations
 │   ├── _base.scss        # Tokens, reset, typography, motion
-│   ├── _chrome.scss      # Grain, header, footer, page heroes
-│   ├── _home.scss        # Hero, disciplines, work, journal, manifesto, CTA
+│   ├── _chrome.scss      # Header, footer, page heroes
+│   ├── _home.scss        # Hero, services, work, process, engagements, FAQ, CTA
 │   ├── _pages.scss       # Archive, about, contact, blog, 404
 │   └── _post.scss        # Article typography and code blocks
 ├── _data/

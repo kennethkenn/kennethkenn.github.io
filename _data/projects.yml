@@ -7,7 +7,7 @@
 
 - title: Enterprise Inventory System
   description: A robust enterprise application for tracking stock levels across multiple warehouses, featuring a RESTful API backend, role-based access control, and real-time reporting dashboards.
-  outcome: A multi-warehouse inventory platform with role-based access and live reporting — replacing spreadsheets and manual stock counts.
+  outcome: A multi-warehouse inventory platform with role-based access and live reporting - replacing spreadsheets and manual stock counts.
   tech: Java, Spring Boot, AngularJS, SQL
   github: https://github.com/kennethkenn/Enterprise-Inventory
   demo: #
@@ -46,7 +46,7 @@
 
 - title: Personal Finance Tracker
   description: A comprehensive personal finance dashboard that visualizes income streams and expenses. Features include budget setting, recurring transaction tracking, and interactive charts for financial health analysis.
-  outcome: A finance dashboard that turns raw transactions into budgets, trends, and a clear monthly picture — with recurring payments tracked automatically.
+  outcome: A finance dashboard that turns raw transactions into budgets, trends, and a clear monthly picture - with recurring payments tracked automatically.
   tech: React, Node.js, PostgreSQL
   github: https://github.com/kennethkenn/Finance-Tracker
   demo: #
@@ -83,7 +83,7 @@
 
 - title: E-commerce Storefront
   description: A fully functional mock online store application. It demonstrates product catalog filtering, cart state management, user authentication, and a simulated Stripe checkout payment flow.
-  outcome: A storefront with catalogue filtering, cart state, authentication, and a Stripe checkout flow — TypeScript end to end.
+  outcome: A storefront with catalogue filtering, cart state, authentication, and a Stripe checkout flow - TypeScript end to end.
   tech: TypeScript, Next.js, Stripe API
   github: https://github.com/kennethkenn/ShopHub
   demo: #
